@@ -1,0 +1,2397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SpreadsheetView Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SpreadsheetView" class="dashAnchor"></a>
+    <a title="SpreadsheetView Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NoiseTagging Docs</a> (16% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NoiseTagging Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SpreadsheetView Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Programming%20Guides.html">Programming Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../readme.html">README</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../quick-start.html">Quick Start</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Principal%20Public%20API.html">Principal Public API</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagController.html">NoiseTagController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AlertAction.html">AlertAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BoolSetting.html">BoolSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Cell.html">Cell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CellRange.html">CellRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CircularScrollingConfigurationBuilder.html">CircularScrollingConfigurationBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ColorSetting.html">ColorSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DoubleSetting.html">DoubleSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EnumSetting.html">EnumSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExternalControl.html">ExternalControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GenericKeyboardViewController.html">GenericKeyboardViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Helper_PopoverWithNoiseTagContent.html">Helper_PopoverWithNoiseTagContent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IntSetting.html">IntSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ItemOfArraySetting.html">ItemOfArraySetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Classes.html#/c:@M@NoiseTagging@objc(cs)NTBoolSettingView">NTBoolSettingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTEnumSettingView.html">NTEnumSettingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTSettingView.html">NTSettingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NavigatorTreeOfPages.html">NavigatorTreeOfPages</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagButtonView.html">NoiseTagButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagControlView.html">NoiseTagControlView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagPopupButtonView.html">NoiseTagPopupButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagPopupItem.html">NoiseTagPopupItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagRadioButton.html">NoiseTagRadioButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagSetOfSettings.html">NoiseTagSetOfSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagShapeButtonView.html">NoiseTagShapeButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Page.html">Page</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PageRowView.html">PageRowView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PickableColor.html">PickableColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Classes.html#/c:@M@NoiseTagging@objc(cs)ResultValidityCheck">ResultValidityCheck</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sayer.html">Sayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SetOfSettings.html">SetOfSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SetOfSettingsGenericKeyboard.html">SetOfSettingsGenericKeyboard</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SetOfSettingsTableViewController.html">SetOfSettingsTableViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Setting_abstract.html">Setting_abstract</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SoundsHelper.html">SoundsHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpreadsheetView.html">SpreadsheetView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SyncableDatabase.html">SyncableDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextSetting.html">TextSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VoiceDefinition.html">VoiceDefinition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Global%20Variables.html">Other Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTagging10RecordingsAA18RecordingsdatabaseCvp">Recordings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTagging6SayingAA5SayerCvp">Saying</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTagging5SoundAA12SoundsHelperCvp">Sound</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTagging040kSimpleTrain_tMaxTimeToWaitForRecogniserG17FinishCalibrationSdvp">kSimpleTrain_tMaxTimeToWaitForRecogniserToFinishCalibration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BorderStyle.html">BorderStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CircularScrolling.html">CircularScrolling</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CircularScrolling/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CircularScrolling.html#/s:12NoiseTagging17CircularScrollingO4NoneC">– None</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CircularScrolling/Horizontally.html">– Horizontally</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CircularScrolling/Vertically.html">– Vertically</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CircularScrolling/Both.html">– Both</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClickFeedbackMode.html">ClickFeedbackMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ContrastMode.html">ContrastMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CornerViewMode.html">CornerViewMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CustomizableButtonState.html">CustomizableButtonState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GridStyle.html">GridStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Index.html">Index</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/JSONKey.html">JSONKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/JSONType.html">JSONType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LocationLabel.html">LocationLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NoiseTagMode.html">NoiseTagMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PageAnimationType.html">PageAnimationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SpeechRate.html">SpeechRate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StandardCustomizableButton.html">StandardCustomizableButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SwiftyJSONError.html">SwiftyJSONError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/writingOptionsKeys.html">writingOptionsKeys</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CALayer.html">CALayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/IndexPath.html">IndexPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIWindow.html">UIWindow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Functions.html">Other Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:12NoiseTagging1loiySbAA4JSONV_ADtF">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:12NoiseTagging2leoiySbAA4JSONV_ADtF">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:12NoiseTagging2eeoiySbAA4JSONV_ADtF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:12NoiseTagging1goiySbAA4JSONV_ADtF">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:12NoiseTagging2geoiySbAA4JSONV_ADtF">&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:12NoiseTagging13getScreenshotSo7UIImageCSgyF">getScreenshot()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:12NoiseTagging6random7minimum7maximumS2i_SitF">random(minimum:maximum:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CircularScrollingConfiguration.html">CircularScrollingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Protocols.html#/s:12NoiseTagging35CircularScrollingConfigurationStateP">CircularScrollingConfigurationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CustomVoiceDelegate.html">CustomVoiceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DelegateProtocolForSimplifiedBrainControl.html">DelegateProtocolForSimplifiedBrainControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EnumAsSettingProtocol.html">EnumAsSettingProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ItemOfArrayInMenuProtocol.html">ItemOfArrayInMenuProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/JSONSubscriptType.html">JSONSubscriptType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NoiseTagControlProtocol.html">NoiseTagControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NoiseTaggingKeyboardDelegate.html">NoiseTaggingKeyboardDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ObserverOfSyncableDatabase.html">ObserverOfSyncableDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PageDelegate.html">PageDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SetOfSettingsDelegate.html">SetOfSettingsDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Setting.html">Setting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SettingDelegate.html">SettingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SettingSubscriber.html">SettingSubscriber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SpreadsheetViewDataSource.html">SpreadsheetViewDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SpreadsheetViewDelegate.html">SpreadsheetViewDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SyncableObject.html">SyncableObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Structs.html">Other Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Borders.html">Borders</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ButtonCustomization.html">ButtonCustomization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GenericKeyboardSettingTitles.html">GenericKeyboardSettingTitles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Gridlines.html">Gridlines</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/JSON.html">JSON</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Location.html">Location</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NoiseTagSettingTitles.html">NoiseTagSettingTitles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NoiseTaggingSounds.html">NoiseTaggingSounds</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ScrollPosition.html">ScrollPosition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Typealiases.html">Other Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:12NoiseTagging5Gridsa">Grids</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:12NoiseTagging9JSONIndexa">JSONIndex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:12NoiseTagging12JSONRawIndexa">JSONRawIndex</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SpreadsheetView</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SpreadsheetView</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SpreadsheetView</span><span class="p">:</span> <span class="kt">UIScrollViewDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC10dataSourceAA0cd4DataF0_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dataSource" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC10dataSourceAA0cd4DataF0_pSgvp">dataSource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The object that provides the data for the collection view.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The data source must adopt the <code><a href="../Protocols/SpreadsheetViewDataSource.html">SpreadsheetViewDataSource</a></code> protocol.
+The spreadsheet view maintains a weak reference to the data source object.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">dataSource</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SpreadsheetViewDataSource.html">SpreadsheetViewDataSource</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC8delegateAA0cD8Delegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC8delegateAA0cD8Delegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The object that acts as the delegate of the spreadsheet view.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The delegate must adopt the <code><a href="../Protocols/SpreadsheetViewDelegate.html">SpreadsheetViewDelegate</a></code> protocol.
+The spreadsheet view maintains a weak reference to the delegate object.
+
+</div>
+
+<p>The delegate object is responsible for managing selection behavior and interactions with individual items.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SpreadsheetViewDelegate.html">SpreadsheetViewDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC16intercellSpacingSo6CGSizeVvp"></a>
+                    <a name="//apple_ref/swift/Property/intercellSpacing" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC16intercellSpacingSo6CGSizeVvp">intercellSpacing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The horizontal and vertical spacing between cells.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The default spacing is <code>(1.0, 1.0)</code>. Negative values are not supported.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">intercellSpacing</span><span class="p">:</span> <span class="kt">CGSize</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC9gridStyleAA04GridF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/gridStyle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC9gridStyleAA04GridF0Ovp">gridStyle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">gridStyle</span><span class="p">:</span> <span class="kt"><a href="../Enums/GridStyle.html">GridStyle</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC15allowsSelectionSbvp"></a>
+                    <a name="//apple_ref/swift/Property/allowsSelection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC15allowsSelectionSbvp">allowsSelection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that indicates whether users can select cells in the spreadsheet view.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If the value of this property is <code>true</code> (the default), users can select cells.
+If you want more fine-grained control over the selection of cells,
+you must provide a delegate object and implement the appropriate methods of the <code><a href="../Protocols/SpreadsheetViewDelegate.html">SpreadsheetViewDelegate</a></code> protocol.</p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC23allowsMultipleSelectionSbvp">allowsMultipleSelection</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allowsSelection</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC23allowsMultipleSelectionSbvp"></a>
+                    <a name="//apple_ref/swift/Property/allowsMultipleSelection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC23allowsMultipleSelectionSbvp">allowsMultipleSelection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that determines whether users can select more than one cell in the spreadsheet view.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This property controls whether multiple cells can be selected simultaneously.
+The default value of this property is <code>false</code>.
+
+</div>
+
+<p>When the value of this property is true, tapping a cell adds it to the current selection (assuming the delegate permits the cell to be selected).
+  Tapping the cell again removes it from the selection.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC15allowsSelectionSbvp">allowsSelection</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allowsMultipleSelection</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC28showsVerticalScrollIndicatorSbvp"></a>
+                    <a name="//apple_ref/swift/Property/showsVerticalScrollIndicator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC28showsVerticalScrollIndicatorSbvp">showsVerticalScrollIndicator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that controls whether the vertical scroll indicator is visible.</p>
+
+<p>The default value is <code>true</code>. The indicator is visible while tracking is underway and fades out after tracking.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">showsVerticalScrollIndicator</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC30showsHorizontalScrollIndicatorSbvp"></a>
+                    <a name="//apple_ref/swift/Property/showsHorizontalScrollIndicator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC30showsHorizontalScrollIndicatorSbvp">showsHorizontalScrollIndicator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that controls whether the horizontal scroll indicator is visible.</p>
+
+<p>The default value is <code>true</code>. The indicator is visible while tracking is underway and fades out after tracking.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">showsHorizontalScrollIndicator</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC12scrollsToTopSbvp"></a>
+                    <a name="//apple_ref/swift/Property/scrollsToTop" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC12scrollsToTopSbvp">scrollsToTop</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that controls whether the scroll-to-top gesture is enabled.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The scroll-to-top gesture is a tap on the status bar. When a user makes this gesture,
+the system asks the scroll view closest to the status bar to scroll to the top.
+If that scroll view has <code>scrollsToTop</code> set to <code>false</code>, its delegate returns false from <code>scrollViewShouldScrollToTop(_:)</code>, 
+or the content is already at the top, nothing happens.
+
+</div>
+
+<p>After the scroll view scrolls to the top of the content view, it sends the delegate a <code>scrollViewDidScrollToTop(_:)</code> message.</p>
+
+<p>The default value of scrollsToTop is <code>true</code>.</p>
+
+<p>On iPhone, the scroll-to-top gesture has no effect if there is more than one scroll view on-screen that has <code>scrollsToTop</code> set to <code>true</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">scrollsToTop</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC17circularScrollingAA08CircularF13Configuration_pvp"></a>
+                    <a name="//apple_ref/swift/Property/circularScrolling" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC17circularScrollingAA08CircularF13Configuration_pvp">circularScrolling</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">circularScrolling</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CircularScrollingConfiguration.html">CircularScrollingConfiguration</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC010backgroundD0So6UIViewCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/backgroundView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC010backgroundD0So6UIViewCSgvp">backgroundView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The view that provides the background appearance.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The view (if any) in this property is positioned underneath all of the other content and sized automatically to fill the entire bounds of the spreadsheet view.
+The background view does not scroll with the spreadsheet view’s other content. The spreadsheet view maintains a strong reference to the background view object.
+
+</div>
+
+<p>This property is nil by default, which displays the background color of the spreadsheet view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">backgroundView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NoiseTagging@objc(cs)SpreadsheetView(im)safeAreaInsetsDidChange"></a>
+                    <a name="//apple_ref/swift/Method/safeAreaInsetsDidChange()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NoiseTagging@objc(cs)SpreadsheetView(im)safeAreaInsetsDidChange">safeAreaInsetsDidChange()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">safeAreaInsetsDidChange</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC12visibleCellsSayAA4CellCGvp"></a>
+                    <a name="//apple_ref/swift/Property/visibleCells" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC12visibleCellsSayAA4CellCGvp">visibleCells</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array of visible cells currently displayed by the spreadsheet view.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This method returns the complete list of visible cells displayed by the collection view.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">visibleCells</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/Cell.html">Cell</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of <code><a href="../Classes/Cell.html">Cell</a></code> objects. If no cells are visible, this method returns an empty array.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC25indexPathsForVisibleItemsSay10Foundation9IndexPathVGvp"></a>
+                    <a name="//apple_ref/swift/Property/indexPathsForVisibleItems" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC25indexPathsForVisibleItemsSay10Foundation9IndexPathVGvp">indexPathsForVisibleItems</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An array of the visible items in the collection view.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The value of this property is a sorted array of IndexPath objects, each of which corresponds to a visible cell in the spreadsheet view.
+If there are no visible items, the value of this property is an empty array.</p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC12visibleCellsSayAA4CellCGvp">visibleCells</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">indexPathsForVisibleItems</span><span class="p">:</span> <span class="p">[</span><span class="kt">IndexPath</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC24indexPathForSelectedItem10Foundation05IndexF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/indexPathForSelectedItem" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC24indexPathForSelectedItem10Foundation05IndexF0VSgvp">indexPathForSelectedItem</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">indexPathForSelectedItem</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC26indexPathsForSelectedItemsSay10Foundation9IndexPathVGvp"></a>
+                    <a name="//apple_ref/swift/Property/indexPathsForSelectedItems" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC26indexPathsForSelectedItemsSay10Foundation9IndexPathVGvp">indexPathsForSelectedItems</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The index paths for the selected items.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The value of this property is an array of IndexPath objects, each of which corresponds to a single selected item.
+If there are no selected items, the value of this property is nil.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">indexPathsForSelectedItems</span><span class="p">:</span> <span class="p">[</span><span class="kt">IndexPath</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC24isDirectionalLockEnabledSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isDirectionalLockEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC24isDirectionalLockEnabledSbvp">isDirectionalLockEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that determines whether scrolling is disabled in a particular direction.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If this property is <code>false</code>, scrolling is permitted in both horizontal and vertical directions.
+If this property is <code>true</code> and the user begins dragging in one general direction (horizontally or vertically), the scroll view disables scrolling in the other direction.
+If the drag direction is diagonal, then scrolling will not be locked and the user can drag in any direction until the drag completes.
+The default value is <code>false</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isDirectionalLockEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC7bouncesSbvp"></a>
+                    <a name="//apple_ref/swift/Property/bounces" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC7bouncesSbvp">bounces</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that controls whether the scroll view bounces past the edge of content and back again.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If the value of this property is <code>true</code>, the scroll view bounces when it encounters a boundary of the content.
+Bouncing visually indicates that scrolling has reached an edge of the content.
+If the value is <code>false</code>, scrolling stops immediately at the content boundary without bouncing.
+The default value is <code>true</code>.</p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC22alwaysBounceHorizontalSbvp">alwaysBounceHorizontal</a></code>, <code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC20alwaysBounceVerticalSbvp">alwaysBounceVertical</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bounces</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC20alwaysBounceVerticalSbvp"></a>
+                    <a name="//apple_ref/swift/Property/alwaysBounceVertical" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC20alwaysBounceVerticalSbvp">alwaysBounceVertical</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that determines whether bouncing always occurs when vertical scrolling reaches the end of the content.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If this property is set to true and <code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC7bouncesSbvp">bounces</a></code> is <code>true</code>, vertical dragging is allowed even if the content is smaller than the bounds of the scroll view.
+The default value is <code>false</code>.</p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC22alwaysBounceHorizontalSbvp">alwaysBounceHorizontal</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">alwaysBounceVertical</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC22alwaysBounceHorizontalSbvp"></a>
+                    <a name="//apple_ref/swift/Property/alwaysBounceHorizontal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC22alwaysBounceHorizontalSbvp">alwaysBounceHorizontal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that determines whether bouncing always occurs when horizontal scrolling reaches the end of the content view.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If this property is set to <code>true</code> and <code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC7bouncesSbvp">bounces</a></code> is <code>true</code>, horizontal dragging is allowed even if the content is smaller than the bounds of the scroll view.
+The default value is <code>false</code>.</p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC20alwaysBounceVerticalSbvp">alwaysBounceVertical</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">alwaysBounceHorizontal</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC15stickyRowHeaderSbvp"></a>
+                    <a name="//apple_ref/swift/Property/stickyRowHeader" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC15stickyRowHeaderSbvp">stickyRowHeader</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that determines wheather the row header always sticks to the top.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p><code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC7bouncesSbvp">bounces</a></code> has to be <code>true</code> and there has to be at least one <code>frozenRow</code>.
+The default value is <code>false</code>.</p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC18stickyColumnHeaderSbvp">stickyColumnHeader</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">stickyRowHeader</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC18stickyColumnHeaderSbvp"></a>
+                    <a name="//apple_ref/swift/Property/stickyColumnHeader" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC18stickyColumnHeaderSbvp">stickyColumnHeader</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that determines wheather the column header always sticks to the top.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p><code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC7bouncesSbvp">bounces</a></code> has to be <code>true</code> and there has to be at least one <code>frozenColumn</code>.
+The default value is <code>false</code>.</p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/SpreadsheetView.html#/s:12NoiseTagging15SpreadsheetViewC15stickyRowHeaderSbvp">stickyRowHeader</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">stickyColumnHeader</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC15isPagingEnabledSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isPagingEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC15isPagingEnabledSbvp">isPagingEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that determines whether paging is enabled for the scroll view.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If the value of this property is <code>true</code>, the scroll view stops on multiples of the scroll view’s bounds when the user scrolls.
+The default value is false.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isPagingEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC15isScrollEnabledSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isScrollEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC15isScrollEnabledSbvp">isScrollEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that determines whether scrolling is enabled.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If the value of this property is <code>true</code>, scrolling is enabled, and if it is <code>false</code>, scrolling is disabled. The default is <code>true</code>.
+
+</div>
+
+<p>When scrolling is disabled, the scroll view does not accept touch events; it forwards them up the responder chain.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isScrollEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC14indicatorStyleSo08UIScrolld9IndicatorF0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/indicatorStyle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC14indicatorStyleSo08UIScrolld9IndicatorF0Vvp">indicatorStyle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The style of the scroll indicators.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The default style is <code>default</code>. See <code>UIScrollViewIndicatorStyle</code> for descriptions of these constants.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">indicatorStyle</span><span class="p">:</span> <span class="kt">UIScrollView</span><span class="o">.</span><span class="kt">IndicatorStyle</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC16decelerationRateSo08UIScrolld12DecelerationF0avp"></a>
+                    <a name="//apple_ref/swift/Property/decelerationRate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC16decelerationRateSo08UIScrolld12DecelerationF0avp">decelerationRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A floating-point value that determines the rate of deceleration after the user lifts their finger.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Your application can use the <code>UIScrollViewDecelerationRateNormal</code> and UIScrollViewDecelerationRateFast` constants as reference points for reasonable deceleration rates.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">decelerationRate</span><span class="p">:</span> <span class="kt">UIScrollView</span><span class="o">.</span><span class="kt">DecelerationRate</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC15numberOfColumnsSivp"></a>
+                    <a name="//apple_ref/swift/Property/numberOfColumns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC15numberOfColumnsSivp">numberOfColumns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">numberOfColumns</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC12numberOfRowsSivp"></a>
+                    <a name="//apple_ref/swift/Property/numberOfRows" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC12numberOfRowsSivp">numberOfRows</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">numberOfRows</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC13frozenColumnsSivp"></a>
+                    <a name="//apple_ref/swift/Property/frozenColumns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC13frozenColumnsSivp">frozenColumns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">frozenColumns</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC10frozenRowsSivp"></a>
+                    <a name="//apple_ref/swift/Property/frozenRows" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC10frozenRowsSivp">frozenRows</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">frozenRows</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC11mergedCellsSayAA9CellRangeCGvp"></a>
+                    <a name="//apple_ref/swift/Property/mergedCells" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC11mergedCellsSayAA9CellRangeCGvp">mergedCells</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">mergedCells</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/CellRange.html">CellRange</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC06scrollD0So08UIScrollD0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/scrollView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC06scrollD0So08UIScrollD0Cvp">scrollView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">scrollView</span><span class="p">:</span> <span class="kt">UIScrollView</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NoiseTagging@objc(cs)SpreadsheetView(im)initWithFrame:"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NoiseTagging@objc(cs)SpreadsheetView(im)initWithFrame:">init(frame:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NoiseTagging@objc(cs)SpreadsheetView(im)initWithCoder:"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NoiseTagging@objc(cs)SpreadsheetView(im)initWithCoder:">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NoiseTagging@objc(cs)SpreadsheetView(im)registerClass:forCellWithReuseIdentifier:"></a>
+                    <a name="//apple_ref/swift/Method/register(_:forCellWithReuseIdentifier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NoiseTagging@objc(cs)SpreadsheetView(im)registerClass:forCellWithReuseIdentifier:">register(_:forCellWithReuseIdentifier:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span><span class="p">(</span><span class="nv">registerClass</span><span class="p">:</span><span class="nv">forCellWithReuseIdentifier</span><span class="p">:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="n">_</span> <span class="nv">cellClass</span><span class="p">:</span> <span class="kt"><a href="../Classes/Cell.html">Cell</a></span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">forCellWithReuseIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NoiseTagging@objc(cs)SpreadsheetView(im)registerNib:forCellWithReuseIdentifier:"></a>
+                    <a name="//apple_ref/swift/Method/register(_:forCellWithReuseIdentifier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NoiseTagging@objc(cs)SpreadsheetView(im)registerNib:forCellWithReuseIdentifier:">register(_:forCellWithReuseIdentifier:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span><span class="p">(</span><span class="nv">registerNib</span><span class="p">:</span><span class="nv">forCellWithReuseIdentifier</span><span class="p">:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="n">_</span> <span class="nv">nib</span><span class="p">:</span> <span class="kt">UINib</span><span class="p">,</span> <span class="n">forCellWithReuseIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC10reloadDatayyF"></a>
+                    <a name="//apple_ref/swift/Method/reloadData()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC10reloadDatayyF">reloadData()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reloadData</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC19dequeueReusableCell19withReuseIdentifier3forAA0G0CSS_10Foundation9IndexPathVtF"></a>
+                    <a name="//apple_ref/swift/Method/dequeueReusableCell(withReuseIdentifier:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC19dequeueReusableCell19withReuseIdentifier3forAA0G0CSS_10Foundation9IndexPathVtF">dequeueReusableCell(withReuseIdentifier:for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dequeueReusableCell</span><span class="p">(</span><span class="n">withReuseIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">for</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Cell.html">Cell</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC12scrollToItem2atAE8animatedy10Foundation9IndexPathV_AA14ScrollPositionVSbtF"></a>
+                    <a name="//apple_ref/swift/Method/scrollToItem(at:at:animated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC12scrollToItem2atAE8animatedy10Foundation9IndexPathV_AA14ScrollPositionVSbtF">scrollToItem(at:at:animated:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">scrollToItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">at</span> <span class="nv">scrollPosition</span><span class="p">:</span> <span class="kt"><a href="../Structs/ScrollPosition.html">ScrollPosition</a></span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC10selectItem2at8animated14scrollPositiony10Foundation9IndexPathVSg_SbAA06ScrollJ0VtF"></a>
+                    <a name="//apple_ref/swift/Method/selectItem(at:animated:scrollPosition:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC10selectItem2at8animated14scrollPositiony10Foundation9IndexPathVSg_SbAA06ScrollJ0VtF">selectItem(at:animated:scrollPosition:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">selectItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">?,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">scrollPosition</span><span class="p">:</span> <span class="kt"><a href="../Structs/ScrollPosition.html">ScrollPosition</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC12deselectItem2at8animatedy10Foundation9IndexPathV_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/deselectItem(at:animated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC12deselectItem2at8animatedy10Foundation9IndexPathV_SbtF">deselectItem(at:animated:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deselectItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC16indexPathForItem2at10Foundation05IndexF0VSgSo7CGPointV_tF"></a>
+                    <a name="//apple_ref/swift/Method/indexPathForItem(at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC16indexPathForItem2at10Foundation05IndexF0VSgSo7CGPointV_tF">indexPathForItem(at:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexPathForItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">point</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC11cellForItem2atAA4CellCSg10Foundation9IndexPathV_tF"></a>
+                    <a name="//apple_ref/swift/Method/cellForItem(at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC11cellForItem2atAA4CellCSg10Foundation9IndexPathV_tF">cellForItem(at:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cellForItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Cell.html">Cell</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC12cellsForItem2atSayAA4CellCG10Foundation9IndexPathV_tF"></a>
+                    <a name="//apple_ref/swift/Method/cellsForItem(at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC12cellsForItem2atSayAA4CellCG10Foundation9IndexPathV_tF">cellsForItem(at:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cellsForItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/Cell.html">Cell</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC11rectForItem2atSo6CGRectV10Foundation9IndexPathV_tF"></a>
+                    <a name="//apple_ref/swift/Method/rectForItem(at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC11rectForItem2atSo6CGRectV10Foundation9IndexPathV_tF">rectForItem(at:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rectForItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGRect</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)layoutSubviews"></a>
+                    <a name="//apple_ref/swift/Method/layoutSubviews()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)layoutSubviews">layoutSubviews()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">layoutSubviews</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC13contentOffsetSo7CGPointVvp"></a>
+                    <a name="//apple_ref/swift/Property/contentOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC13contentOffsetSo7CGPointVvp">contentOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">contentOffset</span><span class="p">:</span> <span class="kt">CGPoint</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC21scrollIndicatorInsetsSo06UIEdgeG0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/scrollIndicatorInsets" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC21scrollIndicatorInsetsSo06UIEdgeG0Vvp">scrollIndicatorInsets</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">scrollIndicatorInsets</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC11contentSizeSo6CGSizeVvp"></a>
+                    <a name="//apple_ref/swift/Property/contentSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC11contentSizeSo6CGSizeVvp">contentSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">contentSize</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC12contentInsetSo12UIEdgeInsetsVvp"></a>
+                    <a name="//apple_ref/swift/Property/contentInset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC12contentInsetSo12UIEdgeInsetsVvp">contentInset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">contentInset</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC20adjustedContentInsetSo12UIEdgeInsetsVvp"></a>
+                    <a name="//apple_ref/swift/Property/adjustedContentInset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC20adjustedContentInsetSo12UIEdgeInsetsVvp">adjustedContentInset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">adjustedContentInset</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC21flashScrollIndicatorsyyF"></a>
+                    <a name="//apple_ref/swift/Method/flashScrollIndicators()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC21flashScrollIndicatorsyyF">flashScrollIndicators()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">flashScrollIndicators</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC16setContentOffset_8animatedySo7CGPointV_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/setContentOffset(_:animated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC16setContentOffset_8animatedySo7CGPointV_SbtF">setContentOffset(_:animated:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setContentOffset</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentOffset</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging15SpreadsheetViewC19scrollRectToVisible_8animatedySo6CGRectV_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/scrollRectToVisible(_:animated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging15SpreadsheetViewC19scrollRectToVisible_8animatedySo6CGRectV_SbtF">scrollRectToVisible(_:animated:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">scrollRectToVisible</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)isKindOfClass:"></a>
+                    <a name="//apple_ref/swift/Method/isKind(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)isKindOfClass:">isKind(of:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">isKind</span><span class="p">(</span><span class="n">of</span> <span class="nv">aClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)forwardingTargetForSelector:"></a>
+                    <a name="//apple_ref/swift/Method/forwardingTarget(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)forwardingTargetForSelector:">forwardingTarget(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">forwardingTarget</span><span class="p">(</span><span class="k">for</span> <span class="nv">aSelector</span><span class="p">:</span> <span class="kt">Selector</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)scrollViewDidScroll:"></a>
+                    <a name="//apple_ref/swift/Method/scrollViewDidScroll(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)scrollViewDidScroll:">scrollViewDidScroll(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">scrollViewDidScroll</span><span class="p">(</span><span class="n">_</span> <span class="nv">scrollView</span><span class="p">:</span> <span class="kt">UIScrollView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)scrollViewDidEndScrollingAnimation:"></a>
+                    <a name="//apple_ref/swift/Method/scrollViewDidEndScrollingAnimation(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)scrollViewDidEndScrollingAnimation:">scrollViewDidEndScrollingAnimation(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">scrollViewDidEndScrollingAnimation</span><span class="p">(</span><span class="n">_</span> <span class="nv">scrollView</span><span class="p">:</span> <span class="kt">UIScrollView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)scrollViewDidChangeAdjustedContentInset:"></a>
+                    <a name="//apple_ref/swift/Method/scrollViewDidChangeAdjustedContentInset(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)scrollViewDidChangeAdjustedContentInset:">scrollViewDidChangeAdjustedContentInset(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">scrollViewDidChangeAdjustedContentInset</span><span class="p">(</span><span class="n">_</span> <span class="nv">scrollView</span><span class="p">:</span> <span class="kt">UIScrollView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets:"></a>
+                    <a name="//apple_ref/swift/Method/resizableSnapshotView(from:afterScreenUpdates:withCapInsets:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets:">resizableSnapshotView(from:afterScreenUpdates:withCapInsets:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">resizableSnapshotView</span><span class="p">(</span><span class="n">from</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="n">afterScreenUpdates</span> <span class="nv">afterUpdates</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">withCapInsets</span> <span class="nv">capInsets</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)insertSubview:atIndex:"></a>
+                    <a name="//apple_ref/swift/Method/insertSubview(_:at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)insertSubview:atIndex:">insertSubview(_:at:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">insertSubview</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)exchangeSubviewAtIndex:withSubviewAtIndex:"></a>
+                    <a name="//apple_ref/swift/Method/exchangeSubview(at:withSubviewAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)exchangeSubviewAtIndex:withSubviewAtIndex:">exchangeSubview(at:withSubviewAt:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">exchangeSubview</span><span class="p">(</span><span class="n">at</span> <span class="nv">index1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">withSubviewAt</span> <span class="nv">index2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)addSubview:"></a>
+                    <a name="//apple_ref/swift/Method/addSubview(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)addSubview:">addSubview(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">addSubview</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)insertSubview:belowSubview:"></a>
+                    <a name="//apple_ref/swift/Method/insertSubview(_:belowSubview:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)insertSubview:belowSubview:">insertSubview(_:belowSubview:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">insertSubview</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">belowSubview</span> <span class="nv">siblingSubview</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)insertSubview:aboveSubview:"></a>
+                    <a name="//apple_ref/swift/Method/insertSubview(_:aboveSubview:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NoiseTagging@objc(cs)SpreadsheetView(im)insertSubview:aboveSubview:">insertSubview(_:aboveSubview:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">insertSubview</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">aboveSubview</span> <span class="nv">siblingSubview</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>MindAffect 2019</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

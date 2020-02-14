@@ -1,0 +1,135 @@
+{"leafs":
+	[
+	 {"id": "TextField"},
+	 
+	 {"id": "A", "title": "A"},
+	 {"id": "B", "title": "B"},
+	 {"id": "C", "title": "C"},
+	 {"id": "D", "title": "D"},
+	 {"id": "E", "title": "E"},
+	 {"id": "F", "title": "F"},
+	 {"id": "G", "title": "G"},
+	 
+	 {"id": "H", "title": "H"},
+	 {"id": "I", "title": "I"},
+	 {"id": "J", "title": "J"},
+	 {"id": "K", "title": "K"},
+	 {"id": "L", "title": "L"},
+	 {"id": "M", "title": "M"},
+	 
+	 {"id": "N", "title": "N"},
+	 {"id": "O", "title": "O"},
+	 {"id": "P", "title": "P"},
+	 {"id": "Q", "title": "Q"},
+	 {"id": "R", "title": "R"},
+	 {"id": "S", "title": "S"},
+	 {"id": "T", "title": "T"},
+	 
+	 {"id": "U", "title": "U"},
+	 {"id": "V", "title": "V"},
+	 {"id": "W", "title": "W"},
+	 {"id": "X", "title": "X"},
+	 {"id": "Y", "title": "Y"},
+	 {"id": "Z", "title": "Z"},
+	 
+	 {"id": "backspace", "icon": "Icons_Backspace"},
+	 {"id": "deleteAll", "icon": "Icons_Delete all"},
+	 {"id": "space", "icon": "Icons_Space"},
+	 {"id": "questionmark", "title": "?"},
+	 {"id": "dot", "title": "."},
+	 {"id": "alarm", "icon": "Icons_Alarm"},
+	 {"id": "keyboards", "title": "123"},
+	 {"id": "autocomplete", "icon": "Icons_Lightningbolt"},
+	 {"id": "confirm", "icon": "Icons_Speak"},
+	 {"id": "shift_LocalTextfield", "icon": "Icons_Shift"},
+	 {"id": "specialCharacters", "title": ".?!"},
+	 {"id": "undo", "icon": "Icons_Undo"},
+	 {"id": "ready", "icon": "Icons_Checkmark"},
+	 {"id": "playpause", "icon": "Icons_Pause"},
+	 
+	 {"id": "1", "title": "1"},
+	 {"id": "2", "title": "2"},
+	 {"id": "3", "title": "3"},
+	 {"id": "4", "title": "4"},
+	 {"id": "5", "title": "5"},
+	 {"id": "6", "title": "6"},
+	 {"id": "7", "title": "7"},
+	 {"id": "8", "title": "8"},
+	 {"id": "9", "title": "9"},
+	 {"id": "0", "title": "0"},
+	 {"id": "00", "title": "00"},
+	 {"id": "000", "title": "000"},
+	 {"id": "–", "title": "–"},
+	 {"id": ",", "title": ","},
+	 {"id": "×", "title": "×"},
+	 {"id": "€", "title": "€"}
+	 ],
+	"groups":
+	[
+	 {"id": "letters1", "elements": ["A", "B", "C", "D", "E", "F", "G"], "marginInBetween": 13},
+	 {"id": "letters2", "elements": ["H", "I", "J", "K", "L", "M"], "marginInBetween": 13, "placementMethod": "elementsSameSizeAsOtherElement", "placementArgs":
+	 {"roleModel": "A", "allignment": "center"}},
+	 {"id": "letters3", "elements": ["N", "O", "P", "Q", "R", "S", "T"], "marginInBetween": 13},
+	 {"id": "letters4", "elements": ["U", "V", "W", "X", "Y", "Z"], "marginInBetween": 13, "placementMethod": "elementsSameSizeAsOtherElement", "placementArgs":
+	 {"roleModel": "A", "allignment": "center"}},
+	 {"id": "letters", "elements": ["letters1", "letters2", "letters3", "letters4"], "orientation": "vertical", "marginInBetween": 10},
+	 
+	 {"id": "letters1_experimentWithSpace", "elements": ["A", "B", "C", "D"], "marginInBetween": 100, "margins": [45, 50, 55, 50]},
+	 {"id": "letters2_experimentWithSpace", "elements": ["H", "I", "J", "K", "L", "M", "E"], "marginInBetween": 13},
+	 {"id": "letters3_experimentWithSpace", "elements": ["N", "O", "P", "Q", "R", "S", "T", "F"], "marginInBetween": 13},
+	 {"id": "letters4_experimentWithSpace", "elements": ["U", "V", "W", "X", "Y", "Z", "G"], "marginInBetween": 13},
+	 {"id": "letters_experimentWithSpace", "elements": ["letters1_experimentWithSpace", "letters2_experimentWithSpace", "letters3_experimentWithSpace", "letters4_experimentWithSpace"], "orientation": "vertical", "marginInBetween": 20, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [4, 1, 1, 1]}},
+	 
+	 {"id": "letters1qwerty", "elements": ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"], "marginInBetween": 10},
+	 {"id": "letters2qwerty", "elements": ["A", "S", "D", "F", "G", "H", "J", "K", "L"], "marginInBetween": 10, "placementMethod": "elementsSameSizeAsOtherElement", "placementArgs":
+	 {"roleModel": "Q", "allignment": "center"}},
+	 {"id": "letters3qwerty", "elements": ["Z", "X", "C", "V", "B", "N", "M", "empty space"], "marginInBetween": 10, "placementMethod": "elementsSameSizeAsOtherElement", "placementArgs":
+	 {"roleModel": "Q", "allignment": "center"}},
+	 {"id": "lettersQwerty", "elements": ["letters1qwerty", "letters2qwerty", "letters3qwerty"], "orientation": "vertical", "marginInBetween": 10},
+	 
+	 {"id": "textFieldAndDeleteAll", "elements": ["TextField", "deleteAll"], "marginInBetween": 13, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [3.7, 1]}},
+	 {"id": "textFieldAndNoDeleteAll", "elements": ["TextField"]},
+	 {"id": "textFieldAndOptionallyDeleteAll", "elements": ["textFieldAndNoDeleteAll"]},
+	 {"id": "leftOfTextField", "elements": ["playpause"]},
+	 {"id": "rightOfTextField", "elements": ["autocomplete", "backspace"], "marginInBetween": 13},
+	 {"id": "topRowWithAutoComplete", "elements": ["leftOfTextField", "textFieldAndOptionallyDeleteAll", "rightOfTextField"], "marginInBetween": 13, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [0.5, 1.3, 1]}},
+	 {"id": "topRowWithoutAutoComplete", "elements": ["leftOfTextField", "textFieldAndOptionallyDeleteAll", "backspace"], "marginInBetween": 13, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [1, 4, 1]}},
+	 {"id": "topRow", "elements": ["topRowWithAutoComplete"]},
+	 {"id": "topRowPlusSpaceLeftForSyncView", "elements": ["empty space", "topRow"], "marginInBetween": 13, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [0.22, 8]}},
+	 {"id": "topRowPlusSpaceRightForSyncView", "elements": ["topRow", "empty space"], "marginInBetween": 0, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [12.821, 1]}},
+	 
+	 {"id": "buttonsLeftOfSpace", "elements": ["alarm", "keyboards", "shift_LocalTextfield"], "marginInBetween": 13},
+	 {"id": "buttonsRightOfSpace", "elements": [], "marginInBetween": 13},
+	 {"id": "bottomRow1", "elements": ["buttonsLeftOfSpace", "space", "buttonsRightOfSpace"], "marginInBetween": 18, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [1.523, 1, 1]}},
+	 {"id": "bottomRow2", "elements": ["buttonsLeftOfSpace", "space", "buttonsRightOfSpace"], "marginInBetween": 18, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [1, 0.4, 1]}},
+	 {"id": "bottomRow3", "elements": ["buttonsLeftOfSpace", "space", "buttonsRightOfSpace"], "marginInBetween": 13, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [1, 0.4, 1]}},
+	 
+	 {"id": "keyboard_letters", "elements": ["topRow", "letters", "bottomRow3"], "orientation": "vertical", "marginInBetween": 25, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [1, 4.2, 1]}},
+	 
+	 
+	 {"id": "digits1", "elements": ["1", "2", "3", "4", "5"], "marginInBetween": 13},
+	 {"id": "digits1_00", "elements": ["digits1", "00"], "marginInBetween": 50, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [5, 1]}},
+	 {"id": "digits2", "elements": ["6", "7", "8", "9", "0"], "marginInBetween": 13},
+	 {"id": "digits2_000", "elements": ["digits2", "000"], "marginInBetween": 50, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [5, 1]}},
+	 {"id": "digitsSpecial", "elements": ["–", ",", "×", "€"], "marginInBetween": 25, "placementMethod": "elementsSameSizeAsOtherElement", "placementArgs":
+	 {"roleModel": "1", "allignment": "center"}},
+	 
+	 {"id": "digits", "elements": ["digits1_00", "digits2_000"], "orientation": "vertical", "marginInBetween": 13},
+	 {"id": "digits+special", "elements": ["digits", "digitsSpecial"], "orientation": "vertical", "marginInBetween": 50, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
+	 {"relativeSizes": [2.1, 1]}, "margins": [40, 50, 40, 50]},
+	 
+	 {"id": "keyboard", "elements": ["keyboard_letters"], "margins": [10, 10, 10, 10]}
+	 ]
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NTSettingView Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/NTSettingView" class="dashAnchor"></a>
+    <a title="NTSettingView Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NoiseTagging Docs</a> (22% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NoiseTagging Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NTSettingView Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Programming%20Guides.html">Programming Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../readme.html">README</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../quick-start.html">Quick Start</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Principal%20Public%20API.html">Principal Public API</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagController.html">NoiseTagController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BoolSetting.html">BoolSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ColorSetting.html">ColorSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DoubleSetting.html">DoubleSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EnumSetting.html">EnumSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IntSetting.html">IntSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ItemOfArraySetting.html">ItemOfArraySetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Classes.html#/c:@M@NoiseTagging@objc(cs)NTBoolSettingView">NTBoolSettingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTEnumSettingView.html">NTEnumSettingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTSettingView.html">NTSettingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagButtonView.html">NoiseTagButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagControlView.html">NoiseTagControlView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagPopupButtonView.html">NoiseTagPopupButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagPopupItem.html">NoiseTagPopupItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagRadioButton.html">NoiseTagRadioButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagSetOfSettings.html">NoiseTagSetOfSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagShapeButtonView.html">NoiseTagShapeButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PickableColor.html">PickableColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Classes.html#/c:@M@NoiseTagging@objc(cs)ResultValidityCheck">ResultValidityCheck</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SetOfSettings.html">SetOfSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Setting_abstract.html">Setting_abstract</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SoundsHelper.html">SoundsHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextSetting.html">TextSetting</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Global%20Variables.html">Other Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTagging5SoundAA12SoundsHelperCvp">Sound</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ClickFeedbackMode.html">ClickFeedbackMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ContrastMode.html">ContrastMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CornerViewMode.html">CornerViewMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LocationLabel.html">LocationLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NoiseTagMode.html">NoiseTagMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CALayer.html">CALayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Extensions.html#/CircularScrolling">CircularScrolling</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIWindow.html">UIWindow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Functions.html">Other Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:12NoiseTagging13getScreenshotSo7UIImageCSgyF">getScreenshot()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:12NoiseTagging6random7minimum7maximumS2i_SitF">random(minimum:maximum:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DelegateProtocolForSimplifiedBrainControl.html">DelegateProtocolForSimplifiedBrainControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EnumAsSettingProtocol.html">EnumAsSettingProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ItemOfArrayInMenuProtocol.html">ItemOfArrayInMenuProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NoiseTagControlProtocol.html">NoiseTagControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SetOfSettingsDelegate.html">SetOfSettingsDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Setting.html">Setting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SettingDelegate.html">SettingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SettingSubscriber.html">SettingSubscriber</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Structs.html">Other Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/NoiseTagSettingTitles.html">NoiseTagSettingTitles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NoiseTaggingSounds.html">NoiseTaggingSounds</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NTSettingView</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NTSettingView</span> <span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/SettingDelegate.html">SettingDelegate</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging13NTSettingViewC5frame7settingACSo6CGRectV_AA7Setting_ptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:setting:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging13NTSettingViewC5frame7settingACSo6CGRectV_AA7Setting_ptcfc">init(frame:setting:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="nv">setting</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Setting.html">Setting</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NoiseTagging@objc(cs)NTSettingView(im)initWithCoder:"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NoiseTagging@objc(cs)NTSettingView(im)initWithCoder:">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">required</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging13NTSettingViewC19noiseTagControlIsOnSbvp"></a>
+                    <a name="//apple_ref/swift/Property/noiseTagControlIsOn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging13NTSettingViewC19noiseTagControlIsOnSbvp">noiseTagControlIsOn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">noiseTagControlIsOn</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/SettingDelegate"></a>
+                <a name="//apple_ref/swift/Section/SettingDelegate" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/SettingDelegate"></a>
+                  <h3 class="section-name"><p>SettingDelegate</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NoiseTagging@objc(cs)NTSettingView(im)valueChangedForSetting:"></a>
+                    <a name="//apple_ref/swift/Method/valueChangedFor(setting:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NoiseTagging@objc(cs)NTSettingView(im)valueChangedForSetting:">valueChangedFor(setting:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">valueChangedFor</span><span class="p">(</span><span class="nv">setting</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Setting.html">Setting</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>MindAffect 2019</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

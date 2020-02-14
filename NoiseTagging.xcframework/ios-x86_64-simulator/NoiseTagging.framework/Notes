@@ -1,0 +1,30 @@
+Todo:
+- Improve feedback messages.
+- What to do with assertions?
+- Make settings (in NoiseTagSettings) for some of the constants in NoiseTagConstants.swift.
+- Better handle voices. See settings for Siri.
+- Improve how bluetooth commands are handled. Users of framework may wish to handle all commands at one single place. For BCIGeneric: let main VC handle all commands.
+
+Nog documenteren:
+- je kunt noise tagging toepassen in andere layers dan de layer die je meegeeft, maar: je kan noise tagging alleen enablen met 1 delegate (dus meerdere layers is alleen handig als die layers dezelfde delegate gebruiken)
+- achtergronden worden niet automatisch grijs gemaakt; framework kan die kleur wel exposen
+- niks mag first responder worden, of noise tag control moet opnieuw aangezet worden
+
+
+Possible improvements NoiseTagPopupButtonView:
+
+model:
+bool buttonToDismiss
+bool showSelectedItem (soms wil je keuze presenteren, soms wil je het gebruiken voor selectie uit aantal opties)
+per item: title
+closure: wat als item i geselecteerd wordtmov
+
+als useAsRadioButton:
+- toon driehoekje
+- title hoef je niet te setten, index current item bepaalt title
+- toon in lijstje welke selected was
+=> nu nog niet, ben teveel tijd in framework aan het stoppen.
+
+
+
+

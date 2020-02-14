@@ -1,0 +1,47 @@
+custom_categories:
+  - name: Programming Guides
+    children:
+      - README
+      - Quick Start
+      - Main Programming Guide
+  - name: Main Symbols
+    children:
+      - NoiseTagging
+      - NoiseTagController
+      - NoiseTagControl
+      - NoiseTagControlProperties
+      - NoiseTagDelegate
+  - name: Controls
+    children:
+      - NoiseTagButtonView
+      - NoiseTagShapeButtonView
+      - NoiseTagLabeledButtonView
+      - LocationLabel
+      - NoiseTagCheckBoxView
+      - NoiseTagRadioButton
+      - NoiseTagPopupButtonView
+      - NoiseTagPopupItem
+  - name: Settings
+    children:
+      - NoiseTagSetOfSettings
+      - SetOfSettings
+      - BoolSetting
+      - IntSetting
+      - DoubleSetting
+      - TextSetting
+      - EnumSetting
+      - ItemOfArraySetting
+      - ColorSetting
+      - PickableColor
+      - ResultValidityCheck
+      - Setting_abstract
+      
+module: NoiseTagging
+
+copyright: MindAffect 2020
+
+min_acl: public
+
+documentation: "*.md"
+
+xcodebuild_arguments: [-UseModernBuildSystem=YES]

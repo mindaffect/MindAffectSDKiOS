@@ -1,0 +1,11 @@
+framework module NoiseTagging {
+  umbrella header "NoiseTagging.h"
+
+  export *
+  module * { export * }
+}
+
+module NoiseTagging.Swift {
+    header "NoiseTagging-Swift.h"
+    requires objc
+}
