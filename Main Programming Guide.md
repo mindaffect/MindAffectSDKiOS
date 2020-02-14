@@ -67,7 +67,7 @@ The fact that we use this stack has a number of advantages. E.g. the framework m
 
 As explained above, the main responsibility of a `NoiseTagDelegate` is to prepare a unit for brain control by assigning actions to controls. When a unit becomes the current unit – because it has been pushed, or because another unit was popped –, `NoiseTagging` calls `startNoiseTagControlOn(noiseTaggingView:)` on the delegate. This typically looks something like this:
 
-```
+```Swift
 import UIKit
 import NoiseTagging
 

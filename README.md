@@ -3,7 +3,7 @@
 Table of Contents:
 - [What is Noise Tagging?](#what-is-noise-tagging)
 - [What Does the Framework Provide?](#what-does-the-framework-provide)
-- [Next Steps](#next-steps)
+- [Further Reading](#further-reading)
 
 
 # What is Noise Tagging?
@@ -103,7 +103,7 @@ As the name already implies, the Developer Screen is *not* aimed at end users. B
 In order to access the Developer Screen, double-press with two fingers. For now the only part of the Developer Screen relevant to clients is the *Settings* screen. 
 
 
-# Next Steps
+# Further Reading
 
 We recommend that you make your first brain-controllable app by going through our *Quick Start*. 
 
