@@ -14,7 +14,7 @@
     <a title="BoolSetting Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NoiseTagging Docs</a> (25% documented)</p>
+        <p><a href="../index.html">NoiseTagging Docs</a> (78% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -74,7 +74,7 @@
                 <a href="../Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/LocationLabel.html">LocationLabel</a>
+                <a href="../Classes/NoiseTagLabeledButtonView/LocationLabel.html">– LocationLabel</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
@@ -132,6 +132,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other%20Guides.html">Other Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../license.html">LICENSE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -184,7 +192,7 @@
                 <a href="../Protocols/Setting.html">Setting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/SettingDelegate.html">SettingDelegate</a>
+                <a href="../Protocols/SettingObserver.html">SettingObserver</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/SettingSubscriber.html">SettingSubscriber</a>
@@ -211,7 +219,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>A <code><a href="../Protocols/Setting.html">Setting</a></code> with a <code>Bool</code> value.</p>
 
           </section>
           <section class="section task-group-section">
@@ -230,7 +238,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The setting&rsquo;s initial value. This is remembered so the user can always restore it.</p>
 
                       </div>
                       <div class="declaration">
@@ -257,7 +265,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The setting&rsquo;s current value.</p>
 
                       </div>
                       <div class="declaration">
@@ -284,7 +292,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initialize a new <code>BoolSetting</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -324,7 +332,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Copy the <code>BoolSetting</code>.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>NSCopying</code>.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -364,7 +377,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Encode the <code>BoolSetting</code>.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>NSCoding</code>.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -391,7 +409,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initialize a new <code>BoolSetting</code> by decoding from <code>aDecoder</code>.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>NSCoding</code>.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -431,7 +454,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A user-friendly description of the <code>BoolSetting</code>.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>CustomStringConvertible</code>.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -471,7 +499,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A description of the setting&rsquo;s value, assuming a value is defined. Used for logging purposes.</p>
 
                       </div>
                       <div class="declaration">
@@ -498,7 +526,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The setting&rsquo;s value described using JSON. Used for logging purposes.</p>
 
                       </div>
                       <div class="declaration">
@@ -525,7 +553,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sets the receiver&rsquo;s setting value to the setting value of <code>newSetting</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -552,7 +580,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Settings may have a default value, which can easily be restored by the user using the standard UI for editing settings provided by the NoiseTagging framework.</p>
 
                       </div>
                       <div class="declaration">
@@ -579,7 +607,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Set the setting value to the default value.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Classes/BoolSetting.html#/c:@M@NoiseTagging@objc(cs)BoolSetting(py)hasDefaultValue">hasDefaultValue</a></code>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -619,7 +652,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The name of the nib used for generating UI for editing the setting.</p>
 
                       </div>
                       <div class="declaration">
@@ -646,7 +679,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The NoiseTagging framework provides standard UI for editing settings. This UI consists of a table view, where each cell is used for one setting. The <code>cellReuseIdentifier</code> makes it possible to reuse these cells per setting type.</p>
 
                       </div>
                       <div class="declaration">

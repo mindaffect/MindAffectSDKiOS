@@ -14,7 +14,7 @@
     <a title="NoiseTagLabeledButtonView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NoiseTagging Docs</a> (25% documented)</p>
+        <p><a href="../index.html">NoiseTagging Docs</a> (78% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -74,7 +74,7 @@
                 <a href="../Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/LocationLabel.html">LocationLabel</a>
+                <a href="../Classes/NoiseTagLabeledButtonView/LocationLabel.html">– LocationLabel</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
@@ -132,6 +132,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other%20Guides.html">Other Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../license.html">LICENSE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -184,7 +192,7 @@
                 <a href="../Protocols/Setting.html">Setting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/SettingDelegate.html">SettingDelegate</a>
+                <a href="../Protocols/SettingObserver.html">SettingObserver</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/SettingSubscriber.html">SettingSubscriber</a>
@@ -211,7 +219,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>A noisetagging button consisting of two parts: a flickering part with an image, and an optionally non-flickering part with a title.</p>
 
           </section>
           <section class="section task-group-section">
@@ -220,9 +228,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12NoiseTagging0A20TagLabeledButtonViewC16customIdentifierSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/customIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12NoiseTagging0A20TagLabeledButtonViewC16customIdentifierSSSgvp">customIdentifier</a>
+                    <a name="/s:12NoiseTagging0A20TagLabeledButtonViewC13LocationLabelO"></a>
+                    <a name="//apple_ref/swift/Enum/LocationLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging0A20TagLabeledButtonViewC13LocationLabelO">LocationLabel</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -230,14 +238,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The location of the label of a <code><a href="../Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a></code>.</p>
 
+                        <a href="../Classes/NoiseTagLabeledButtonView/LocationLabel.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">customIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LocationLabel</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -260,9 +269,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12NoiseTagging0A20TagLabeledButtonViewC5frame13locationLabelACSo6CGRectV_AA08LocationI0Otcfc"></a>
+                    <a name="/s:12NoiseTagging0A20TagLabeledButtonViewC5frame13locationLabelACSo6CGRectV_AC08LocationI0Otcfc"></a>
                     <a name="//apple_ref/swift/Method/init(frame:locationLabel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12NoiseTagging0A20TagLabeledButtonViewC5frame13locationLabelACSo6CGRectV_AA08LocationI0Otcfc">init(frame:locationLabel:)</a>
+                    <a class="token" href="#/s:12NoiseTagging0A20TagLabeledButtonViewC5frame13locationLabelACSo6CGRectV_AC08LocationI0Otcfc">init(frame:locationLabel:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -270,14 +279,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initialize using the passed <code>frame</code> and <code>locationLabel</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="nv">locationLabel</span><span class="p">:</span> <span class="kt"><a href="../Enums/LocationLabel.html">LocationLabel</a></span> <span class="o">=</span> <span class="o">.</span><span class="kt">Right</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="nv">locationLabel</span><span class="p">:</span> <span class="kt"><a href="../Classes/NoiseTagLabeledButtonView/LocationLabel.html">LocationLabel</a></span> <span class="o">=</span> <span class="o">.</span><span class="kt">Right</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -297,7 +306,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initialize from the passed <code>NSCoder</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -324,7 +333,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The title displayed on top of the button.</p>
 
                       </div>
                       <div class="declaration">
@@ -351,7 +360,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The subtitle displayed on top of the button.</p>
 
                       </div>
                       <div class="declaration">
@@ -378,7 +387,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The image displayed on top of the button.</p>
+
+<p>Note that only the image&rsquo;s alpha channel matters. The displayed image&rsquo;s color is defined by <code>self.titleColor</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -405,7 +416,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The font of the title displayed on top of the button.</p>
 
                       </div>
                       <div class="declaration">
@@ -432,7 +443,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The text  alignment of the title displayed on top of the button.</p>
 
                       </div>
                       <div class="declaration">
@@ -472,7 +483,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Implementation of <code><a href="../Protocols/NoiseTagControl.html">NoiseTagControl</a></code>&lsquo;s <code>setFlickerColor(color)</code> function.</p>
+
+<p>The part of us where we display the image always flickers. The part of us where we display the title only flickers if the <code>labeledButtonsOnlyPartlyFlicker</code> setting is <code>false</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -499,7 +512,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>We override this in order to hide the line that divides our two parts  when flickering is on.</p>
 
                       </div>
                       <div class="declaration">

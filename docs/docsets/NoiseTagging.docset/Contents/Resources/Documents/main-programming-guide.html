@@ -13,7 +13,7 @@
     <a title="Main Programming Guide  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">NoiseTagging Docs</a> (25% documented)</p>
+        <p><a href="index.html">NoiseTagging Docs</a> (78% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -73,7 +73,7 @@
                 <a href="Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/LocationLabel.html">LocationLabel</a>
+                <a href="Classes/NoiseTagLabeledButtonView/LocationLabel.html">– LocationLabel</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
@@ -131,6 +131,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Other%20Guides.html">Other Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="license.html">LICENSE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -183,7 +191,7 @@
                 <a href="Protocols/Setting.html">Setting</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/SettingDelegate.html">SettingDelegate</a>
+                <a href="Protocols/SettingObserver.html">SettingObserver</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SettingSubscriber.html">SettingSubscriber</a>
@@ -207,6 +215,17 @@
             <h1 id='main-programming-guide' class='heading'>Main Programming Guide</h1>
 
 <p>This guide describes the most important concepts and functionalities of the NoiseTagging framework for iOS. By reading this document, you make sure you can use the framework effectively. </p>
+
+<p>Table of Contents:</p>
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#blocking">Blocking</a></li>
+<li><a href="#trials">Trials</a></li>
+<li><a href="#settings">Settings</a></li>
+<li><a href="#using-noise-tag-controls">Using Noise Tag Controls</a></li>
+<li><a href="#custom-noise-tag-controls">Custom Noise Tag Controls</a></li>
+</ul>
 <h2 id='overview' class='heading'>Overview</h2>
 
 <p>This Section gives an overview of the most important pieces. Subsequent Sections discuss a number of tasks in more detail. </p>
@@ -217,9 +236,9 @@
 <p>You can easily define your own <code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code>-conformant classes, but you can also simply use the standard control classes, such as <code><a href="Classes/NoiseTagButtonView.html">NoiseTagButtonView</a></code>. </p>
 <h3 id='noisetagging' class='heading'>NoiseTagging</h3>
 
-<p><code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> gives you easy access to a singleton <code><a href="Classes/NoiseTagController.html">NoiseTagController</a></code>. This singleton – from now on referred to as <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> – is the conductor of most of what the NoiseTagging framework does, such as starting and stopping trials, making controls flicker, and communicating with the MindAffect Decoder.</p>
+<p>The read-only variable <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> gives you easy access to a singleton <code><a href="Classes/NoiseTagController.html">NoiseTagController</a></code>. This singleton – from now on referred to as <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> – is the conductor of most of what the NoiseTagging framework does, such as starting and stopping trials, making controls flicker, and communicating with the MindAffect Decoder.</p>
 
-<p><code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> is also your main gateway to using the framework. You use it to define which controls should flicker, to provide  the user with UI to setup brain control, to customize noise tagging settings, etcetera. </p>
+<p><code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> is also <em>your</em> main gateway to using the framework. You use it to define which controls should flicker, to provide  the user with UI to setup brain control, to customize noise tagging settings, etcetera. </p>
 <h3 id='settings' class='heading'>Settings</h3>
 
 <p><code>NoiseTagging.settings</code> lets you customize all kinds of things, such as trial timing and the default colors used for flickering. Please note that many of these settings have been developed for internal usage, so not all of them will be relevant for you.</p>
@@ -246,18 +265,20 @@
 <p>The set of controls that can be brain-controlled depends on the current <em>NoiseTagging unit</em>. A NoiseTagging unit, or simply <em>unit</em>, consists of two objects: a <em>view</em> (<code>UIView</code>) and a <em>delegate</em> (<code><a href="Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></code>):</p>
 
 <ul>
-<li>The view merely acts as an identifier, but generally it is the view in which the brain-controllable controls reside.</li>
+<li>The view generally is the view in which the brain-controllable controls reside. <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> may add gesture recognizers on this view, e.g. to let the user toggle the flickering on or off.</li>
 <li>The delegate is responsible for preparing for brain control when the unit becomes the current unit. Primarily this means assigning actions to controls. The <code><a href="Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></code> protocol also lets you make customizations, or respond to certain events, such as a trial ending.</li>
 </ul>
 
-<p><code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> keeps a stack of units, called the <em>unit stack</em>. If you want to make a certain set of your own controls brain-controllable, you push your own unit onto the stack: <code>NoiseTagging.push(view:forNoiseTaggingWithDelegate:)</code>. Once your unit becomes the current unit, your delegate will be asked to make preparations (see next Section).</p>
+<p><code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> keeps a stack of units, called the <em>unit stack</em>. If you want to make a certain set of controls brain-controllable, you push your own unit onto the stack: <code>NoiseTagging.push(view:forNoiseTaggingWithDelegate:)</code>. Once your unit becomes the current unit, your delegate will be asked to make preparations (see next Section).</p>
 
 <p>You can pop the current unit using <code>NoiseTagging.pop()</code>. This removes the current unit from the stack and makes the now-top-most unit the current unit again. </p>
 
 <p>The fact that we use this stack has a number of advantages. E.g. the framework might display a warning message in a brain-controllable popover; when this message is dismissed, the framework simply pops and the previously current unit will become current again. The same happens when presenting a popover using a <code><a href="Classes/NoiseTagPopupButtonView.html">NoiseTagPopupButtonView</a></code>. Last, the stack makes it easy to implement navigation logic, such as in a navigation controller. </p>
+
+<p>If you want to update the current unit, you can do so using <code>NoiseTagging.update(view:forNoiseTaggingWithDelegate:)</code>. This update will only take place if the passed view equals the current unit&rsquo;s view. </p>
 <h3 id='noisetagdelegate' class='heading'>NoiseTagDelegate</h3>
 
-<p>As explained above, the main responsibility of a <code><a href="Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></code> is to prepare a unit for brain control by assigning actions to controls. When a unit becomes the current unit – because it has been pushed, or because another unit was popped –, <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> calls <code>startNoiseTagControlOn(noiseTaggingView:)</code> on the delegate. This typically looks something like this:</p>
+<p>As explained above, the main responsibility of a <code><a href="Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></code> is to prepare a unit for brain control by assigning actions to controls. When a unit becomes the current unit – because it has been pushed, or because another unit was popped –, or if  <code>NoiseTagging.update(view:forNoiseTaggingWithDelegate:)</code> is called, <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> calls <code>startNoiseTagControlOn(noiseTaggingView:)</code> on the delegate. The implementation of this function typically looks something like this:</p>
 <pre class="highlight plaintext"><code>import UIKit
 import NoiseTagging
 
@@ -271,7 +292,7 @@ class ViewController: UIViewController, NoiseTagDelegate {
         // Add noise tagging actions:
 
         // For some types of controls you add actions directly:
-        someNoiseTagButtonView.noiseTagging.addAction(timing: 0) {
+        someNoiseTagButtonView.noiseTagging.addAction(timing: 1) {
             // This code is executed when the button is pressed:
             print("Hello")
         }
@@ -284,7 +305,171 @@ class ViewController: UIViewController, NoiseTagDelegate {
 
 <p>Please note that a unit does <em>not</em> need to have a fixed set of controls: each time <code>startNoiseTagControlOn(noiseTaggingView:)</code> is called your delegate can choose how it assigns actions to controls, depending on some current state. </p>
 
+<p>The <code>noiseTaggingView</code> argument makes it possible to use one delegate for multiple units.  </p>
+
 <p><code><a href="Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></code> has a number of optional functions as well, e.g. to use an alternative background color (<code>customBackgroundColorFor(view:)</code>), or to respond to a trial ending without any of the buttons being pressed (<code>respondToNoClick()</code>).</p>
+<h2 id='blocking' class='heading'>Blocking</h2>
+
+<p>Sometimes a new trial should not start untill some (asynchronous) task has finished. For example, if a button press results in an animated transition from one screen to another, the flickering should not start untill the transition is finished. Since <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> has no way of knowing whether such an animation is underway, <em>you</em> need to tell it. You do this using <em>blocking</em>. </p>
+
+<p>By calling <code>blockTrials(forDuration:)</code>, you let <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> know that it should not start a new trial untill a matching <em>unblock</em> occurs. This call also stops any current trial. The <code>forDuration</code> argument is optional. If you pass <code>nil</code>, you need to call <code>unblockTrials()</code> explicitly to unblock. Alternatively you can pass a time interval after which <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> will unblock on your behalf. </p>
+
+<p>Note that <em>each</em> block needs to be unblocked before a new trial may start. This means that if, for example, one block starts at time 1 and has a duration of 3, and another block starts at time 2 and has a duration of 4, for the whole duration of time 1 till time 6 no new trial will be started. </p>
+<h3 id='examples' class='heading'>Examples</h3>
+
+<p>If you have a blocking animation, you can use a completion closure to unblock:</p>
+<pre class="highlight plaintext"><code>// Block trials till our animations are finished:
+NoiseTagging.blockTrials()
+
+// Perform animations as part of a transaction, so we can set a completion block:
+CATransaction.begin()
+CATransaction.setCompletionBlock {
+    // Unblock trials again:
+    NoiseTagging.unblockTrials()
+}
+
+// Perform animations:
+...
+
+CATransaction.commit()
+</code></pre>
+
+<p>In some situations you may want to apply blocking, but you cannot use a completion closure to unblock. In these cases pass the time that is needed to complete the tasks:</p>
+<pre class="highlight plaintext"><code>// Block trials till our asynchronous task is finished:
+NoiseTagging.blockTrials(forDuration: someDuration)
+
+// Perform some asynchronous task that takes someDuration:
+...
+</code></pre>
+<h3 id='blocking-by-code-noisetagging-code' class='heading'>Blocking by <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code></h3>
+
+<p>The framework itself also applies blocking, for example for:</p>
+
+<ul>
+<li>Inducing breaks in between trials;</li>
+<li>Not running trials during an update;</li>
+<li>Not running trials during the execution of actions of some of the framework&rsquo;s standard controls.</li>
+</ul>
+
+<p>Note that this implies that if your code no longer imposes any active blocks, the next trial may still need to wait for an <em>internal</em> unblock to take place. </p>
+<h2 id='trials' class='heading'>Trials</h2>
+
+<p>This Section explains in more detail what a noise tagging trial consists of, its possible endings, and how each new trial follows up the previous one. </p>
+<h3 id='trial-phases' class='heading'>Trial Phases</h3>
+
+<p>In normal prediction mode, a trial consists of just one phase: the <em>flicker phase</em>. In other modes, such as <em>Generic train</em>, each trial consists of the following phases:</p>
+
+<ol>
+<li>Highlight the target;</li>
+<li>Pause;</li>
+<li>Flicker.</li>
+</ol>
+<h3 id='trial-endings' class='heading'>Trial Endings</h3>
+
+<p>Each trial ends in one of three possible ways:</p>
+
+<ol>
+<li>A button is pressed, either by touch or brain.</li>
+<li>There is a maximum trial duration, which has passed.</li>
+<li>The trial is stopped mid-way, for example because <code>trialsAreRunning</code> becomes <code>false</code>, or an update takes place.</li>
+</ol>
+
+<p>Beneath these are discussed in more detail. </p>
+<h4 id='1-button-presses' class='heading'>1. Button Presses</h4>
+
+<p>If a button is pressed, the framework gives visual feedback. The type of visual feedback depends on the <code>clickFeedbackMode</code> setting, as well as whether the press was by brain or by touch. For example, the pressed button temporarily becomes smaller, as if it is pressed downwards physically. Or the pressed button temporarily becomes white, while all other buttons become gray. During this visual feedback, trials are blocked. If the <code>clickSoundOnPress</code> is <code>true</code>, the framework  provides auditory feedback as well. </p>
+
+<p>Each of the pressed button&rsquo;s actions is performed. Each action has a <code>timing</code>, which you pass when adding an action to a button. This timing determines when the action is performed <em>with respect to</em> the visual feedback. If <code>timing</code> is 0, the action is executed immediately. If it is 1, the action is executed once the visual feedback has finished. If it has a value in between, the action is executed during the visual feedback. </p>
+<h4 id='2-maximum-trial-durations' class='heading'>2. Maximum Trial Durations</h4>
+
+<p>Depending on the settings <code>maxTestTrialDuration</code> and <code>disableMaxTestTrialDuration</code>, trials may have a maximum duration. If this is the case and time runs out, the trial ends. If the <code>disableNoClicks</code> is <code>true</code>, the <em>most likely</em> button will be pressed, just like in the case of a &#39;normal&rsquo; button press. If  <code>disableNoClicks</code> is <code>false</code>, the framework gives visual feedback, indicating that no button is being pressed, and no button actions are performed. </p>
+<h4 id='3-trials-stopped-mid-way' class='heading'>3. Trials Stopped Mid-Way</h4>
+
+<p>If <code>trialsAreRunning</code> is set to <code>false</code> while a trial is running – be it by your own code or because the user swipes up or down with one finger –, the current trial ends as well. In this case there is no visual feedback, except that the flickering stops. </p>
+
+<p>The same happens if trials are being blocked. For example because you push a noise tagging unit (which results in an update), or because you call <code>blockTrials(forDuration:)</code> directly. </p>
+<h3 id='inter-trial-time' class='heading'>Inter-Trial Time</h3>
+
+<p>The minimum time in between trials is defined by the <code>timeInBetweenTrials</code> setting. Note that this is the <em>minimum</em> time, because the actual time in between trials may be larger due to blocking.</p>
+
+<p>The framework applies blocking in between trials in order to provide visual feedback before the next trial starts. Furthermore any actions performed as a result of a button being pressed may perform blocking as well. </p>
+<h2 id='settings' class='heading'>Settings</h2>
+
+<p>You can use <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code>&lsquo;s <code>settings</code> property to customise how the framework operates. </p>
+<h3 id='the-settings-screen' class='heading'>The Settings Screen</h3>
+
+<p>If the <code>enableAccessDeveloperScreen</code> setting is <code>true</code>, the user can double tap with two fingers on the current unit&rsquo;s view in order to bring up the <em>Developer Screen</em>. From this screen the user can navigate to the <em>Settings Screen</em>, where all of <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code>&rsquo;s settings can be changed directly. </p>
+<h3 id='changing-settings-programatically' class='heading'>Changing Settings Programatically</h3>
+
+<p>You access settings by their titles, which are defined in the struct <code><a href="Structs/NoiseTagSettingTitles.html">NoiseTagSettingTitles</a></code>. For example:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">setting_framesPerBit</span> <span class="o">=</span> <span class="kt">NoiseTagging</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="nf">settingWith</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">NoiseTagSettingTitles</span><span class="o">.</span><span class="n">framesPerBit</span><span class="p">)</span>
+</code></pre>
+
+<p>Alternatively you can use some convenience methods of <code>setOfSettings</code> to get or set settings more directly:</p>
+<pre class="highlight swift"><code><span class="c1">// Get an Int setting:</span>
+<span class="n">_</span> <span class="o">=</span> <span class="kt">NoiseTagging</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="nf">intFor</span><span class="p">(</span><span class="kt">NoiseTagSettingTitles</span><span class="o">.</span><span class="n">framesPerBit</span><span class="p">)</span>
+
+<span class="c1">// Set a setting:</span>
+<span class="kt">NoiseTagging</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">NoiseTagSettingTitles</span><span class="o">.</span><span class="n">framesPerBit</span><span class="p">)</span>
+</code></pre>
+<h3 id='important-settings' class='heading'>Important Settings</h3>
+
+<p>You can go through all settings to check which ones are relevant for you, but we want to highlight these two:</p>
+
+<ul>
+<li><strong><code>timeInBetweenTrials</code></strong>: By default this is set to 1 second. Once a user is used to the system, you probably want to decrease this value, increasing overall speed.</li>
+<li><strong><code>certaintyRequiredForClick</code></strong>: The MindAffect Decoder sends predictions to iOS about where the user is looking. Each prediction contains a probability. A button is pressed once this probability passes a certain threshold, which is defined by this setting. If a user has a difficulty brain-pressing any buttons, you may want to lower this threshold. This does mean the chance of the wrong button being pressed increases as well.</li>
+</ul>
+<h2 id='using-noise-tag-controls' class='heading'>Using Noise Tag Controls</h2>
+
+<p>As discussed, the NoiseTagging framework for iOS provides a number of control classes you can use straight out of the box. However, if these do not provide what you want, you can easily define your own brain-pressable buttons. For this, see the next Section (<em>Custom Noise Tag Controls</em>). </p>
+<h3 id='code-noisetagcontrolproperties-code' class='heading'><code><a href="Classes/NoiseTagControlProperties.html">NoiseTagControlProperties</a></code></h3>
+
+<p>Each <code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code> has a <code>noiseTagging</code> property of type <code><a href="Classes/NoiseTagControlProperties.html">NoiseTagControlProperties</a></code>. The purpose of this <code>noiseTagging</code> property is to store a number of things that are needed to make noise tagging work. It is also your main point of access to define how each control behaves as a brain-pressable button. </p>
+
+<p>The most important public part of <code><a href="Classes/NoiseTagControlProperties.html">NoiseTagControlProperties</a></code> is the function <code>addAction(timing:closure:)</code>. As we have seen before, this lets you attach a noise tagging action to a control as follows:</p>
+<pre class="highlight swift"><code><span class="n">control</span><span class="o">.</span><span class="n">noiseTagging</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="nv">timing</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Furthermore, <code><a href="Classes/NoiseTagControlProperties.html">NoiseTagControlProperties</a></code> provides these public variables: <code>identifier</code>, <code>customUtopiaObjectID</code>, <code>participatesInFlickering</code>, <code>enabled</code>, and <code>playClickSoundOnPress</code>. </p>
+
+<p>If you want to implement <code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code> yourselves, please note that the <code>noiseTagging</code> property is provided by the framework automatically, so you do <strong>not</strong> need to implement it yourself.</p>
+<h3 id='actions-and-updates' class='heading'>Actions and Updates</h3>
+
+<p>Please note that although actions are stored inside controls, they are <strong>not</strong> persistent over updates. At the start of each update – for example because a noise tagging unit is pushed or popped –, <em>all</em> control actions are deleted. The advantage of this approach is that there is just one single place where the actions of the current set of controls are being defined, namely in the function  <code>startNoiseTagControlOn(noiseTaggingView:)</code> of the current unit&rsquo;s delegate. Within that function you simply add actions to controls dependent on your own current state. </p>
+<h2 id='custom-noise-tag-controls' class='heading'>Custom Noise Tag Controls</h2>
+
+<p>Besides using the standard control classes provided by the framework, you can easily define your own brain-pressable buttons. You do this by conforming to the <code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code> protocol. </p>
+<h3 id='code-uiview-code-as-code-noisetagcontrol-code' class='heading'><code>UIView</code> as <code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code></h3>
+
+<p>The easiest way to conform to <code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code> is to simply subclass <code>UIView</code>. The NoiseTagging framework defines an extension on <code>UIView</code> which makes <code>UIView</code> conform to <code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code> automatically. This extension provides default implementations of all of <code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code>&rsquo;s obligatory methods and properties. You can override these as you see fit. In the next Section we discuss the methods and properties that <code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code> defines, as well as the default implementations for <code>UIView</code>. </p>
+<h3 id='code-noisetagcontrol-code-methods-and-properties' class='heading'><code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code> Methods and Properties</h3>
+<h4 id='code-func-setflickercolor-color-uicolor-code' class='heading'><code>func setFlickerColor(color: UIColor)</code></h4>
+
+<p>This function is called to show a noise tag on the control. The passed color is the current <em>flicker color</em>, which is a function of the current bit of the control&rsquo;s noise tag. By default <code>UIView</code> sets this color as its layer&rsquo;s background color. </p>
+<h4 id='code-func-setfeedbackcolor-color-uicolor-code' class='heading'><code>func setFeedbackColor(color: UIColor?)</code></h4>
+
+<p>This function is called to show <em>feedback</em> colors on the control, for example for <em>highlighting</em> – indicating that the user should look at the control during calibration –, or for providing visual feedback when there is a button press. By default <code>UIView</code> calls <code>setFlickerColor(color:)</code>, passing this color, or if the color is <code>nil</code>, it calls <code>self.updateUIDependingOnNoiseTagging()</code>. </p>
+<h4 id='code-func-layertohandlenoisetagtaps-gt-calayer-code' class='heading'><code>func layerToHandleNoiseTagTaps() -&gt; CALayer?</code></h4>
+
+<p>In order to allow the user to press buttons using touch, the framework performs a simple kind of hit test. A tap is considered to be on a control if it is in the bounds of the layer returned by this function. By default <code>UIView</code> simply returns its <code>layer</code>.</p>
+<h4 id='code-func-layertoanimateforfeedbackontouchpress-gt-calayer-code' class='heading'><code>func layerToAnimateForfeedbackOnTouchPress() -&gt; CALayer</code></h4>
+
+<p>The framework applies a number of animations to controls. For example it might make a control &#39;wiggle&rsquo; to indicate that the user should look at, or it might animate a control&rsquo;s size when it is pressed by touch. These animations are applied to the layer returned by this function. By default <code>UIView</code> simply returns its <code>layer</code>.</p>
+<h4 id='code-func-layerflickeringpart-gt-calayer-code' class='heading'><code>func layerFlickeringPart() -&gt; CALayer</code></h4>
+
+<p>The framework may use Metal for drawing the parts of the UI that actually flicker. If Metal is used, for each control the contents of the layer returned by this function is what is drawn using Metal, in a view on top of everything else. By default <code>UIView</code> simply returns its <code>layer</code>.</p>
+<h4 id='code-var-ishiddenorisinhiddenview-bool-get-code' class='heading'><code>var isHiddenOrIsInHiddenView: Bool {get}</code></h4>
+
+<p>The hit test we explained above, in the context of <code>layerToHandleNoiseTagTaps</code>, always fails if this function returns <code>true</code>. Also, brain presses are only possible on controls for which this returns <code>false</code>. This prevents that controls that are in the view hierarchy, invisible but enabled, be it by accident or on purpose, can still be pressed. By default <code>UIView</code> returns <code>false</code> only if its <code>isHidden</code> property is <code>false</code> and the same holds for all of its super views. </p>
+<h4 id='code-func-updateuidependingonnoisetagging-code' class='heading'><code>func updateUIDependingOnNoiseTagging()</code></h4>
+
+<p>This allows controls to respond when the state of <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code> changes in some way that might be relevant for their appearance. Currently this only is called when the flickering starts or stops. <code>UIView</code>&lsquo;s default implementation is as follows:</p>
+<pre class="highlight swift"><code><span class="c1">// By default we use setFlickerColor to show the default color for enabled/disabled controls:</span>
+<span class="k">self</span><span class="o">.</span><span class="nf">setFlickerColor</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">noiseTagging</span><span class="o">.</span><span class="n">enabled</span> <span class="p">?</span> <span class="k">self</span><span class="o">.</span><span class="n">defaultColorWhenEnabled</span> <span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">defaultColorWhenDisabled</span><span class="p">)</span>
+</code></pre>
 
           </section>
         </section>

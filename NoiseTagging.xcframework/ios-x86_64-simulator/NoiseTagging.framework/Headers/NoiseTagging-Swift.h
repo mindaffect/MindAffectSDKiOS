@@ -203,144 +203,330 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-@protocol SettingDelegate;
+@protocol SettingObserver;
 @class ResultValidityCheck;
 
+/// Objects conforming to this protocol can be used as <em>Settings</em>. This a.o. means they have a value that can be set and get, and that the NoiseTagging framework can provide the user with UI to edit the setting.
+/// The easiest way to conform to <code>Setting</code> is to subclass <code>Setting_abstract</code>.
+/// seealso:
+/// Settings can be grouped together in a <code>SetOfSettings</code>.
 SWIFT_PROTOCOL("_TtP12NoiseTagging7Setting_")
 @protocol Setting <NSCopying, NSObject>
+/// The setting’s title, as displayed in the UI.
 @property (nonatomic, readonly, copy) NSString * _Nonnull title;
+/// Whether the settings is editable by the user.
 @property (nonatomic) BOOL isEditable;
+/// If the setting is part of a <code>SetOfSettings</code> and UI is displayed to edit that set, this determines whether the setting is also visible in the UI.
 @property (nonatomic) BOOL isVisibleInUI;
+/// An explanation for the user about what the setting  exactly is about.
 @property (nonatomic, copy) NSString * _Nullable help;
-@property (nonatomic, copy) NSArray<id <SettingDelegate>> * _Nonnull observers;
-- (void)addWithObserver:(id <SettingDelegate> _Nonnull)observer;
-- (void)removeWithObserver:(id <SettingDelegate> _Nonnull)observer;
+/// A setting’s observers are informed whenever the setting’s value changes.
+@property (nonatomic, copy) NSArray<id <SettingObserver>> * _Nonnull observers;
+/// Add a new observer, which is informed whenever the setting’s value changes.
+- (void)addWithObserver:(id <SettingObserver> _Nonnull)observer;
+/// Remove an observer, so it is no longer informed whenever the setting’s value changes.
+- (void)removeWithObserver:(id <SettingObserver> _Nonnull)observer;
 @optional
+/// The setting’s value described using JSON. Used for logging purposes.
 @property (nonatomic, readonly) id _Nonnull valueAsJson;
 @required
+/// A description of the setting’s value, assuming a value is defined. Used for logging purposes.
 @property (nonatomic, readonly, copy) NSString * _Nonnull descriptionValueIfDefined;
+/// A description of the setting’s value, be it defined or undefined. Used for logging purposes.
 @property (nonatomic, readonly, copy) NSString * _Nonnull descriptionValue;
+/// Sets the receiver’s setting value to the setting value of <code>newSetting</code>.
 - (void)updateValueToMatchWithNewSetting:(id <Setting> _Nonnull)newSetting;
+/// Settings may have a default value, which can easily be restored by the user using the standard UI for editing settings provided by the NoiseTagging framework.
 @property (nonatomic, readonly) BOOL hasDefaultValue;
+/// Set the setting value to the default value.
+/// seealso:
+/// <code>hasDefaultValue</code>
 - (void)resetToDefault;
+/// The name of the nib used for generating UI for editing the setting.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellNibName;
+/// The NoiseTagging framework provides standard UI for editing settings. This UI consists of a table view, where each cell is used for one setting. The <code>cellReuseIdentifier</code> makes it possible to reuse these cells per setting type.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellReuseIdentifier;
+/// A closure which checks whether a certain value is a valid value for the setting.
+/// This closure gets a ‘candidate’ for the setting’s new value and should return nil if that candidate is ‘valid’. If it is not valid, the closure should return an explanation for the user why the value is not valid.
+/// attention:
+/// Classes that implement the <code>Setting</code> protocol should perform the <code>validityCheck</code> before they actually change their setting value. They should also not forget to copy the <code>validityCheck</code> in their copy function.
 @property (nonatomic, copy) ResultValidityCheck * _Nonnull (^ _Nullable validityCheck)(id _Nonnull);
+/// An optional closures that is executed just before changing the setting’s value:
 @property (nonatomic, copy) void (^ _Nullable actionBeforeChange)(void);
+/// An optional closures that is executed just after changing the setting’s value:
 @property (nonatomic, copy) void (^ _Nullable actionAfterChange)(void);
+/// Whether the setting allows to be undefined.
+/// important:
+/// we do not use optionals for representing specific setting type values. Instead in most cases the concept of ‘undefined’ is irrelevant. This property, as well as <code>allowsUndefined</code>, is only used for implementing the ‘Feedback Screen’, where ‘undefined’ should be the default for all ‘settings’. But these ‘settings’ are only used for logging purposes.
 @property (nonatomic) BOOL allowsUndefined;
+/// Whether the setting is ‘undefined’. Only relevant if <code>allowsUndefined</code> is <code>true</code>.
+/// seealso:
+/// <code>allowsUndefined</code>.
 @property (nonatomic) BOOL isUndefined;
+/// Set the setting value to <code>undefined</code>.
+/// seealso:
+/// <code>allowsUndefined</code>.
 - (void)setToUndefined;
 @end
 
 
+/// Setting classes can subclass this abstract class to more easily implement the <code>Setting</code> protocol.
+/// important:
+/// subclasses should call <code>valueWillChange</code> and <code>valueChanged</code> at appropriate times.
 SWIFT_CLASS("_TtC12NoiseTagging16Setting_abstract")
 @interface Setting_abstract : NSObject
+/// The setting’s title, as displayed in the UI.
 @property (nonatomic, readonly, copy) NSString * _Nonnull title;
+/// Whether the settings is editable by the user.
+/// Settings are editable by default.
 @property (nonatomic) BOOL isEditable;
+/// If the setting is part of a <code>SetOfSettings</code> and UI is displayed to edit that set, this determines whether the setting is also visible in the UI.
+/// Settings are visible by default.
 @property (nonatomic) BOOL isVisibleInUI;
+/// An explanation for the user about what the setting exactly is about.
 @property (nonatomic, copy) NSString * _Nullable help;
-@property (nonatomic, copy) NSArray<id <SettingDelegate>> * _Nonnull observers;
+/// A setting’s observers are informed whenever the setting’s value changes.
+@property (nonatomic, copy) NSArray<id <SettingObserver>> * _Nonnull observers;
+/// A closure which checks whether a certain value is a valid value for the setting.
+/// This closure gets a ‘candidate’ for the setting’s new value and should return nil if that candidate is ‘valid’. If it is not valid, the closure should return an explanation for the user why the value is not valid.
+/// attention:
+/// Classes that implement the <code>Setting</code> protocol should perform the <code>validityCheck</code> before they actually change their setting value. They should also not forget to copy the <code>validityCheck</code> in their copy function.
 @property (nonatomic, copy) ResultValidityCheck * _Nonnull (^ _Nullable validityCheck)(id _Nonnull);
+/// An optional closures that is executed just before changing the setting’s value:
 @property (nonatomic, copy) void (^ _Nullable actionBeforeChange)(void);
+/// An optional closures that is executed just after changing the setting’s value:
 @property (nonatomic, copy) void (^ _Nullable actionAfterChange)(void);
+/// Whether the setting allows to be undefined.
+/// Settings cannot be undefined by default.
+/// important:
+/// we do not use optionals for representing specific setting type values. Instead in most cases the concept of ‘undefined’ is irrelevant. This property, as well as <code>allowsUndefined</code>, is only used for implementing the ‘Feedback Screen’, where ‘undefined’ should be the default for all ‘settings’. But these ‘settings’ are only used for logging purposes.
 @property (nonatomic) BOOL allowsUndefined;
+/// Whether the setting is ‘undefined’. Only relevant if <code>allowsUndefined</code> is <code>true</code>.
+/// seealso:
+/// <code>allowsUndefined</code>.
 @property (nonatomic) BOOL isUndefined;
+/// Set the setting value to <code>undefined</code>.
+/// By default this means setting <code>allowsUndefined</code> and <code>isUndefined</code> to <code>true</code>.
+/// seealso:
+/// <code>allowsUndefined</code>.
 - (void)setToUndefined;
+/// Subclasses should NOT override <code>descriptionValue</code>. Instead they should implement <code>descriptionValueIfDefined</code>.
 @property (nonatomic, readonly, copy) NSString * _Nonnull descriptionValue;
-- (void)addWithObserver:(id <SettingDelegate> _Nonnull)observer;
-- (void)removeWithObserver:(id <SettingDelegate> _Nonnull)observer;
+/// Add a new observer, which is informed whenever the setting’s value changes.
+- (void)addWithObserver:(id <SettingObserver> _Nonnull)observer;
+/// Remove an observer, so it is no longer informed whenever the setting’s value changes.
+- (void)removeWithObserver:(id <SettingObserver> _Nonnull)observer;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class NSCoder;
 
+/// A <code>Setting</code> with a <code>Bool</code> value.
 SWIFT_CLASS("_TtC12NoiseTagging11BoolSetting")
 @interface BoolSetting : Setting_abstract <NSCoding, Setting>
+/// Copy the <code>BoolSetting</code>.
+/// seealso:
+/// <code>NSCopying</code>.
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
+/// Encode the <code>BoolSetting</code>.
+/// seealso:
+/// <code>NSCoding</code>.
 - (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
+/// Initialize a new <code>BoolSetting</code> by decoding from <code>aDecoder</code>.
+/// seealso:
+/// <code>NSCoding</code>.
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// A user-friendly description of the <code>BoolSetting</code>.
+/// seealso:
+/// <code>CustomStringConvertible</code>.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
+/// A description of the setting’s value, assuming a value is defined. Used for logging purposes.
 @property (nonatomic, readonly, copy) NSString * _Nonnull descriptionValueIfDefined;
+/// The setting’s value described using JSON. Used for logging purposes.
 @property (nonatomic, readonly) id _Nonnull valueAsJson;
+/// Sets the receiver’s setting value to the setting value of <code>newSetting</code>.
 - (void)updateValueToMatchWithNewSetting:(id <Setting> _Nonnull)newSetting;
+/// Settings may have a default value, which can easily be restored by the user using the standard UI for editing settings provided by the NoiseTagging framework.
 @property (nonatomic, readonly) BOOL hasDefaultValue;
+/// Set the setting value to the default value.
+/// seealso:
+/// <code>hasDefaultValue</code>
 - (void)resetToDefault;
+/// The name of the nib used for generating UI for editing the setting.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellNibName;
+/// The NoiseTagging framework provides standard UI for editing settings. This UI consists of a table view, where each cell is used for one setting. The <code>cellReuseIdentifier</code> makes it possible to reuse these cells per setting type.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellReuseIdentifier;
 @end
 
 
 
 
+/// A <code>Setting</code> with a color value.
+/// The color is defined by one of two options:
+/// <ol>
+///   <li>
+///     It is one of the ‘pickable colors’, which are predefined colors (<code>PickableColor</code>) as set on <code>var pickableColors</code>.
+///   </li>
+///   <li>
+///     It is specified using RGBA.
+///   </li>
+/// </ol>
 SWIFT_CLASS("_TtC12NoiseTagging12ColorSetting")
 @interface ColorSetting : Setting_abstract <Setting>
+/// Copy the <code>ColorSetting</code>.
+/// seealso:
+/// <code>NSCopying</code>.
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
+/// A user-friendly description of the <code>ColorSetting</code>.
+/// seealso:
+/// <code>CustomStringConvertible</code>.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
+/// A description of the setting’s value, assuming a value is defined. Used for logging purposes.
 @property (nonatomic, readonly, copy) NSString * _Nonnull descriptionValueIfDefined;
+/// Sets the receiver’s setting value to the setting value of <code>newSetting</code>.
 - (void)updateValueToMatchWithNewSetting:(id <Setting> _Nonnull)newSetting;
+/// Settings may have a default value, which can easily be restored by the user using the standard UI for editing settings provided by the NoiseTagging framework.
 @property (nonatomic, readonly) BOOL hasDefaultValue;
+/// Set the setting value to the default value.
+/// seealso:
+/// <code>hasDefaultValue</code>
 - (void)resetToDefault;
+/// The name of the nib used for generating UI for editing the setting.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellNibName;
+/// The NoiseTagging framework provides standard UI for editing settings. This UI consists of a table view, where each cell is used for one setting. The <code>cellReuseIdentifier</code> makes it possible to reuse these cells per setting type.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellReuseIdentifier;
 @end
 
 
+/// A <code>Setting</code> with a <code>Double</code> value.
 SWIFT_CLASS("_TtC12NoiseTagging13DoubleSetting")
 @interface DoubleSetting : Setting_abstract <NSCoding, Setting>
+/// Copy the <code>DoubleSetting</code>.
+/// seealso:
+/// <code>NSCopying</code>.
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
+/// Encode the <code>DoubleSetting</code>.
+/// seealso:
+/// <code>NSCoding</code>.
 - (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
+/// Initialize a new <code>DoubleSetting</code> by decoding from <code>aDecoder</code>.
+/// seealso:
+/// <code>NSCoding</code>.
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// A user-friendly description of the <code>DoubleSetting</code>.
+/// seealso:
+/// <code>CustomStringConvertible</code>.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
+/// A description of the setting’s value, assuming a value is defined. Used for logging purposes.
 @property (nonatomic, readonly, copy) NSString * _Nonnull descriptionValueIfDefined;
+/// The setting’s value described using JSON. Used for logging purposes.
 @property (nonatomic, readonly) id _Nonnull valueAsJson;
+/// Sets the receiver’s setting value to the setting value of <code>newSetting</code>.
 - (void)updateValueToMatchWithNewSetting:(id <Setting> _Nonnull)newSetting;
+/// Settings may have a default value, which can easily be restored by the user using the standard UI for editing settings provided by the NoiseTagging framework.
 @property (nonatomic, readonly) BOOL hasDefaultValue;
+/// Set the setting value to the default value.
+/// seealso:
+/// <code>hasDefaultValue</code>
 - (void)resetToDefault;
+/// The name of the nib used for generating UI for editing the setting.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellNibName;
+/// The NoiseTagging framework provides standard UI for editing settings. This UI consists of a table view, where each cell is used for one setting. The <code>cellReuseIdentifier</code> makes it possible to reuse these cells per setting type.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellReuseIdentifier;
 @end
 
 
+/// A <code>Setting</code> with a <code>EnumAsSettingProtocol</code> value.
 SWIFT_CLASS("_TtC12NoiseTagging11EnumSetting")
 @interface EnumSetting : Setting_abstract <Setting>
+/// Copy the <code>EnumSetting</code>.
+/// seealso:
+/// <code>NSCopying</code>.
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
+/// A user-friendly description of the <code>EnumSetting</code>.
+/// seealso:
+/// <code>CustomStringConvertible</code>.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
+/// A description of the setting’s value, assuming a value is defined. Used for logging purposes.
 @property (nonatomic, readonly, copy) NSString * _Nonnull descriptionValueIfDefined;
+/// Sets the receiver’s setting value to the setting value of <code>newSetting</code>.
 - (void)updateValueToMatchWithNewSetting:(id <Setting> _Nonnull)newSetting;
+/// Settings may have a default value, which can easily be restored by the user using the standard UI for editing settings provided by the NoiseTagging framework.
 @property (nonatomic, readonly) BOOL hasDefaultValue;
+/// Set the setting value to the default value.
+/// seealso:
+/// <code>hasDefaultValue</code>
 - (void)resetToDefault;
+/// The name of the nib used for generating UI for editing the setting.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellNibName;
+/// The NoiseTagging framework provides standard UI for editing settings. This UI consists of a table view, where each cell is used for one setting. The <code>cellReuseIdentifier</code> makes it possible to reuse these cells per setting type.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellReuseIdentifier;
 @end
 
 
+/// A <code>Setting</code> with an <code>Int</code> value.
 SWIFT_CLASS("_TtC12NoiseTagging10IntSetting")
 @interface IntSetting : Setting_abstract <NSCoding, Setting>
+/// Copy the <code>IntSetting</code>.
+/// seealso:
+/// <code>NSCopying</code>.
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
+/// Encode the <code>IntSetting</code>.
+/// seealso:
+/// <code>NSCoding</code>.
 - (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
+/// Initialize a new <code>IntSetting</code> by decoding from <code>aDecoder</code>.
+/// seealso:
+/// <code>NSCoding</code>.
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// A user-friendly description of the <code>IntSetting</code>.
+/// seealso:
+/// <code>CustomStringConvertible</code>.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
+/// A description of the setting’s value, assuming a value is defined. Used for logging purposes.
 @property (nonatomic, readonly, copy) NSString * _Nonnull descriptionValueIfDefined;
+/// The setting’s value described using JSON. Used for logging purposes.
 @property (nonatomic, readonly) id _Nonnull valueAsJson;
+/// Sets the receiver’s setting value to the setting value of <code>newSetting</code>.
 - (void)updateValueToMatchWithNewSetting:(id <Setting> _Nonnull)newSetting;
+/// Settings may have a default value, which can easily be restored by the user using the standard UI for editing settings provided by the NoiseTagging framework.
 @property (nonatomic, readonly) BOOL hasDefaultValue;
+/// Set the setting value to the default value.
+/// seealso:
+/// <code>hasDefaultValue</code>
 - (void)resetToDefault;
+/// The name of the nib used for generating UI for editing the setting.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellNibName;
+/// The NoiseTagging framework provides standard UI for editing settings. This UI consists of a table view, where each cell is used for one setting. The <code>cellReuseIdentifier</code> makes it possible to reuse these cells per setting type.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellReuseIdentifier;
 @end
 
 
+/// A <code>Setting</code> which models an array of possible values and one of those values being selected.
 SWIFT_CLASS("_TtC12NoiseTagging18ItemOfArraySetting")
 @interface ItemOfArraySetting : Setting_abstract <Setting>
+/// Copy the <code>ItemOfArraySetting</code>.
+/// seealso:
+/// <code>NSCopying</code>.
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
+/// A user-friendly description of the <code>ItemOfArraySetting</code>.
+/// seealso:
+/// <code>CustomStringConvertible</code>.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
+/// A description of the setting’s value, assuming a value is defined. Used for logging purposes.
 @property (nonatomic, readonly, copy) NSString * _Nonnull descriptionValueIfDefined;
+/// Sets the receiver’s setting value to the setting value of <code>newSetting</code>.
 - (void)updateValueToMatchWithNewSetting:(id <Setting> _Nonnull)newSetting;
+/// Settings may have a default value, which can easily be restored by the user using the standard UI for editing settings provided by the NoiseTagging framework.
 @property (nonatomic, readonly) BOOL hasDefaultValue;
+/// Set the setting value to the default value.
+/// seealso:
+/// <code>hasDefaultValue</code>
 - (void)resetToDefault;
+/// The name of the nib used for generating UI for editing the setting.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellNibName;
+/// The NoiseTagging framework provides standard UI for editing settings. This UI consists of a table view, where each cell is used for one setting. The <code>cellReuseIdentifier</code> makes it possible to reuse these cells per setting type.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellReuseIdentifier;
 @end
 
@@ -348,20 +534,31 @@ SWIFT_CLASS("_TtC12NoiseTagging18ItemOfArraySetting")
 
 @class UIColor;
 
+/// A button with either a title or an image.
 SWIFT_CLASS("_TtC12NoiseTagging18NoiseTagButtonView")
 @interface NoiseTagButtonView : UIView
+/// Implementation of <code>NoiseTagControl</code>‘s <code>setFlickerColor(color)</code> function. We simply set the passed <code>color</code> as our layer’s background color.
 - (void)setFlickerColorWithColor:(UIColor * _Nonnull)color;
+/// Initialize a new <code>NoiseTagButtonView</code>.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// We override <code>layoutSubviews</code> to keep our layout correct whenever our <code>bounds</code> change.
 - (void)layoutSubviews;
+/// Initialize using the passed <code>frame</code>.
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+/// Initialize from the passed <code>NSCoder</code>.
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// A noisetagging button consisting of two parts: a flickering part with an image, and an optionally non-flickering part with a title.
 SWIFT_CLASS("_TtC12NoiseTagging25NoiseTagLabeledButtonView")
 @interface NoiseTagLabeledButtonView : UIView
+/// Initialize from the passed <code>NSCoder</code>.
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// Implementation of <code>NoiseTagControl</code>’s <code>setFlickerColor(color)</code> function.
+/// The part of us where we display the image always flickers. The part of us where we display the title only flickers if the <code>labeledButtonsOnlyPartlyFlicker</code> setting is <code>false</code>.
 - (void)setFlickerColorWithColor:(UIColor * _Nonnull)color;
+/// We override this in order to hide the line that divides our two parts  when flickering is on.
 - (void)updateUIDependingOnNoiseTagging;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
@@ -373,21 +570,51 @@ SWIFT_CLASS("_TtC12NoiseTagging20NoiseTagCheckBoxView")
 @end
 
 
+/// Objects conforming to <code>NoiseTagControl</code> are <em>controls</em>. Being a control means being a brain-pressable button.
+/// The most important tasks of these buttons are:
+/// <ol>
+///   <li>
+///     to show noise tags, and
+///   </li>
+///   <li>
+///     to perform actions when they are being pressed, be it by brain or finger.
+///   </li>
+/// </ol>
+/// In the future non-button control types might become availalable as well.
+/// <ul>
+///   <li>
+///     See Also: Check out the Main Programming Guide for details on how to make your own <code>NoiseTagControl</code>-conformant classes.
+///   </li>
+/// </ul>
 SWIFT_PROTOCOL("_TtP12NoiseTagging15NoiseTagControl_")
 @protocol NoiseTagControl <NSObject>
+/// This function is called by <code>NoiseTagging</code> to show a noise tag on the control.
+/// \param color The current <em>flicker color</em>, which is a function of the current bit of the control’s noise tag. The control should show this color, e.g. by setting it as its background color.
+///
 - (void)setFlickerColorWithColor:(UIColor * _Nonnull)color;
+/// This function is called by <code>NoiseTagging</code> to show <em>feedback</em> colors on the control, for example for <em>highlighting</em> – indicating that the user should look at the control during calibration –, or for providing visual feedback when there is a button press. By default <code>UIView</code> calls <code>setFlickerColor(color:)</code>, passing this color, or if the color is <code>nil</code>, it calls <code>self.updateUIDependingOnNoiseTagging()</code>.
+/// \param color The color that should be used for providing the feedback.
+///
 - (void)setFeedbackColorWithColor:(UIColor * _Nullable)color;
+/// In order to allow the user to press buttons using touch, the framework performs a simple kind of hit test. A tap is considered to be on a control if it is in the bounds of the layer returned by this function. By default <code>UIView</code> simply returns its <code>layer</code>.
 - (CALayer * _Nullable)layerToHandleNoiseTagTaps SWIFT_WARN_UNUSED_RESULT;
-- (CALayer * _Nonnull)layerToAnimateForfeedbackOnTouchPress SWIFT_WARN_UNUSED_RESULT;
+/// The framework applies a number of animations to controls. For example it might make a control ‘wiggle’ to indicate that the user should look at, or it might animate a control’s size when it is pressed by touch. These animations are applied to the layer returned by this function. By default <code>UIView</code> simply returns its <code>layer</code>.
+- (CALayer * _Nonnull)layerForFeedbackAnimations SWIFT_WARN_UNUSED_RESULT;
+/// The framework may use Metal for drawing the parts of the UI that actually flicker. If Metal is used, for each control the contents of the layer returned by this function is what is drawn using Metal, in a view on top of everything else. By default <code>UIView</code> simply returns its <code>layer</code>.
 - (CALayer * _Nonnull)layerFlickeringPart SWIFT_WARN_UNUSED_RESULT;
+/// The hit test applied by <code>layerToHandleNoiseTagTaps</code> always fails if this function returns <code>true</code>. Also, brain presses are only possible on controls for which this returns <code>false</code>. This prevents that controls that are in the view hierarchy, invisible but enabled, be it by accident or on purpose, can still be pressed. By default <code>UIView</code> returns <code>false</code> only if its <code>isHidden</code> property is <code>false</code> and the same holds for all of its super views.
 @property (nonatomic, readonly) BOOL isHiddenOrIsInHiddenView;
+/// This function allows controls to respond when the state of <code>NoiseTagging</code> changes in some way that might be relevant for their appearance. Currently this only is called when the flickering starts or stops. <code>UIView</code>’s default implementation is as follows:
 - (void)updateUIDependingOnNoiseTagging;
 @optional
+/// Allows controls to respond when the value of <code>self.noiseTagging.participatesInFlickering</code> changes.
 - (void)participatesInFlickering_didChangeValue;
+/// Allows controls to respond when the value of <code>self.noiseTagging.enabled</code> changes.
 - (void)noiseTagControlIsEnabled_didChangeValue;
 @end
 
 
+/// Each <code>NoiseTagControl</code> has a <code>noiseTagging</code> property of type <code>NoiseTagControlProperties</code>. The purpose of this <code>noiseTagging</code> property is to store a number of things that are needed to make noise tagging work. It is also your main point of access to define how each control behaves as a brain-pressable button.
 SWIFT_CLASS("_TtC12NoiseTagging25NoiseTagControlProperties")
 @interface NoiseTagControlProperties : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -406,39 +633,73 @@ SWIFT_CLASS("_TtC12NoiseTagging18NoiseTagController")
 
 
 @interface NoiseTagController (SWIFT_EXTENSION(NoiseTagging))
+/// In the future this will no longer be public.
 + (NSInteger)nFramesPerBit SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
+/// The main responsibility of a <code>NoiseTagDelegate</code> is to prepare a unit for brain control by assigning actions to controls.
 SWIFT_PROTOCOL("_TtP12NoiseTagging16NoiseTagDelegate_")
 @protocol NoiseTagDelegate
+/// When a unit becomes the current unit – because it has been pushed, or because another unit was popped –, or if <code>NoiseTagging.update(view:forNoiseTaggingWithDelegate:)</code> is called, <code>NoiseTagging</code> calls this function on the delegate.
+/// <ul>
+///   <li>
+///     Example:
+///   </li>
+/// </ul>
+/// \code
+/// func startNoiseTagControlOn(noiseTaggingView: UIView) {
+///        // Add noise tagging actions:
+///
+///        // For some types of controls you add actions directly:
+///        someNoiseTagButtonView.noiseTagging.addAction(timing: 1) {
+///            // This code is executed when the button is pressed:
+///            print("Hello")
+///        }
+///
+///        // For some types of controls you add actions indirectly. E.g. a NoiseTagPopupButtonView's action always is the same and you only need to enable brain control on it:
+///        someNoiseTagPopupButtonView.noiseTagControlIsOn = true
+///    }
+///
+/// \endcode
 - (void)startNoiseTagControlOnNoiseTaggingView:(UIView * _Nonnull)noiseTaggingView;
 @optional
+/// Called whenever the <code>mode</code> of <code>NoiseTagging</code> changes.
 - (void)respondToNoiseTagModeChange;
-- (NSNumber * _Nullable)overridingNoiseTag SWIFT_WARN_UNUSED_RESULT;
+/// Called after each update for logging purposes. If the delegate returns a <em>context description</em>, this is logged.
 - (NSString * _Nullable)contextDescription SWIFT_WARN_UNUSED_RESULT;
+/// Called whenever a trial ends because the maximum trial duration has passed and no control is being pressed.
 - (void)respondToNoClick;
+/// Called just before the flickering starts.
 - (NSNumber * _Nullable)preparePlay SWIFT_WARN_UNUSED_RESULT;
 /// Optionally define an alternative background color for the view. By default the color is defined by <code>NoiseTagController</code>’s <code>defaultBackgroundColorPrimary</code> setting.
 - (UIColor * _Nullable)customBackgroundColorForView:(UIView * _Nonnull)view SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<CALayer *> * _Nonnull)activeLayers SWIFT_WARN_UNUSED_RESULT;
+/// In some modes the framework randomly selects one of the controls as the <em>target</em>. By implementing this function, the delegate can limit the set of controls that can be selected as the target.
 - (NSArray<NSString *> * _Nullable)idsOfControlsToIncludeAsTargetInVerifyModeWithNoiseTaggingView:(UIView * _Nonnull)noiseTaggingView SWIFT_WARN_UNUSED_RESULT;
+/// This is part of functionality that will become available later on.
 - (id <NoiseTagControl> _Nullable)nextTarget SWIFT_WARN_UNUSED_RESULT;
+/// This is part of functionality that will become available later on.
 - (void)trialEnded;
 @end
 
 
 @class UIPopoverPresentationController;
 
+/// A <code>NoiseTagLabeledButtonView</code> which when pressed lets the user pick one out of a list of possible items in a popover.
 SWIFT_CLASS("_TtC12NoiseTagging23NoiseTagPopupButtonView")
 @interface NoiseTagPopupButtonView : NoiseTagLabeledButtonView <NoiseTagDelegate, UIPopoverPresentationControllerDelegate>
+/// Initialize a new <code>NoiseTagPopupButtonView</code> from the passed <code>coder</code>.
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// When a <code>NoiseTagPopupButtonView</code>, it presents a popover and pushes a new unit on the noise tagging stack. It becomes this unit’s delegate. In this <code>NoiseTagDelegate</code> function is prepare the popover’s contents for noise tagging control.
 - (void)startNoiseTagControlOnNoiseTaggingView:(UIView * _Nonnull)noiseTaggingView;
+/// See <code>UIPopoverPresentationControllerDelegate</code>.
 - (BOOL)popoverPresentationControllerShouldDismissPopover:(UIPopoverPresentationController * _Nonnull)_ SWIFT_WARN_UNUSED_RESULT;
+/// See <code>UIPopoverPresentationControllerDelegate</code>.
 - (void)popoverPresentationControllerDidDismissPopover:(UIPopoverPresentationController * _Nonnull)popoverPresentationController;
 @end
 
 
+/// Used for modeling the items a user can choose from in a <code>NoiseTagPopupButtonView</code>.
 SWIFT_CLASS("_TtC12NoiseTagging17NoiseTagPopupItem")
 @interface NoiseTagPopupItem : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -452,14 +713,16 @@ SWIFT_CLASS("_TtC12NoiseTagging19NoiseTagRadioButton")
 @end
 
 
-SWIFT_PROTOCOL("_TtP12NoiseTagging15SettingDelegate_")
-@protocol SettingDelegate
+/// Each <code>Setting</code> can have one or more observers, which are informed whenever the setting changes value.
+SWIFT_PROTOCOL("_TtP12NoiseTagging15SettingObserver_")
+@protocol SettingObserver
+/// Whenever a <code>Setting</code>’s value changes, it calls this on each of its <code>observers</code>.
 - (void)valueChangedForSetting:(id <Setting> _Nonnull)setting;
 @end
 
 
 SWIFT_CLASS("_TtC12NoiseTagging13SetOfSettings")
-@interface SetOfSettings : NSObject <NSCoding, NSCopying, SettingDelegate>
+@interface SetOfSettings : NSObject <NSCoding, NSCopying, SettingObserver>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
 - (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
@@ -478,18 +741,25 @@ SWIFT_CLASS("_TtC12NoiseTagging21NoiseTagSetOfSettings")
 @end
 
 
+/// A <code>NoiseTagButtonView</code>, but with a shape defined by a <code>CGPath</code> instead of a regular rectangle.
 SWIFT_CLASS("_TtC12NoiseTagging23NoiseTagShapeButtonView")
 @interface NoiseTagShapeButtonView : NoiseTagButtonView
+/// Initialize using the passed <code>frame</code>.
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+/// Initialize from the passed <code>NSCoder</code>.
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// See <code>NoiseTagControl</code>.
 - (CALayer * _Nullable)layerToHandleNoiseTagTaps SWIFT_WARN_UNUSED_RESULT;
+/// See <code>NoiseTagControl</code>.
 - (void)setFlickerColorWithColor:(UIColor * _Nonnull)color;
+/// See <code>NoiseTagControl</code>.
 - (void)noiseTagControlIsEnabled_didChangeValue;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+/// A <code>PickableColor</code> models a color that can be selected as a <code>ColorSetting</code>’s current value.
 SWIFT_CLASS("_TtC12NoiseTagging13PickableColor")
 @interface PickableColor : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -508,18 +778,40 @@ SWIFT_CLASS("_TtC12NoiseTagging19ResultValidityCheck")
 
 
 
+/// A <code>Setting</code> with a <code>String</code> value.
 SWIFT_CLASS("_TtC12NoiseTagging11TextSetting")
 @interface TextSetting : Setting_abstract <NSCoding, Setting>
+/// Copy the <code>StringSetting</code>.
+/// seealso:
+/// <code>NSCopying</code>.
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
+/// Encode the <code>StringSetting</code>.
+/// seealso:
+/// <code>NSCoding</code>.
 - (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
+/// Initialize a new <code>StringSetting</code> by decoding from <code>aDecoder</code>.
+/// seealso:
+/// <code>NSCoding</code>.
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// A user-friendly description of the <code>StringSetting</code>.
+/// seealso:
+/// <code>CustomStringConvertible</code>.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
+/// A description of the setting’s value, assuming a value is defined. Used for logging purposes.
 @property (nonatomic, readonly, copy) NSString * _Nonnull descriptionValueIfDefined;
+/// The setting’s value described using JSON. Used for logging purposes.
 @property (nonatomic, readonly) id _Nonnull valueAsJson;
+/// Sets the receiver’s setting value to the setting value of <code>newSetting</code>.
 - (void)updateValueToMatchWithNewSetting:(id <Setting> _Nonnull)newSetting;
+/// Settings may have a default value, which can easily be restored by the user using the standard UI for editing settings provided by the NoiseTagging framework.
 @property (nonatomic, readonly) BOOL hasDefaultValue;
+/// Set the setting value to the default value.
+/// seealso:
+/// <code>hasDefaultValue</code>
 - (void)resetToDefault;
+/// The name of the nib used for generating UI for editing the setting.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellNibName;
+/// The NoiseTagging framework provides standard UI for editing settings. This UI consists of a table view, where each cell is used for one setting. The <code>cellReuseIdentifier</code> makes it possible to reuse these cells per setting type.
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellReuseIdentifier;
 @end
 
@@ -538,7 +830,7 @@ SWIFT_CLASS("_TtC12NoiseTagging11TextSetting")
 - (void)setFeedbackColorWithColor:(UIColor * _Nullable)color;
 - (CALayer * _Nullable)layerToHandleNoiseTagTaps SWIFT_WARN_UNUSED_RESULT;
 - (CALayer * _Nonnull)layerFlickeringPart SWIFT_WARN_UNUSED_RESULT;
-- (CALayer * _Nonnull)layerToAnimateForfeedbackOnTouchPress SWIFT_WARN_UNUSED_RESULT;
+- (CALayer * _Nonnull)layerForFeedbackAnimations SWIFT_WARN_UNUSED_RESULT;
 - (void)updateUIDependingOnNoiseTagging;
 @end
 

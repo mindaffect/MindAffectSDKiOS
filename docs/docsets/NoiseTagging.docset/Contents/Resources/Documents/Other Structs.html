@@ -14,7 +14,7 @@
     <a title="Other Structures  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">NoiseTagging Docs</a> (25% documented)</p>
+        <p><a href="index.html">NoiseTagging Docs</a> (78% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -74,7 +74,7 @@
                 <a href="Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/LocationLabel.html">LocationLabel</a>
+                <a href="Classes/NoiseTagLabeledButtonView/LocationLabel.html">– LocationLabel</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
@@ -132,6 +132,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Other%20Guides.html">Other Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="license.html">LICENSE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -184,7 +192,7 @@
                 <a href="Protocols/Setting.html">Setting</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/SettingDelegate.html">SettingDelegate</a>
+                <a href="Protocols/SettingObserver.html">SettingObserver</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SettingSubscriber.html">SettingSubscriber</a>
@@ -226,9 +234,9 @@
                       <div class="abstract">
                         <p>Struct containing titles of settings used by the NoiseTagging framework.</p>
 
-<p>The Noise Tagging framework makes use of settings, as defined by <code>NoiseTagging.setOfSettings</code>. You access these settings by their titles, which are defined in this struct.</p>
+<p>The Noise Tagging framework makes use of settings, as defined by <code>NoiseTagging.settings</code>. You access these settings by their titles, which are defined in this struct.</p>
 <h1 id='example' class='heading'>Example</h1>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">setting_framesPerBit</span> <span class="o">=</span> <span class="kt">NoiseTagging</span><span class="o">.</span><span class="n">setOfSettings</span><span class="o">.</span><span class="nf">settingWith</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">NoiseTagSettingTitles</span><span class="o">.</span><span class="n">framesPerBit</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">setting_framesPerBit</span> <span class="o">=</span> <span class="kt">NoiseTagging</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="nf">settingWith</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">NoiseTagSettingTitles</span><span class="o">.</span><span class="n">framesPerBit</span><span class="p">)</span>
 </code></pre>
 
                         <a href="Structs/NoiseTagSettingTitles.html" class="slightly-smaller">See more</a>

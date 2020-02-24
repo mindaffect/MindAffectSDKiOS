@@ -54,7 +54,7 @@ And we implement `NoiseTagDelegate`'s one required function:
 ```Swift
 func startNoiseTagControlOn(noiseTaggingView: UIView) {
 	// Add noise tagging actions:
-	flickeringButton.noiseTagging.addAction(timing: 0) {
+	flickeringButton.noiseTagging.addAction(timing: 1) {
 		print("Hello")
 	}
 }
@@ -110,7 +110,7 @@ class ViewController: UIViewController, NoiseTagDelegate {
 	
 	func startNoiseTagControlOn(noiseTaggingView: UIView) {
 		// Add noise tagging actions:
-		flickeringButton.noiseTagging.addAction(timing: 0) {
+		flickeringButton.noiseTagging.addAction(timing: 1) {
 			print("Hello")
 		}
 	}
@@ -119,31 +119,5 @@ class ViewController: UIViewController, NoiseTagDelegate {
 
 ## Further Reading
 
-We recommend that next you read the *Main Programming Guide*. This guide provides an overview of everything you need to know to start developing your own amazing, brain-controllable iOS apps!
+We recommend that next you read the **`Main Programming Guide`**. This guide provides an overview of everything you need to know to start developing your own amazing, brain-controllable iOS apps!
 
-
-<!---
-
-### The Noise Tagging Stack
-
-For you to understand what is going on in the next steps, let us first discuss the *noise tagging stack*. 
-
-The noise tagging stack is maintained by NoiseTagging and is a stack of *noise tagging units*. Each noise tagging unit consists of a `UIView` and a `NoiseTagDelegate`. Units can be pushed onto the stack and they can be popped. The unit at the top of the stack is the *active unit*. 
-
-Your code and NoiseTagging work togethether in order to make the appropriate buttons flicker, based on the active unit. This works as follows:
-1. You push a noise tagging unit by calling `NoiseTagging.push:view:forNoiseTaggingWithDelegate`, passing a view and a delegate. 
-2. NoiseTagging calls `startNoiseTagControlOn:noiseTaggingView` on the delegate, passing the view.
-3. The delegate assigns *noise tagging actions* to buttons. The view is passed so you can have one object which is the delegate for multiple units and use that view to know which buttons should get actions. 
-4. NoiseTagging takes care of performing the set noise tagging actions whenever a button is pressed. 
-
-### Implement the NoiseTagDelegate Protocol
-
-
-
-
-Use the Framework
-Simple Example
-Related articles
-
-
---->

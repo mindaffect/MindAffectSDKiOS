@@ -14,7 +14,7 @@
     <a title="Setting_abstract Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NoiseTagging Docs</a> (25% documented)</p>
+        <p><a href="../index.html">NoiseTagging Docs</a> (78% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -74,7 +74,7 @@
                 <a href="../Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/LocationLabel.html">LocationLabel</a>
+                <a href="../Classes/NoiseTagLabeledButtonView/LocationLabel.html">– LocationLabel</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
@@ -132,6 +132,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other%20Guides.html">Other Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../license.html">LICENSE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -184,7 +192,7 @@
                 <a href="../Protocols/Setting.html">Setting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/SettingDelegate.html">SettingDelegate</a>
+                <a href="../Protocols/SettingObserver.html">SettingObserver</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/SettingSubscriber.html">SettingSubscriber</a>
@@ -211,7 +219,12 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Setting classes can subclass this abstract class to more easily implement the <code><a href="../Protocols/Setting.html">Setting</a></code> protocol.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    subclasses should call <code>valueWillChange</code> and <code>valueChanged</code> at appropriate times.
+
+</div>
 
           </section>
           <section class="section task-group-section">
@@ -230,7 +243,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The setting&rsquo;s title, as displayed in the UI.</p>
 
                       </div>
                       <div class="declaration">
@@ -258,7 +271,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Whether the settings is editable by the user.</p>
+
+<p>Settings are editable by default.</p>
 
                       </div>
                       <div class="declaration">
@@ -286,7 +301,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>If the setting is part of a <code><a href="../Classes/SetOfSettings.html">SetOfSettings</a></code> and UI is displayed to edit that set, this determines whether the setting is also visible in the UI.</p>
+
+<p>Settings are visible by default.</p>
 
                       </div>
                       <div class="declaration">
@@ -314,7 +331,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An explanation for the user about what the setting exactly is about.</p>
 
                       </div>
                       <div class="declaration">
@@ -342,7 +359,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A setting&rsquo;s observers are informed whenever the setting&rsquo;s value changes.</p>
 
                       </div>
                       <div class="declaration">
@@ -350,7 +367,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">observers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/SettingDelegate.html">SettingDelegate</a></span><span class="p">]</span></code></pre>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">observers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/SettingObserver.html">SettingObserver</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -370,7 +387,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A closure which checks whether a certain value is a valid value for the setting.</p>
+
+<p>This closure gets a &lsquo;candidate&rsquo; for the setting&rsquo;s new value and should return nil if that candidate is &lsquo;valid&rsquo;. If it is not valid, the closure should return an explanation for the user why the value is not valid.</p>
+<div class="aside aside-attention">
+    <p class="aside-title">Attention</p>
+    Classes that implement the <code><a href="../Protocols/Setting.html">Setting</a></code> protocol should perform the <code>validityCheck</code> before they actually change their setting value. They should also not forget to copy the <code>validityCheck</code> in their copy function.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -398,7 +422,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An optional closures that is executed just before changing the setting&rsquo;s value:</p>
 
                       </div>
                       <div class="declaration">
@@ -426,7 +450,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An optional closures that is executed just after changing the setting&rsquo;s value:</p>
 
                       </div>
                       <div class="declaration">
@@ -454,7 +478,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Whether the setting allows to be undefined.</p>
+
+<p>Settings cannot be undefined by default.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    we do not use optionals for representing specific setting type values. Instead in most cases the concept of &lsquo;undefined&rsquo; is irrelevant. This property, as well as <code>allowsUndefined</code>, is only used for implementing the &lsquo;Feedback Screen&rsquo;, where &lsquo;undefined&rsquo; should be the default for all &lsquo;settings&rsquo;. But these &lsquo;settings&rsquo; are only used for logging purposes.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -482,7 +513,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Whether the setting is &lsquo;undefined&rsquo;. Only relevant if <code><a href="../Classes/Setting_abstract.html#/c:@M@NoiseTagging@objc(cs)Setting_abstract(py)allowsUndefined">allowsUndefined</a></code> is <code>true</code>.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    SeeAlso <code><a href="../Classes/Setting_abstract.html#/c:@M@NoiseTagging@objc(cs)Setting_abstract(py)allowsUndefined">allowsUndefined</a></code>.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -510,7 +546,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Set the setting value to <code>undefined</code>.</p>
+
+<p>By default this means setting <code><a href="../Classes/Setting_abstract.html#/c:@M@NoiseTagging@objc(cs)Setting_abstract(py)allowsUndefined">allowsUndefined</a></code> and <code><a href="../Classes/Setting_abstract.html#/c:@M@NoiseTagging@objc(cs)Setting_abstract(py)isUndefined">isUndefined</a></code> to <code>true</code>.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Classes/Setting_abstract.html#/c:@M@NoiseTagging@objc(cs)Setting_abstract(py)allowsUndefined">allowsUndefined</a></code>.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -538,7 +581,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Subclasses should NOT override <code>descriptionValue</code>. Instead they should implement <code>descriptionValueIfDefined</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -566,7 +609,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Add a new observer, which is informed whenever the setting&rsquo;s value changes.</p>
 
                       </div>
                       <div class="declaration">
@@ -574,7 +617,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">observer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SettingDelegate.html">SettingDelegate</a></span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">observer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SettingObserver.html">SettingObserver</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -594,7 +637,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Remove an observer, so it is no longer informed whenever the setting&rsquo;s value changes.</p>
 
                       </div>
                       <div class="declaration">
@@ -602,7 +645,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">observer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SettingDelegate.html">SettingDelegate</a></span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">observer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SettingObserver.html">SettingObserver</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -635,7 +678,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Encode to the passed <code>NSCoder</code>.</p>
+
+<ul>
+<li>Importamt: NSCoding is only implemented because settings are also used for collecting &lsquo;feedback&rsquo;, which is part of a recording and which needs to be stored to disk. Not <em>everything</em> is encoded; only what is relevant for the purpose of storing feedback.</li>
+</ul>
 
                       </div>
                       <div class="declaration">
@@ -662,7 +709,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Decode from the passed <code>NSCoder</code>.</p>
+
+<ul>
+<li>Importamt: NSCoding is only implemented because settings are also used for collecting &lsquo;feedback&rsquo;, which is part of a recording and which needs to be stored to disk. Not <em>everything</em> is encoded; only what is relevant for the purpose of storing feedback.</li>
+</ul>
 
                       </div>
                       <div class="declaration">

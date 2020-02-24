@@ -3,7 +3,7 @@
 Table of Contents:
 - [What is Noise Tagging?](#what-is-noise-tagging)
 - [What Does the Framework Provide?](#what-does-the-framework-provide)
-- [Further Reading](#further-reading)
+- [Next Steps](#next-steps)
 
 
 # What is Noise Tagging?
@@ -103,8 +103,8 @@ As the name already implies, the Developer Screen is *not* aimed at end users. B
 In order to access the Developer Screen, double-press with two fingers. For now the only part of the Developer Screen relevant to clients is the *Settings* screen. 
 
 
-# Further Reading
+# Next Steps
 
-We recommend that you make your first brain-controllable app by going through our *Quick Start*. 
+We recommend that you make your first brain-controllable app by going through our **`Quick Start`**. 
 
-After that, we recommend to read the *Main Programming Guide*, which should provide you with all the information to start developing your own great, brain-controllable iOS apps!
+After that, we recommend to read the **`Main Programming Guide`**, which should provide you with all the information to start developing your own great, brain-controllable iOS apps!

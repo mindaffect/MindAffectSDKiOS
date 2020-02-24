@@ -14,7 +14,7 @@
     <a title="EnumAsSettingProtocol Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NoiseTagging Docs</a> (25% documented)</p>
+        <p><a href="../index.html">NoiseTagging Docs</a> (78% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -74,7 +74,7 @@
                 <a href="../Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/LocationLabel.html">LocationLabel</a>
+                <a href="../Classes/NoiseTagLabeledButtonView/LocationLabel.html">– LocationLabel</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
@@ -132,6 +132,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other%20Guides.html">Other Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../license.html">LICENSE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -184,7 +192,7 @@
                 <a href="../Protocols/Setting.html">Setting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/SettingDelegate.html">SettingDelegate</a>
+                <a href="../Protocols/SettingObserver.html">SettingObserver</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/SettingSubscriber.html">SettingSubscriber</a>
@@ -211,7 +219,9 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Enums that implement <code>EnumAsSettingProtocol</code> can be used as values for <code><a href="../Classes/EnumSetting.html">EnumSetting</a></code>.</p>
+
+<p>The NoiseTagging framework provides extensions so that enums that use Int for raw values automatically conform to this protocol, except for <code>var displayName</code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -230,7 +240,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The number of possible cases the enum has.</p>
 
                       </div>
                       <div class="declaration">
@@ -257,7 +267,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The case of the enum at the passed <code>index</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -284,7 +294,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A user-friendly description of the enum case.</p>
 
                       </div>
                       <div class="declaration">
@@ -314,13 +324,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An optional sub title for the enum case, which can be used to provide the user with more elaborate information about what the enum case means.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -349,13 +358,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A user-friendly description of the enum case with the passed <code>index</code>.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -381,7 +389,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The case&rsquo;s raw value, as an <code>Int</code>.</p>
 
                       </div>
                       <div class="declaration">

@@ -14,7 +14,7 @@
     <a title="Main Symbols  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">NoiseTagging Docs</a> (25% documented)</p>
+        <p><a href="index.html">NoiseTagging Docs</a> (78% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -74,7 +74,7 @@
                 <a href="Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/LocationLabel.html">LocationLabel</a>
+                <a href="Classes/NoiseTagLabeledButtonView/LocationLabel.html">– LocationLabel</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
@@ -132,6 +132,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Other%20Guides.html">Other Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="license.html">LICENSE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -184,7 +192,7 @@
                 <a href="Protocols/Setting.html">Setting</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/SettingDelegate.html">SettingDelegate</a>
+                <a href="Protocols/SettingObserver.html">SettingObserver</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SettingSubscriber.html">SettingSubscriber</a>
@@ -278,7 +286,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Objects conforming to <code>NoiseTagControl</code> are <em>controls</em>. Being a control means being a brain-pressable button.</p>
+
+<p>The most important tasks of these buttons are:</p>
+
+<ol>
+<li>to show noise tags, and</li>
+<li>to perform actions when they are being pressed, be it by brain or finger.</li>
+</ol>
+
+<p>In the future non-button control types might become availalable as well.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    See Also: Check out the Main Programming Guide for details on how to make your own <code>NoiseTagControl</code>-conformant classes.
+
+</div>
 
                         <a href="Protocols/NoiseTagControl.html" class="slightly-smaller">See more</a>
                       </div>
@@ -307,7 +329,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Each <code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code> has a <code>noiseTagging</code> property of type <code>NoiseTagControlProperties</code>. The purpose of this <code>noiseTagging</code> property is to store a number of things that are needed to make noise tagging work. It is also your main point of access to define how each control behaves as a brain-pressable button.</p>
 
                         <a href="Classes/NoiseTagControlProperties.html" class="slightly-smaller">See more</a>
                       </div>
@@ -335,7 +357,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The main responsibility of a <code>NoiseTagDelegate</code> is to prepare a unit for brain control by assigning actions to controls.</p>
 
                         <a href="Protocols/NoiseTagDelegate.html" class="slightly-smaller">See more</a>
                       </div>

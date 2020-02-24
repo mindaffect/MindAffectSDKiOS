@@ -13,7 +13,7 @@
     <a title="Quick Start  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">NoiseTagging Docs</a> (25% documented)</p>
+        <p><a href="index.html">NoiseTagging Docs</a> (78% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -73,7 +73,7 @@
                 <a href="Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/LocationLabel.html">LocationLabel</a>
+                <a href="Classes/NoiseTagLabeledButtonView/LocationLabel.html">– LocationLabel</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
@@ -131,6 +131,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Other%20Guides.html">Other Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="license.html">LICENSE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -183,7 +191,7 @@
                 <a href="Protocols/Setting.html">Setting</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/SettingDelegate.html">SettingDelegate</a>
+                <a href="Protocols/SettingObserver.html">SettingObserver</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/SettingSubscriber.html">SettingSubscriber</a>
@@ -207,22 +215,11 @@
             <h1 id='quick-start' class='heading'>Quick Start</h1>
 
 <p>Follow these steps to create your first NoiseTagging app for iOS:</p>
-<h2 id='download-the-framework' class='heading'>Download the Framework</h2>
-
-<p>If you have not yet done already, download the ios_noise_tagging repo from BitBucket: <a href="https://bitbucket.org/mindaffect_bci/ios_noise_tagging/src/master/">https://bitbucket.org/mindaffect_bci/ios_noise_tagging/src/master/</a>. </p>
-<h2 id='build-the-framework' class='heading'>Build the Framework</h2>
-
-<ol>
-<li>Open NoiseTagging.xcodeproj.</li>
-<li>Build the framework for a real iOS device. Note that currently we do not create a <em>fat</em> or <em>universal</em> framework, so either you build the framework for use in the Simulator, or you build the framework for use on real devices.</li>
-<li>You find the framework – NoiseTagging.framework – in the project navigator in the <em>products</em> group.</li>
-</ol>
 <h2 id='add-the-framework-to-your-project' class='heading'>Add the Framework to your project</h2>
 
 <ol>
-<li>Create a new project, or use an existing project. <strong>Important</strong>: currently the NoiseTagging framework assumes that apps are running on a large iPad Pro.</li>
-<li>Drag the framework that you just build into your own project. In the dialog that appears, tick &ldquo;Copy items if needed&rdquo; and untick &ldquo;Add to targets&rdquo;.</li>
-<li>Select your project in the project navigator, select your app target in the project and target list, and add NoiseTagging.framework to the list of Embedded Binaries.</li>
+<li>Create a new project, or use an existing project.</li>
+<li>Select your project in Xcode&rsquo;s Project Navigator, select your target, and open the General tab. Add  <strong><code>NoiseTagging.xcframework</code></strong> underneath &ldquo;Frameworks, Libraries, and Embedded Content&rdquo;.</li>
 </ol>
 <h2 id='create-your-first-flickering-button' class='heading'>Create your first Flickering Button</h2>
 
@@ -234,7 +231,7 @@
 </code></pre>
 <h3 id='create-a-button' class='heading'>Create a Button</h3>
 
-<p>The NoiseTagging framework provides a number of generic UI components that work well with noise tagging. The simplest of these is the <em>NoiseTagButtonView</em> class. Add one using Interface Builder or programatically. For example like this, in your view controller:</p>
+<p>The NoiseTagging framework provides a number of generic UI components that work well with noise tagging. The simplest of these is the <code><a href="Classes/NoiseTagButtonView.html">NoiseTagButtonView</a></code> class. Add one using Interface Builder or programatically. For example like this, in your view controller:</p>
 <pre class="highlight plaintext"><code>let flickeringButton = NoiseTagButtonView(frame: CGRect(x: 20, y: 20, width: 300, height: 300))
 
 override func viewDidLoad() {
@@ -249,7 +246,7 @@ override func viewDidLoad() {
 </code></pre>
 <h3 id='implement-the-code-noisetagdelegate-code-protocol' class='heading'>Implement the <code><a href="Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></code> Protocol</h3>
 
-<p>To make the button flicker, you need to implement the <code><a href="Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></code> protocol. Later on I will discuss the role of this protocol in more detail. For now it suffices to say that NoiseTagging will call a function on the delegate (the <code><a href="Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></code>) to set things up. Within this function you tell NoiseTagging what action should be performed on each button press. </p>
+<p>To make the button flicker, you need to implement the <code><a href="Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></code> protocol. In the <strong><code>Main Programming Guide</code></strong> the role of this protocol is discussed in more detail. For now it suffices to say that NoiseTagging will call a function on the delegate (the <code><a href="Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></code>) to set things up. Within this function you tell NoiseTagging what action should be performed on each button press. </p>
 
 <p>In this example we make our <code>ViewController</code> the delegate:</p>
 <pre class="highlight plaintext"><code>class ViewController: UIViewController, NoiseTagDelegate {
@@ -257,8 +254,8 @@ override func viewDidLoad() {
 
 <p>And we implement <code><a href="Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></code>&lsquo;s one required function:</p>
 <pre class="highlight plaintext"><code>func startNoiseTagControlOn(noiseTaggingView: UIView) {
-    // Set noise tagging actions:
-    flickeringButton.setNoiseTagAction {
+    // Add noise tagging actions:
+    flickeringButton.noiseTagging.addAction(timing: 1) {
         print("Hello")
     }
 }
@@ -271,30 +268,15 @@ override func viewDidLoad() {
 <pre class="highlight plaintext"><code>NoiseTagging.push(view: view, forNoiseTaggingWithDelegate: self)
 </code></pre>
 
-<p>This is what will result in <code>startNoiseTagControlOn:noiseTaggingView</code> being called on the delegate. In &hellip; I will discuss what this <em>push</em> exactly means, but for now: run your app! Remember that you have build the NoiseTagging framework for real devices only, so run your app on a real device. </p>
+<p>This is what will result in <code>startNoiseTagControlOn(noiseTaggingView:)</code> being called on the delegate. The <strong><code>Main Programming Guide</code></strong> explains what this <em>push</em> exactly means, but for now: run your app!</p>
+<h2 id='run-your-app' class='heading'>Run your app</h2>
 
-<p>Your app should now show a button with &ldquo;Hello&rdquo; on it. Tap it and &ldquo;Hello&rdquo; should be printed in Xcode&rsquo;s Console. Swipe up or down and the button should begin to flicker. Double tap with two fingers to enter the <em>Developer Screen</em>. </p>
+<p>You can run in the Simulator or on a real device, but only on the latter the noise tags will be displayed correctly. </p>
 
-<p>One thing is still missing: how can you connect a brain? </p>
-<h3 id='provide-access-to-the-brain-control-layer' class='heading'>Provide Access to the Brain Control Layer</h3>
+<p>Your app should show a button with &ldquo;Hello&rdquo; on it. Tap it and &ldquo;Hello&rdquo; should be printed in Xcode&rsquo;s Console. Swipe up or down and the button should begin to flicker. You can double tap with two fingers to enter the <em>Developer Screen</em>. </p>
 
-<p>The NoiseTagging framework provides UI for letting users set everything up – connect with the MA Decoder, fit the headset, and calibrate. This UI is called <em>the Brain Control Layer</em>. It is your responsibility to provide access to the Brain Control Layer, for example like this:</p>
-<pre class="highlight plaintext"><code>...
-// Add a button to enter the Brain Control Layer:
-let brainControlButton = UIButton(frame: CGRect(x: 20, y: 350, width: 1, height: 1))
-brainControlButton.setTitle("Enter Brain Control", for: .normal)
-brainControlButton.sizeToFit()
-brainControlButton.addTarget(self, action: #selector(enterBrainControlLayer), for: .touchUpInside)
-view.addSubview(brainControlButton)
-...
-
-@objc func enterBrainControlLayer() {
-    NoiseTagging.enterBrainControlLayerFrom(view: view)
-}
-</code></pre>
-
-<p>Go ahead and try it out! If you have a complete MindAffect setup, you can now press your button with your brain!</p>
-<h3 id='full-code-example' class='heading'>Full Code Example</h3>
+<p>One thing is still missing: how can you connect a brain? Double tap with one finger to open the UI for connecting a brain. If you have a MindAffect Decoder and a EEG headset, you should be able to calibrate and then press your button with your brain!</p>
+<h2 id='full-code-example' class='heading'>Full Code Example</h2>
 
 <p>The full code looks like this:</p>
 <pre class="highlight plaintext"><code>import UIKit
@@ -315,56 +297,19 @@ class ViewController: UIViewController, NoiseTagDelegate {
 
         // Push our view on the NoiseTagging stack:
         NoiseTagging.push(view: view, forNoiseTaggingWithDelegate: self)
-
-        // Add a button to enter the Brain Control Layer:
-        let brainControlButton = UIButton(frame: CGRect(x: 20, y: 350, width: 1, height: 1))
-        brainControlButton.setTitle("Enter Brain Control", for: .normal)
-        brainControlButton.sizeToFit()
-        brainControlButton.addTarget(self, action: #selector(enterBrainControlLayer), for: .touchUpInside)
-        view.addSubview(brainControlButton)
     }
 
     func startNoiseTagControlOn(noiseTaggingView: UIView) {
-        // Set noise tagging actions:
-        flickeringButton.setNoiseTagAction {
+        // Add noise tagging actions:
+        flickeringButton.noiseTagging.addAction(timing: 1) {
             print("Hello")
         }
-    }
-
-    @objc func enterBrainControlLayer() {
-        NoiseTagging.enterBrainControlLayerFrom(view: view)
     }
 }
 </code></pre>
 <h2 id='further-reading' class='heading'>Further Reading</h2>
 
-<p>todo…</p>
-
-<!---
-
-### The Noise Tagging Stack
-
-For you to understand what is going on in the next steps, let us first discuss the *noise tagging stack*. 
-
-The noise tagging stack is maintained by NoiseTagging and is a stack of *noise tagging units*. Each noise tagging unit consists of a `UIView` and a `NoiseTagDelegate`. Units can be pushed onto the stack and they can be popped. The unit at the top of the stack is the *active unit*. 
-
-Your code and NoiseTagging work togethether in order to make the appropriate buttons flicker, based on the active unit. This works as follows:
-1. You push a noise tagging unit by calling `NoiseTagging.push:view:forNoiseTaggingWithDelegate`, passing a view and a delegate. 
-2. NoiseTagging calls `startNoiseTagControlOn:noiseTaggingView` on the delegate, passing the view.
-3. The delegate assigns *noise tagging actions* to buttons. The view is passed so you can have one object which is the delegate for multiple units and use that view to know which buttons should get actions. 
-4. NoiseTagging takes care of performing the set noise tagging actions whenever a button is pressed. 
-
-### Implement the NoiseTagDelegate Protocol
-
-
-
-
-Use the Framework
-Simple Example
-Related articles
-
-
---->
+<p>We recommend that next you read the <strong><code>Main Programming Guide</code></strong>. This guide provides an overview of everything you need to know to start developing your own amazing, brain-controllable iOS apps!</p>
 
           </section>
         </section>

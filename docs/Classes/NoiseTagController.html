@@ -14,7 +14,7 @@
     <a title="NoiseTagController Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NoiseTagging Docs</a> (25% documented)</p>
+        <p><a href="../index.html">NoiseTagging Docs</a> (78% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -74,7 +74,7 @@
                 <a href="../Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/LocationLabel.html">LocationLabel</a>
+                <a href="../Classes/NoiseTagLabeledButtonView/LocationLabel.html">– LocationLabel</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
@@ -132,6 +132,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other%20Guides.html">Other Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../license.html">LICENSE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -184,7 +192,7 @@
                 <a href="../Protocols/Setting.html">Setting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/SettingDelegate.html">SettingDelegate</a>
+                <a href="../Protocols/SettingObserver.html">SettingObserver</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/SettingSubscriber.html">SettingSubscriber</a>
@@ -239,7 +247,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Perform an update.</p>
+
+<p>The current set of controls as well as the actions assigned to them can only be changed as part of an update block.</p>
+
+<p>In most cases you do not call this function directly. Instead you use <code><a href="../Classes/NoiseTagController.html#/s:12NoiseTagging0A13TagControllerC4push4view03foraB12WithDelegateySo6UIViewC_AA0acI0_ptF">push(view:forNoiseTaggingWithDelegate:)</a></code>, <code><a href="../Classes/NoiseTagController.html#/s:12NoiseTagging0A13TagControllerC3popyyF">pop()</a></code>, and <code><a href="../Classes/NoiseTagController.html#/s:12NoiseTagging0A13TagControllerC6update4view03foraB12WithDelegateySo6UIViewC_AA0acI0_ptF">update(view:forNoiseTaggingWithDelegate:)</a></code>. However, if you have multiple of these calls in a row – e.g. two pops at once –, we recommend that you group them together in one update, using this function.</p>
+
+<ul>
+<li>example:</li>
+</ul>
+<pre class="highlight swift"><code><span class="c1">// Combine two pops in one single update:</span>
+<span class="kt">NoiseTagging</span><span class="o">.</span><span class="n">updateControls</span> <span class="p">{</span>
+    <span class="kt">NoiseTagging</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
+    <span class="kt">NoiseTagging</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
 
                       </div>
                       <div class="declaration">
@@ -249,6 +271,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateControls</span><span class="p">(</span><span class="nv">updateCode</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateCode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>This closure is executed as part of the update.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -279,7 +320,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Push a new unit on the noise tagging stack.</p>
 
                       </div>
                       <div class="declaration">
@@ -289,6 +330,37 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">push</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">forNoiseTaggingWithDelegate</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>view</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The unit&rsquo;s view.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the unit&rsquo;s delegate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -306,7 +378,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Pop the current noise tagging unit, making the second-topmost unit the active unit.</p>
 
                       </div>
                       <div class="declaration">
@@ -333,7 +405,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Restart noise tagging on the current unit.</p>
 
                       </div>
                       <div class="declaration">
@@ -341,46 +413,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">forNoiseTaggingWithDelegate</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Mode%20Control"></a>
-                <a name="//apple_ref/swift/Section/Mode Control" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Mode%20Control"></a>
-                  <h3 class="section-name"><p>Mode Control</p>
-</h3>
-                </div>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12NoiseTagging0A13TagControllerC3set4mode0E25OfSettingsAlreadyUpToDateyAA0aC4ModeO_SbtF"></a>
-                    <a name="//apple_ref/swift/Method/set(mode:setOfSettingsAlreadyUpToDate:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12NoiseTagging0A13TagControllerC3set4mode0E25OfSettingsAlreadyUpToDateyAA0aC4ModeO_SbtF">set(mode:setOfSettingsAlreadyUpToDate:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Enums/NoiseTagMode.html">NoiseTagMode</a></span><span class="p">,</span> <span class="nv">setOfSettingsAlreadyUpToDate</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -415,27 +447,6 @@
                       <div class="abstract">
                         <p>Whether noise tagging trials are running.</p>
 
-<p>Each trial consists of a number of phases:</p>
-
-<ul>
-<li>In calibration mode, a target will be highlighted, after which there is a pause;</li>
-<li>All buttons flicker;</li>
-<li>The trial stops because of one of these reasons:
-
-<ol>
-<li>A button is pressed, either by touch or brain;</li>
-<li>A maximum trial duration has been set and it has passed;</li>
-<li><code>trialsAreRunning</code> is set to <code>false</code>.</li>
-</ol></li>
-</ul>
-
-<p>After a trial stops and <code>trialsAreRunning</code> is still <code>true</code>, these two factors determine when the next trial starts:</p>
-
-<ul>
-<li>The minimal pause in between trials, as defined by the <code>timeInBetweenTrials</code> setting;</li>
-<li>Whether trials are <em>blocked</em>. Trials may be blocked in order to finish certain tasks before the next trial starts. E.g. an animation may need to be finished first. Also see <code><a href="../Classes/NoiseTagController.html#/s:12NoiseTagging0A13TagControllerC11blockTrials11forDurationySdSg_tF">blockTrials(forDuration:)</a></code>.</li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -464,7 +475,7 @@
                         <p>Use this function whenever starting the next noise tagging trial should be postponed untill a certain task has been finished.</p>
 
 <ul>
-<li><p>Example: if one of your buttons is pressed and as a result a different screen is opened in an animated fashion, then you should call this function at the start of that animation, and call <code>unblockTrials</code> once the animation is finished.</p></li>
+<li><p>Example: if one of your buttons is pressed and as a result a different screen is opened in an animated fashion, then you should call this function at the start of that animation, and call <code>unblockTrials</code> once the animation is finished, or pass a duration.</p></li>
 </ul><div class="aside aside-attention">
     <p class="aside-title">Attention</p>
     <p>If no duration is passed, each call to block needs to be matched by a call to unblock. Otherwise no new trial will ever be started.</p>
@@ -560,7 +571,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Call this function to bring up the standard UI for connecting to the MindAffect Decoder and connecting a brain.</p>
 
                       </div>
                       <div class="declaration">
@@ -570,6 +581,37 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startBrainSetup</span><span class="p">(</span><span class="n">pushedFromNavigationController</span> <span class="nv">clientNavigationController</span><span class="p">:</span> <span class="kt">UINavigationController</span><span class="p">?,</span> <span class="n">withCompletionAfterBrainSetup</span> <span class="nv">completionAfterBrainSetup</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientNavigationController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If you have an existing <code>UINavigationController</code> which you want to use to present the brain setup UI, pass it and the brain setup view controller will be pushed onto it. Alternatively pass <code>nil</code> and the framework will make and present a <code>UINavigationController</code> itself.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionAfterBrainSetup</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>This closure is executed once brain setup has finished. If you did not pass a <code>clientNavigationController</code>, the <code>UINavigationController</code> will be dismissed first before executing this closure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -600,7 +642,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>In the future this will no longer be public.</p>
 
                       </div>
                       <div class="declaration">
