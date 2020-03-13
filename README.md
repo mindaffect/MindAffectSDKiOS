@@ -5,6 +5,8 @@ Table of Contents:
 - [What Does the Framework Provide?](#what-does-the-framework-provide)
 - [Next Steps](#next-steps)
 
+**Important**: For the full documentation, download the repository from Github (https://github.com/mindaffect/MindAffectSDKiOS) and open docs/index.html. 
+
 
 # What is Noise Tagging?
 

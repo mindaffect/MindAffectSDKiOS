@@ -25,6 +25,7 @@ custom_categories:
     children:
       - NoiseTagSetOfSettings
       - SetOfSettings
+      - NoiseTagSettingTitles
       - BoolSetting
       - IntSetting
       - DoubleSetting

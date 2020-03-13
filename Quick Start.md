@@ -54,7 +54,7 @@ And we implement `NoiseTagDelegate`'s one required function:
 ```Swift
 func startNoiseTagControlOn(noiseTaggingView: UIView) {
 	// Add noise tagging actions:
-	flickeringButton.noiseTagging.addAction(timing: 1) {
+	flickeringButton.noiseTagging.addAction(timing: 0) {
 		print("Hello")
 	}
 }
@@ -110,7 +110,7 @@ class ViewController: UIViewController, NoiseTagDelegate {
 	
 	func startNoiseTagControlOn(noiseTaggingView: UIView) {
 		// Add noise tagging actions:
-		flickeringButton.noiseTagging.addAction(timing: 1) {
+		flickeringButton.noiseTagging.addAction(timing: 0) {
 			print("Hello")
 		}
 	}

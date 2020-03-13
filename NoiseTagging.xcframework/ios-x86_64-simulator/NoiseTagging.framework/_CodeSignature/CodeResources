@@ -6,7 +6,7 @@
 	<dict>
 		<key>.jazzy.yaml</key>
 		<data>
-		BCdXm98TiAdN9SQNccLQ9CpL1AA=
+		W1rmV8yqbq1K+yyefJHcTulH0UM=
 		</data>
 		<key>AlarmSound10s.wav</key>
 		<data>
@@ -14,139 +14,71 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		UfYrootR7GU/Z8Vmp0Ng7htAzNQ=
+		NYdPS4vddC+sRpxB+lHsnrE93Nk=
 		</data>
-		<key>Base.lproj/HardwareViewController.nib/objects-13.0+.nib</key>
+		<key>Base.lproj/HardwareViewController.nib</key>
 		<data>
-		Rq/NhJyd1BixwSUiHjtAUyQEda0=
+		X9Uk2wgy8NjcB5P2olvMrGIPIWI=
 		</data>
-		<key>Base.lproj/HardwareViewController.nib/runtime.nib</key>
+		<key>BoolSettingTableViewCell.nib</key>
 		<data>
-		rJQnBWUeKOtiQH5fC5LDLhZFn9M=
-		</data>
-		<key>BoolSettingTableViewCell.nib/objects-13.0+.nib</key>
-		<data>
-		R1LYK5F+KxgadDb/vYLKC2dPX6g=
-		</data>
-		<key>BoolSettingTableViewCell.nib/runtime.nib</key>
-		<data>
-		PmwKjRXICmEz6yMoYcTzsAnIy2E=
+		AJZz6/PEF8HLAtE43oxOkTYr2nc=
 		</data>
 		<key>Bottle Cork.wav</key>
 		<data>
 		vald4soowVfh9oYK16GuCU8VLJA=
 		</data>
-		<key>BrainControlViewController.nib/objects-13.0+.nib</key>
+		<key>BrainControlViewController.nib</key>
 		<data>
-		/qrqU9YzKY0TfhmIIEbhlPoEHkk=
+		tGfPT70GYPjxczI4D7OgtpYDLEA=
 		</data>
-		<key>BrainControlViewController.nib/runtime.nib</key>
+		<key>ColorSettingRGBAView.nib</key>
 		<data>
-		87cxvr0GHQezoSL2DGYg3ETqZ0A=
+		mubvKxrbwYEdHa4uTERpQAmdk44=
 		</data>
-		<key>ColorSettingRGBAView.nib/objects-13.0+.nib</key>
+		<key>ColorSettingTableViewCell.nib</key>
 		<data>
-		EavO9kbO/zxcoI+UtYewacAxZFU=
+		RfrsdFJte+wuHbxm5fP4hC/nfvY=
 		</data>
-		<key>ColorSettingRGBAView.nib/runtime.nib</key>
+		<key>DevelopmentViewController.nib</key>
 		<data>
-		JNmtZRKxczaIgmGfqWHaHolvW68=
+		CAL6MvDTpFhu/1fu7KVxL3FXLJk=
 		</data>
-		<key>ColorSettingTableViewCell.nib/objects-13.0+.nib</key>
+		<key>DoubleSettingTableViewCell.nib</key>
 		<data>
-		4YcWcA1SCNIJKa847M9zH2ZgJQc=
+		DK5i4j8Xml1+48NGM+IXMBf28to=
 		</data>
-		<key>ColorSettingTableViewCell.nib/runtime.nib</key>
+		<key>EditEnumViewController.nib</key>
 		<data>
-		Wp7g5cQImAKxGCAKcv5/s1BxT08=
+		JeFQTEydVp/F1AcuVHPsx3xUNPA=
 		</data>
-		<key>DevelopmentViewController.nib/objects-13.0+.nib</key>
+		<key>EditTextViewController.nib</key>
 		<data>
-		54Hwyf8J8RGfak2+6+09lM4ddmE=
+		bqKxpSkj5bPVG+csiXim8KfvS/k=
 		</data>
-		<key>DevelopmentViewController.nib/runtime.nib</key>
+		<key>EnumSettingTableViewCell.nib</key>
 		<data>
-		OxN6U1x974UUxj4Xcx8mCtrNmEU=
+		Tz9flxyfHBIqdXGwUKGT8J8SEvA=
 		</data>
-		<key>DoubleSettingTableViewCell.nib/objects-13.0+.nib</key>
+		<key>FakeSettingForGroupingTableViewCell.nib</key>
 		<data>
-		rACPW+K6T+k7Fe6k2elLvP7nKUI=
+		+fcmU79OjkjylkdykSrtBKGxRCw=
 		</data>
-		<key>DoubleSettingTableViewCell.nib/runtime.nib</key>
+		<key>FeedbackOnClickTableViewCell.nib</key>
 		<data>
-		M3dC4/mdyvqeKbe2oGEKrkLGIDM=
+		O+u++1j7bbSITKaIJnA8WXnEWSE=
 		</data>
-		<key>EditEnumViewController.nib/objects-13.0+.nib</key>
+		<key>FeedbackViewController.nib</key>
 		<data>
-		xPG5HLt7aE8h2v/xV0ianwrUHaM=
+		+DfaMs+bOFfkRGwNldcc+A9bXWo=
 		</data>
-		<key>EditEnumViewController.nib/runtime.nib</key>
+		<key>FileTableViewCell.nib</key>
 		<data>
-		zJmkfpahZ7vmwAG8IoilcjXtMaw=
+		dXduhUz3vttr4T56ORf8WXk2oWM=
 		</data>
-		<key>EditTextViewController.nib/objects-13.0+.nib</key>
+		<key>FileViewerViewController.nib</key>
 		<data>
-		F/w4z2c0hekZz7sCI9+PstV91k8=
-		</data>
-		<key>EditTextViewController.nib/runtime.nib</key>
-		<data>
-		zoYKg8eN2/Y2lXTewi7ChDRQqQo=
-		</data>
-		<key>EnumSettingTableViewCell.nib/objects-13.0+.nib</key>
-		<data>
-		FhiOFtCFgliNcrvoMG9bgnd8vAU=
-		</data>
-		<key>EnumSettingTableViewCell.nib/runtime.nib</key>
-		<data>
-		Rees+IK8Nk99yWq2hC7Ftb3nhxY=
-		</data>
-		<key>FakeSettingForGroupingTableViewCell.nib/objects-13.0+.nib</key>
-		<data>
-		gXe/2nPTvf6DQtXgRFfe3o5hxBU=
-		</data>
-		<key>FakeSettingForGroupingTableViewCell.nib/runtime.nib</key>
-		<data>
-		zgNxdkFKBayCVjp8ZfUsFkbw+Ac=
-		</data>
-		<key>FeedbackOnClickTableViewCell.nib/objects-13.0+.nib</key>
-		<data>
-		Xs4mtPX3mRaRFfV0U3Q8vRyiMI0=
-		</data>
-		<key>FeedbackOnClickTableViewCell.nib/runtime.nib</key>
-		<data>
-		kOSYcoOV3/URzF1qmp5IHWzppKQ=
-		</data>
-		<key>FeedbackViewController.nib/objects-13.0+.nib</key>
-		<data>
-		XT26cpqrwwH0vMUCtcP/RVbOfHg=
-		</data>
-		<key>FeedbackViewController.nib/runtime.nib</key>
-		<data>
-		kzHj32mVGFIzN3Jl6kLz2vhDAJ0=
-		</data>
-		<key>FileTableViewCell.nib/objects-13.0+.nib</key>
-		<data>
-		kzRJgU867IGqGFFWWjXzT5FnA8c=
-		</data>
-		<key>FileTableViewCell.nib/runtime.nib</key>
-		<data>
-		kb/H0jRsohur+rW9N9/ASoYOVDk=
-		</data>
-		<key>FileViewerViewController.nib/objects-13.0+.nib</key>
-		<data>
-		MYybC0IHB7KvC7tjpsiexkqp3PY=
-		</data>
-		<key>FileViewerViewController.nib/runtime.nib</key>
-		<data>
-		7iLNuZgv+yGbNEHxtMMxRMhM1yQ=
-		</data>
-		<key>GenericKeyboardViewController.nib/objects-13.0+.nib</key>
-		<data>
-		LYear/DCJ2wz4H0upwyEfFBrwPU=
-		</data>
-		<key>GenericKeyboardViewController.nib/runtime.nib</key>
-		<data>
-		bk+bZBOi72RXukxKo7qCpVXZAdQ=
+		8pGpjsjA3uI9NbBtweo4A76pEJE=
 		</data>
 		<key>Head.png</key>
 		<data>
@@ -162,31 +94,23 @@
 		</data>
 		<key>Headers/NoiseTagging-Swift.h</key>
 		<data>
-		bjSwDZsoVMlQsd9IaXYkHt4F1pU=
+		R6kffVRt5nHLGFYIqVH75K9PIlo=
 		</data>
 		<key>Headers/NoiseTagging.h</key>
 		<data>
 		KJfL2eDBFQlVsPkHolsqEGcr7qE=
 		</data>
-		<key>HeadsetScreenViewController.nib/objects-13.0+.nib</key>
+		<key>HeadsetScreenViewController.nib</key>
 		<data>
-		vmKYK4vsJelo/0KNx79chf5WpsY=
-		</data>
-		<key>HeadsetScreenViewController.nib/runtime.nib</key>
-		<data>
-		50BdEjwOvdULwDzD+xD/JnEbu1o=
+		2IA3jQddFGgpVpV5vD5Bqpn6BR4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		C53N4v8LZG11H27Dlek9rRefB6I=
+		WoAJ2BUQV1jPolNqNe3fNvLC5yw=
 		</data>
-		<key>IntSettingTableViewCell.nib/objects-13.0+.nib</key>
+		<key>IntSettingTableViewCell.nib</key>
 		<data>
-		jxfx4TKallfMY1KTfbBjNJXLfXA=
-		</data>
-		<key>IntSettingTableViewCell.nib/runtime.nib</key>
-		<data>
-		IiDWgBIe4l6Uu6qzzJ+uL8ldp9s=
+		R1HeG+QOdRZyRCR8xABLdirnSPI=
 		</data>
 		<key>Keyboard Laptop.json</key>
 		<data>
@@ -202,31 +126,35 @@
 		</data>
 		<key>Modules/NoiseTagging.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ABxp15kiUKQbVyQbtbNiBun0whE=
+		XJY2Tj7AmMAgU+FfVtx2HrN6N04=
 		</data>
 		<key>Modules/NoiseTagging.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		yFkL1lZYhBCc/89SNc0W2MWA3Ps=
+		QODpNemZ+okdM98IzdAi9yS8pWg=
 		</data>
 		<key>Modules/NoiseTagging.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qWQq8swPdubeFieMs2E8EAJKPXA=
+		0myUZOHmaaJbxStPRWfpIhWeox4=
 		</data>
 		<key>Modules/NoiseTagging.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		ABxp15kiUKQbVyQbtbNiBun0whE=
+		XJY2Tj7AmMAgU+FfVtx2HrN6N04=
 		</data>
 		<key>Modules/NoiseTagging.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		yFkL1lZYhBCc/89SNc0W2MWA3Ps=
+		QODpNemZ+okdM98IzdAi9yS8pWg=
 		</data>
 		<key>Modules/NoiseTagging.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		qWQq8swPdubeFieMs2E8EAJKPXA=
+		0myUZOHmaaJbxStPRWfpIhWeox4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		XXvuQO5T+nM79Y4Dtg6sxwtFrtg=
+		</data>
+		<key>NoiseTagKeyboardViewController.nib</key>
+		<data>
+		SSTRan422wMii/+j2Uap9h0JqRg=
 		</data>
 		<key>NoiseTagsForTestingCustomFrameRates_ROW_PER_PATTERN.txt</key>
 		<data>
@@ -256,53 +184,29 @@
 		<data>
 		KLNxs735xlXXXPI7mdJ92CWZjHQ=
 		</data>
-		<key>PickableColorTableViewCell.nib/objects-13.0+.nib</key>
+		<key>PickableColorTableViewCell.nib</key>
 		<data>
-		qD6AYxDU/kbtquOu5JTyDh5mIuI=
+		ho0MbkuCtXjbrhV09+Knw7nL9H4=
 		</data>
-		<key>PickableColorTableViewCell.nib/runtime.nib</key>
+		<key>RecordingTableViewCell.nib</key>
 		<data>
-		34FN4Iu/XxQu1SSfnqwny/SqWFU=
+		2aOdjtMmzfQYf0l9A1hVekGHwkU=
 		</data>
-		<key>RecordingTableViewCell.nib/objects-13.0+.nib</key>
+		<key>RecordingsViewController.nib</key>
 		<data>
-		S+C0ctCOyFMX31vXWsxxQocA0VY=
+		poRM1ESO+D8lhEWb/Rqcc7t1K98=
 		</data>
-		<key>RecordingTableViewCell.nib/runtime.nib</key>
+		<key>SetOfSettingsTableViewController.nib</key>
 		<data>
-		1nLtWzjNdcH4Ve30BIkGug2M1w8=
+		IAP9hJzzc7JGYIkmf2BpawUHZdo=
 		</data>
-		<key>RecordingsViewController.nib/objects-13.0+.nib</key>
+		<key>SimplifiedBrainControlViewController.nib</key>
 		<data>
-		yZEzsge5Hmi0P7jhy91piGkZCRU=
+		2S7sSHcQ4oWKOPWrIIdMTCOOoeU=
 		</data>
-		<key>RecordingsViewController.nib/runtime.nib</key>
+		<key>TextSettingTableViewCell.nib</key>
 		<data>
-		OV92NmFgJa8LaOQNIVSLHnqyCBw=
-		</data>
-		<key>SetOfSettingsTableViewController.nib/objects-13.0+.nib</key>
-		<data>
-		5YuLZE7BzvdkQCZQHy/eO90Kjnw=
-		</data>
-		<key>SetOfSettingsTableViewController.nib/runtime.nib</key>
-		<data>
-		uYy7oU/bFpcHiyzDjz/S4TUhiMw=
-		</data>
-		<key>SimplifiedBrainControlViewController.nib/objects-13.0+.nib</key>
-		<data>
-		wMRFOzN4p9Jf9KXPq1gtpJYAkRk=
-		</data>
-		<key>SimplifiedBrainControlViewController.nib/runtime.nib</key>
-		<data>
-		iizdi0SD/NQJazSRm/kCry1sFFA=
-		</data>
-		<key>TextSettingTableViewCell.nib/objects-13.0+.nib</key>
-		<data>
-		cmG3UnUtE6ELiCYlopzzTQGk0Cw=
-		</data>
-		<key>TextSettingTableViewCell.nib/runtime.nib</key>
-		<data>
-		XSV4RyqR2PsBZca5XtxpnGBDa9U=
+		LS0GTRgPVkBWBMY1bKEk9nfnyyA=
 		</data>
 		<key>Toggle.wav</key>
 		<data>
@@ -465,7 +369,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pdiEUrFuK6JvEoNXQScROkBImEkhAlR/Uug7HNhBAD0=
+			h53V7nQ5zc+Pz8x1zJJS9CqtvA34Q68nCPqgTC80eko=
 			</data>
 		</dict>
 		<key>AlarmSound10s.wav</key>
@@ -479,35 +383,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gIEeSwAcfWhMO3UfAPpAZKt+9sKAjIybNhpKKayz9wY=
+			AmCkEp2sI8j18gQLBOh0E9MoDKKUlHIuZQ2t8A2Deu0=
 			</data>
 		</dict>
-		<key>Base.lproj/HardwareViewController.nib/objects-13.0+.nib</key>
+		<key>Base.lproj/HardwareViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AqCOf4oiKNF3NGATgU91UT5R7T548qRppdQqMnL28Zw=
+			yKsO6K4/3UZpW1WolQ5AhYioHCHmMPkt8+MtqcZrOaU=
 			</data>
 		</dict>
-		<key>Base.lproj/HardwareViewController.nib/runtime.nib</key>
+		<key>BoolSettingTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iBSPiMEhfPSYi/PuFNu6ksgbRltiMek7maKug6GFyhw=
-			</data>
-		</dict>
-		<key>BoolSettingTableViewCell.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			UDt06PMv6V0xk5azViBdz6/rKC/Kcnvh/MAQq/gEyFs=
-			</data>
-		</dict>
-		<key>BoolSettingTableViewCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xPrx8CzteCgncGTyML7lccperLKGLqat9IATMTAniRY=
+			42go3Q1gUjcrDGqFzk9Vd7Aj6hTebxI/KeONsRemoGs=
 			</data>
 		</dict>
 		<key>Bottle Cork.wav</key>
@@ -517,200 +407,95 @@
 			EeQ7AxW1Z1s9hcTSc32JmPuZUQA/O6HtTzgr0iqC7x8=
 			</data>
 		</dict>
-		<key>BrainControlViewController.nib/objects-13.0+.nib</key>
+		<key>BrainControlViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			niDfV+mJmfPnf+2+wdjnHKyqx9KT5dFU51YviG6PIM0=
+			Pp+M0Tv18hIOnnvubyfDchQGNnReI7PIIIhtc+Ar5Ew=
 			</data>
 		</dict>
-		<key>BrainControlViewController.nib/runtime.nib</key>
+		<key>ColorSettingRGBAView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gSBh6OEui+/wZrbOzrebv78g1eA6rI//Vlt1L/Wxueg=
+			iywVfFy+l7XS4BdQP0PDQT8hZZueSQOzCiK+sQLqT98=
 			</data>
 		</dict>
-		<key>ColorSettingRGBAView.nib/objects-13.0+.nib</key>
+		<key>ColorSettingTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yUi2GKqUxCpuN/AyPHUwvZrRdge+vI38xs3k699logk=
+			lv/Q20wuV3W4395d02DCGHb+eYZgBJfe/cTViPUwPQg=
 			</data>
 		</dict>
-		<key>ColorSettingRGBAView.nib/runtime.nib</key>
+		<key>DevelopmentViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cotg+FszEyOGV1OWDdrwbC2R86pFJ8rWWCW0JRoaHFw=
+			Ygv0+oWozJ6RYtAxH0eyNPl3Eq9i7J83xE8x3LgYG2k=
 			</data>
 		</dict>
-		<key>ColorSettingTableViewCell.nib/objects-13.0+.nib</key>
+		<key>DoubleSettingTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LV7DAAsd97bRkQPgR7ZRjg3wAiJ4zVczNkPqUM8xwwA=
+			bUWhBsjvV+oyt9DFUThpbmyRNuX5fi5wATTv4ip9zBs=
 			</data>
 		</dict>
-		<key>ColorSettingTableViewCell.nib/runtime.nib</key>
+		<key>EditEnumViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EYdYpGysHIjWfNBRE6S8+71QA9KxpzLyCDdlPdGD3tA=
+			ij0OZKCFskLD5UWCn/0OiRDFVPpWlH+0lcUFJv4EpC0=
 			</data>
 		</dict>
-		<key>DevelopmentViewController.nib/objects-13.0+.nib</key>
+		<key>EditTextViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qvk3+OnmWHyBXb51DahFVXrswBZzy/dOYAb4Qq8DFVA=
+			28ZG5Sv3nn8ybci2fDmRPeALpX8hUfFzTZQtIsp0cNo=
 			</data>
 		</dict>
-		<key>DevelopmentViewController.nib/runtime.nib</key>
+		<key>EnumSettingTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g/DrzJvdJ6tlt/MNNBpcsuriQTaB5lmjgofRdTGkmJw=
+			xij3ti71Rwticy8Cz4QlvEFZcO2bTMqJKBsmS9EIZPo=
 			</data>
 		</dict>
-		<key>DoubleSettingTableViewCell.nib/objects-13.0+.nib</key>
+		<key>FakeSettingForGroupingTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CDwP68R+Xd3BqtRGecdYN93oT9p75uBmNHVZCWfl1BU=
+			M9fmwMvXuyFci3M1qpU9wF61yeGcVWvE1WiY1AC6nXc=
 			</data>
 		</dict>
-		<key>DoubleSettingTableViewCell.nib/runtime.nib</key>
+		<key>FeedbackOnClickTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m6S3oSNJ3ocNgIrlWoS7veDNCqIb2aj56Alc176uHwc=
+			eRrGVc4GhPIJrFhoMJ1kwWFTBcrWv03V/HMUNenzfNg=
 			</data>
 		</dict>
-		<key>EditEnumViewController.nib/objects-13.0+.nib</key>
+		<key>FeedbackViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jIqcOOJsIrpNR8bWTtcooOULH8FcaP+L4Zl6kFCgT/M=
+			sMt+8SAKBdIpJvYP8utx9zD76WZbUSL6D7o9BAS7C44=
 			</data>
 		</dict>
-		<key>EditEnumViewController.nib/runtime.nib</key>
+		<key>FileTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A2jRHj2Ej86obl4baGV3Hy4Kl9rbXBbtNyn5+WF5yu0=
+			ZjoUHWBgfZTrdylv9/AY5jTmWFhXUZfFautEydrIW60=
 			</data>
 		</dict>
-		<key>EditTextViewController.nib/objects-13.0+.nib</key>
+		<key>FileViewerViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zhW9+c4/r8jqANyjCquXjZQHhlsJvxzdEzsE7G4PLYU=
-			</data>
-		</dict>
-		<key>EditTextViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2bU4gPfBYeDtoj6aZKvn+Cn/yzREd7DG+xPW+erzuJA=
-			</data>
-		</dict>
-		<key>EnumSettingTableViewCell.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			62V3Waas5XputtXv8X5D6QbbWdZ5lMeNRbUah6XACW8=
-			</data>
-		</dict>
-		<key>EnumSettingTableViewCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6abL2BJoszsY0KGxjrclwSaiZMkSlBZzMLLMKCpPlZ0=
-			</data>
-		</dict>
-		<key>FakeSettingForGroupingTableViewCell.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			+llbtvPT1M3tOQXqesY/GJqQtj93pFcyM+52X7zcLqM=
-			</data>
-		</dict>
-		<key>FakeSettingForGroupingTableViewCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			K0ZrIqAD0Z+3Np+Yl3gnOCLm7UMMzjlnE/Atw2Qs6v0=
-			</data>
-		</dict>
-		<key>FeedbackOnClickTableViewCell.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			s5yu6Sdi44riqoQxKs75QE6T7GGWIVYCH4r2yexLbG4=
-			</data>
-		</dict>
-		<key>FeedbackOnClickTableViewCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			OtGOFuNP/gdlXV47lAnqM9TEaBSe6qFJYdTSxFf6j5Q=
-			</data>
-		</dict>
-		<key>FeedbackViewController.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zVVY2Hr7F2gJ+Y1nUKT34Zh+FiyIDKqTpTa/krhhD+k=
-			</data>
-		</dict>
-		<key>FeedbackViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			M9M8lBQMX/GUnfuPbpPkF2kl485BNyVBGCQFsRNRQJo=
-			</data>
-		</dict>
-		<key>FileTableViewCell.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			U+8D0vR/ZPH1ci2udXKzGZt17kvydNf8GYhaYDMubGc=
-			</data>
-		</dict>
-		<key>FileTableViewCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			UfjS5XBK+h/LnAyqinOXet/YBSf+dHZM8lr2wpogzWs=
-			</data>
-		</dict>
-		<key>FileViewerViewController.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xJYvAiFQtmtGn/sV7ZcFchJJoMtnaYlx1pmXoDKsELQ=
-			</data>
-		</dict>
-		<key>FileViewerViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mTpv5f6v5pidW/37KhgHOIg25KBs7j48NzqmqG5DRYQ=
-			</data>
-		</dict>
-		<key>GenericKeyboardViewController.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			F9llWXYAzQC23pY6GivMJPM4zGFlpI3beVX1RSo1mmI=
-			</data>
-		</dict>
-		<key>GenericKeyboardViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hVXa/D6eBEnZ+r/1CuejQU7M8KJzGZ3Fh5t9MJj8A9M=
+			xxNOamM4Vz193c831yJFTvBHeDNmw/YNdBvHsLqFZog=
 			</data>
 		</dict>
 		<key>Head.png</key>
@@ -738,7 +523,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zf1dh/ONU8Mvia3NK6mU+84O+Axg2dLECLO+aMllpvo=
+			0TaatguP6YvoFUAmWp2XD0t8SZVIISRZiJcPzmUWW4U=
 			</data>
 		</dict>
 		<key>Headers/NoiseTagging.h</key>
@@ -748,32 +533,18 @@
 			nyDabKBBTxnElgWZxNcVTbReyzieWD0gk1RAqlMwtY8=
 			</data>
 		</dict>
-		<key>HeadsetScreenViewController.nib/objects-13.0+.nib</key>
+		<key>HeadsetScreenViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b0/e110NxFkdCy4MrW8ArFbcj9WxAdvVApzUwc7mKu4=
+			GGI/61Hyab86f8LOUcWGrjWIvxHAYh/8vbFR6QZMnOE=
 			</data>
 		</dict>
-		<key>HeadsetScreenViewController.nib/runtime.nib</key>
+		<key>IntSettingTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TF6JGLqYLqXaBPaYaDgqAGZQJEo6zkyFkfT7NAKf9DA=
-			</data>
-		</dict>
-		<key>IntSettingTableViewCell.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jNPKRuWlvTdvzpyNFhgyWHcnK3N95CjKhdi1WUQWZhc=
-			</data>
-		</dict>
-		<key>IntSettingTableViewCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rAy4n+koldcHZcUYAI+6+iGY5ZMGoUOuXfPcdbsMrDk=
+			PW9xx6mRmltl5q3vyonpAJC939E6nPr8AVwe+FbbS8I=
 			</data>
 		</dict>
 		<key>Keyboard Laptop.json</key>
@@ -801,42 +572,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			POHS/83kiCuo/iUZuDLthNxLNamR4cW+8MNU7aAj5ew=
+			iwdkhwGiUv71AK3kPj4XTjqUCoN0f/RSMoPCZIW9vPg=
 			</data>
 		</dict>
 		<key>Modules/NoiseTagging.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YADVV64YUfEx/zUDnVBySJYDNHs4wpzbmAvhsbbTgYA=
+			ry6/lwkThQOIZH7IVq5knTSB8VG9cKTswRdrqsbo1rk=
 			</data>
 		</dict>
 		<key>Modules/NoiseTagging.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dWBJvyAlzxt6WmlvVuo7ZulPgs6iU/Oiv5iLIBnK5iM=
+			2T+O8weaSw5Nv9V4WCGL9DJarVfmSR3m7JOYGIAmHp4=
 			</data>
 		</dict>
 		<key>Modules/NoiseTagging.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			POHS/83kiCuo/iUZuDLthNxLNamR4cW+8MNU7aAj5ew=
+			iwdkhwGiUv71AK3kPj4XTjqUCoN0f/RSMoPCZIW9vPg=
 			</data>
 		</dict>
 		<key>Modules/NoiseTagging.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YADVV64YUfEx/zUDnVBySJYDNHs4wpzbmAvhsbbTgYA=
+			ry6/lwkThQOIZH7IVq5knTSB8VG9cKTswRdrqsbo1rk=
 			</data>
 		</dict>
 		<key>Modules/NoiseTagging.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dWBJvyAlzxt6WmlvVuo7ZulPgs6iU/Oiv5iLIBnK5iM=
+			2T+O8weaSw5Nv9V4WCGL9DJarVfmSR3m7JOYGIAmHp4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -844,6 +615,13 @@
 			<key>hash2</key>
 			<data>
 			gM1tG+9lBZM6mT5bWNYUaV5uhCyBW0Xh9pYtW6aobh8=
+			</data>
+		</dict>
+		<key>NoiseTagKeyboardViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IU/N8hgkKTq3u2XRWbg1RhIKdAFh0HUhNtJ1w3mhAic=
 			</data>
 		</dict>
 		<key>NoiseTagsForTestingCustomFrameRates_ROW_PER_PATTERN.txt</key>
@@ -895,88 +673,46 @@
 			SdineyX+KlX6vedDHKidhFTWBKPU8iB/2hQkgEt4Ia4=
 			</data>
 		</dict>
-		<key>PickableColorTableViewCell.nib/objects-13.0+.nib</key>
+		<key>PickableColorTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uy03dX5E9vd1E295TyYGwFG4JbEYMY9zyETG1gIu9yg=
+			erq5LWrMlligLDyKO7sVRs5B4goDF0FFuaS3YLq0FyI=
 			</data>
 		</dict>
-		<key>PickableColorTableViewCell.nib/runtime.nib</key>
+		<key>RecordingTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KbUBSsGIJ5bqx/L/PhvQagdOsbsBwJHBXlq+CzGbImE=
+			pt01OmYAZEFFyYFDlhywBexOcoMPD+0vED+w9n8mlIM=
 			</data>
 		</dict>
-		<key>RecordingTableViewCell.nib/objects-13.0+.nib</key>
+		<key>RecordingsViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zo1cv1UvuhH0CKy4PANQ+7+9+nK+FHbYYXZ0qmdduHM=
+			RzES2Wv8Hh0P7g5cVchnyEQh0eY5lClH/vcJSOK+5nU=
 			</data>
 		</dict>
-		<key>RecordingTableViewCell.nib/runtime.nib</key>
+		<key>SetOfSettingsTableViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G3wXYWAKhZ/aztk41h1jEWdegIzS0hRUowmUNV8u5u0=
+			gkbaLxNIus+lYusMnQrldYtuF/42GT2XUkrfZk1ijso=
 			</data>
 		</dict>
-		<key>RecordingsViewController.nib/objects-13.0+.nib</key>
+		<key>SimplifiedBrainControlViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ElrLjy/B8Ep4qk0qrzxYub7RYYZXudVK+4HB2G8SDIE=
+			JKrkXOncH+P9oPAw7i8emhXiToZE9RtGK6htQaTlVPE=
 			</data>
 		</dict>
-		<key>RecordingsViewController.nib/runtime.nib</key>
+		<key>TextSettingTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A1WfvFa1opixMFtcxtYQxu6a95I4vv0+BCmVuDyLzDk=
-			</data>
-		</dict>
-		<key>SetOfSettingsTableViewController.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			YIFoY6zaZK6hPlykNOJFlkgYWzF0dvwJrwsixDioJe8=
-			</data>
-		</dict>
-		<key>SetOfSettingsTableViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			XiQ/JLO/mCrh8Pkazdd41lnTAS2IWzR7XTY4NVioydo=
-			</data>
-		</dict>
-		<key>SimplifiedBrainControlViewController.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			gGJmIfikrfBfy4z3YJLAB4RspPDq1m8EAt+P3LFtsMI=
-			</data>
-		</dict>
-		<key>SimplifiedBrainControlViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			GUCLWV7GqR5JInlxD5yqHXKkWLPbIAwv9ux5lI7L5MM=
-			</data>
-		</dict>
-		<key>TextSettingTableViewCell.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			e/tb2dJf2eKrswQJhz9H67cESHEzGqhLN2ErIgfbKCM=
-			</data>
-		</dict>
-		<key>TextSettingTableViewCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MCcrPBLkZNaf3kGqvoZxNHE9q+GzvH5vkZrMk5O5E44=
+			XFNvTOmQ+n/nTDVHEK03TRgdQRX+xWmk7i1f5lgdCd0=
 			</data>
 		</dict>
 		<key>Toggle.wav</key>

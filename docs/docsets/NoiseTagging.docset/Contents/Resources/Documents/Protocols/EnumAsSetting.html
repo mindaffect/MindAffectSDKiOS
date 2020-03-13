@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EnumAsSetting Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/EnumAsSetting" class="dashAnchor"></a>
+    <a title="EnumAsSetting Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NoiseTagging Docs</a> (78% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NoiseTagging Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        EnumAsSetting Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Programming%20Guides.html">Programming Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../readme.html">README</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../quick-start.html">Quick Start</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../main-programming-guide.html">Main Programming Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Main%20Symbols.html">Main Symbols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagController.html">NoiseTagController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NoiseTagControl.html">NoiseTagControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagControlProperties.html">NoiseTagControlProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Controls.html">Controls</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagButtonView.html">NoiseTagButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagShapeButtonView.html">NoiseTagShapeButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagLabeledButtonView/LocationLabel.html">– LocationLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagRadioButton.html">NoiseTagRadioButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagPopupButtonView.html">NoiseTagPopupButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagPopupItem.html">NoiseTagPopupItem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Settings.html">Settings</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagSetOfSettings.html">NoiseTagSetOfSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SetOfSettings.html">SetOfSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NoiseTagSettingTitles.html">NoiseTagSettingTitles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BoolSetting.html">BoolSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IntSetting.html">IntSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DoubleSetting.html">DoubleSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextSetting.html">TextSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EnumSetting.html">EnumSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ItemOfArraySetting.html">ItemOfArraySetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ColorSetting.html">ColorSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PickableColor.html">PickableColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Settings.html#/c:@M@NoiseTagging@objc(cs)ResultValidityCheck">ResultValidityCheck</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Setting_abstract.html">Setting_abstract</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Guides.html">Other Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../license.html">LICENSE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagKeyboardViewController.html">NoiseTagKeyboardViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SetOfSettingsGenericKeyboard.html">SetOfSettingsGenericKeyboard</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Global%20Variables.html">Other Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTagging22kColorMindAffectOrangeSo7UIColorCvp">kColorMindAffectOrange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTagging014kDefaultHeightA9TagButton12CoreGraphics7CGFloatVvp">kDefaultHeightNoiseTagButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTagging013kDefaultWidthA9TagButton12CoreGraphics7CGFloatVvp">kDefaultWidthNoiseTagButton</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ClickFeedbackMode.html">ClickFeedbackMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ContrastMode.html">ContrastMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CornerViewMode.html">CornerViewMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CustomizableButtonState.html">CustomizableButtonState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LettersLayoutType_genericKeyboard.html">LettersLayoutType_genericKeyboard</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NoiseTagControlAppearance.html">NoiseTagControlAppearance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NoiseTagMode.html">NoiseTagMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StandardCustomizableButton.html">StandardCustomizableButton</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Extensions.html#/CircularScrolling">CircularScrolling</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DelegateForSimplifiedBrainControl.html">DelegateForSimplifiedBrainControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EnumAsSetting.html">EnumAsSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ItemOfArrayInMenu.html">ItemOfArrayInMenu</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NoiseTaggingKeyboardDelegate.html">NoiseTaggingKeyboardDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Setting.html">Setting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SettingObserver.html">SettingObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SettingSubscriber.html">SettingSubscriber</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Structs.html">Other Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/GenericKeyboardSettingTitles.html">GenericKeyboardSettingTitles</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>EnumAsSetting</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">EnumAsSetting</span></code></pre>
+
+                </div>
+              </div>
+            <p>Enums that implement <code>EnumAsSettingProtocol</code> can be used as values for <code><a href="../Classes/EnumSetting.html">EnumSetting</a></code>.</p>
+
+<p>The NoiseTagging framework provides extensions so that enums that use Int for raw values automatically conform to this protocol, except for <code>var displayName</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging13EnumAsSettingP9caseCountSivpZ"></a>
+                    <a name="//apple_ref/swift/Variable/caseCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging13EnumAsSettingP9caseCountSivpZ">caseCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of possible cases the enum has.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">caseCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging13EnumAsSettingP7valueAt5indexxSgSi_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/valueAt(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging13EnumAsSettingP7valueAt5indexxSgSi_tFZ">valueAt(index:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The case of the enum at the passed <code>index</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">valueAt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">`</span><span class="nv">Self</span><span class="p">`?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging13EnumAsSettingP11displayNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/displayName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging13EnumAsSettingP11displayNameSSvp">displayName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A user-friendly description of the enum case.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">displayName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging13EnumAsSettingP8subTitleSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/subTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging13EnumAsSettingP8subTitleSSSgvp">subTitle</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An optional sub title for the enum case, which can be used to provide the user with more elaborate information about what the enum case means.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">subTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging13EnumAsSettingP13displayNameAt5indexSSSi_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/displayNameAt(index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging13EnumAsSettingP13displayNameAt5indexSSSi_tFZ">displayNameAt(index:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A user-friendly description of the enum case with the passed <code>index</code>.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">displayNameAt</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging13EnumAsSettingP8rawValueSivp"></a>
+                    <a name="//apple_ref/swift/Property/rawValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging13EnumAsSettingP8rawValueSivp">rawValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The case&rsquo;s raw value, as an <code>Int</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rawValue</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>MindAffect 2020</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

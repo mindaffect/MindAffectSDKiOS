@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
-// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name NoiseTagging
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name NoiseTagging
 import AVFoundation
 import AudioToolbox
 import CloudKit
@@ -11,17 +11,17 @@ import Network
 @_exported import NoiseTagging
 import Swift
 import UIKit
-public protocol ItemOfArrayInMenuProtocol {
+public protocol ItemOfArrayInMenu {
   var displayName: Swift.String { get }
   func isEqual(_ object: Any?) -> Swift.Bool
 }
-extension String : NoiseTagging.ItemOfArrayInMenuProtocol {
+extension String : NoiseTagging.ItemOfArrayInMenu {
   public var displayName: Swift.String {
     get
   }
   public func isEqual(_ object: Any?) -> Swift.Bool
 }
-extension Int : NoiseTagging.ItemOfArrayInMenuProtocol {
+extension Int : NoiseTagging.ItemOfArrayInMenu {
   public var displayName: Swift.String {
     get
   }
@@ -33,17 +33,17 @@ extension Int : NoiseTagging.ItemOfArrayInMenuProtocol {
     get
     set
   }
-  final public let initialValue: NoiseTagging.ItemOfArrayInMenuProtocol
-  public var value: NoiseTagging.ItemOfArrayInMenuProtocol {
+  final public let initialValue: NoiseTagging.ItemOfArrayInMenu
+  public var value: NoiseTagging.ItemOfArrayInMenu {
     get
   }
-  public init(title: Swift.String, possibleValues: [NoiseTagging.ItemOfArrayInMenuProtocol], indexValue: Swift.Int, usePickerInsteadOfSegmentedControl: Swift.Bool = false, isEditable: Swift.Bool = true, help: Swift.String? = nil)
-  public func indexFor(value: NoiseTagging.ItemOfArrayInMenuProtocol) -> Swift.Int?
+  public init(title: Swift.String, possibleValues: [NoiseTagging.ItemOfArrayInMenu], indexValue: Swift.Int, usePickerInsteadOfSegmentedControl: Swift.Bool = false, isEditable: Swift.Bool = true, help: Swift.String? = nil)
+  public func indexFor(value: NoiseTagging.ItemOfArrayInMenu) -> Swift.Int?
   public var numberOfPossibleValues: Swift.Int {
     get
   }
-  public func possibleValueAt(index: Swift.Int) -> NoiseTagging.ItemOfArrayInMenuProtocol
-  public func select(value: NoiseTagging.ItemOfArrayInMenuProtocol)
+  public func possibleValueAt(index: Swift.Int) -> NoiseTagging.ItemOfArrayInMenu
+  public func select(value: NoiseTagging.ItemOfArrayInMenu)
   public func selectValueWith(displayName: Swift.String) -> Swift.Bool
   @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
   @objc override dynamic public var description: Swift.String {
@@ -65,7 +65,7 @@ extension Int : NoiseTagging.ItemOfArrayInMenuProtocol {
   }
   @objc deinit
 }
-public enum NoiseTagMode : Swift.Int, NoiseTagging.EnumAsSettingProtocol {
+public enum NoiseTagMode : Swift.Int, NoiseTagging.EnumAsSetting {
   case TrainGeneric
   case TrainSimple
   case TrainCustom
@@ -88,6 +88,8 @@ public struct NoiseTagSettingTitles {
   public static let showNoiseTagIDsOnControls: Swift.String
   public static let framesPerBit: Swift.String
   public static let preferredNFramesPerSecond: Swift.String
+  public static let doubleTapOpensBrainSetup: Swift.String
+  public static let twoFingerDoubleTapOpensDeveloperScreen: Swift.String
   public static let useTapsForTogglingWhetherControlsParticipateInNoiseTagging: Swift.String
   public static let filenameNoiseTags: Swift.String
   public static let mode: Swift.String
@@ -149,8 +151,20 @@ public struct NoiseTagSettingTitles {
   @objc override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
   @objc deinit
 }
-public protocol DelegateProtocolForSimplifiedBrainControl : AnyObject {
+public protocol DelegateForSimplifiedBrainControl : AnyObject {
   func simplifiedSetupForBrainControlFinished(withBrainControl: Swift.Bool, completion: () -> ())
+}
+@objc public enum NoiseTagControlAppearance : Swift.Int {
+  case Flicker0
+  case Flicker1
+  case Enabled
+  case Disabled
+  case Other
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 @objc public class NoiseTagRadioButton : NoiseTagging.NoiseTagLabeledButtonView {
   public var isOn: Swift.Bool {
@@ -160,6 +174,11 @@ public protocol DelegateProtocolForSimplifiedBrainControl : AnyObject {
   override public init(frame: CoreGraphics.CGRect, locationLabel: NoiseTagging.NoiseTagLabeledButtonView.LocationLabel = super)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
+}
+extension UIViewController {
+  public var viewIsInCurrentNoiseTaggingUnit: Swift.Bool {
+    get
+  }
 }
 @objc public class IntSetting : NoiseTagging.Setting_abstract, NoiseTagging.Setting, Foundation.NSCoding {
   final public let initialValue: Swift.Int
@@ -209,14 +228,17 @@ extension UIView : NoiseTagging.NoiseTagControl {
   @objc dynamic public var isHiddenOrIsInHiddenView: Swift.Bool {
     @objc get
   }
-  @objc dynamic open func setFlickerColor(color: UIKit.UIColor)
+  @objc dynamic open func show(appearance: NoiseTagging.NoiseTagControlAppearance, withDefaultColor defaultColor: UIKit.UIColor)
   @objc dynamic open func setFeedbackColor(color: UIKit.UIColor?)
   @objc dynamic open func layerToHandleNoiseTagTaps() -> QuartzCore.CALayer?
   @objc dynamic open func layerFlickeringPart() -> QuartzCore.CALayer
   @objc dynamic open func layerForFeedbackAnimations() -> QuartzCore.CALayer
   @objc dynamic public func updateUIDependingOnNoiseTagging()
 }
-public enum CornerViewMode : Swift.Int, NoiseTagging.EnumAsSettingProtocol {
+public let kColorMindAffectOrange: UIKit.UIColor
+public let kDefaultHeightNoiseTagButton: CoreGraphics.CGFloat
+public let kDefaultWidthNoiseTagButton: CoreGraphics.CGFloat
+public enum CornerViewMode : Swift.Int, NoiseTagging.EnumAsSetting {
   case Off
   case Sync
   case Target
@@ -231,6 +253,7 @@ public enum CornerViewMode : Swift.Int, NoiseTagging.EnumAsSettingProtocol {
   }
 }
 @objc public class NoiseTagController : ObjectiveC.NSObject {
+  public func colorFor(bit: Swift.Bool) -> UIKit.UIColor
   public func updateControls(updateCode: @escaping () -> ())
   public func push(view: UIKit.UIView, forNoiseTaggingWithDelegate delegate: NoiseTagging.NoiseTagDelegate)
   public func pop()
@@ -241,6 +264,7 @@ public enum CornerViewMode : Swift.Int, NoiseTagging.EnumAsSettingProtocol {
   }
   public func blockTrials(forDuration duration: Foundation.TimeInterval? = nil)
   public func unblockTrials()
+  final public let settings: NoiseTagging.NoiseTagSetOfSettings
   public func startBrainSetup(pushedFromNavigationController clientNavigationController: UIKit.UINavigationController?, withCompletionAfterBrainSetup completionAfterBrainSetup: @escaping () -> ())
   @objc deinit
 }
@@ -268,7 +292,52 @@ public var NoiseTagging: NoiseTagging.NoiseTagController {
   @objc override dynamic public init()
   @objc deinit
 }
+public enum StandardCustomizableButton : Swift.Int {
+  case SpecialCharacters
+  case SpeakOutOrUndo
+  case Ready
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CustomizableButtonState : Swift.Equatable {
+  case standard(NoiseTagging.StandardCustomizableButton)
+  case custom(view: UIKit.UIView, idInKeyboard: Swift.String)
+  public static func == (lhs: NoiseTagging.CustomizableButtonState, rhs: NoiseTagging.CustomizableButtonState) -> Swift.Bool
+}
+@objc public protocol NoiseTaggingKeyboardDelegate : AnyObject {
+  @objc optional func customActionOnPressOnKeyWith(idInKeyboard: Swift.String) -> Swift.Bool
+  @objc optional func readyButtonPressedInKeyboard()
+}
+@objc public class NoiseTagKeyboardViewController : UIKit.UIViewController, NoiseTagging.NoiseTagDelegate, NoiseTagging.SettingSubscriber {
+  @objc dynamic public init()
+  weak public var delegate: NoiseTagging.NoiseTaggingKeyboardDelegate?
+  public var customizableButtonStates: [NoiseTagging.CustomizableButtonState] {
+    get
+    set
+  }
+  public var smartTextEditing: Swift.Bool
+  public static let setOfSettings: NoiseTagging.SetOfSettingsGenericKeyboard
+  public var typedText: Swift.String {
+    get
+    set
+  }
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc public func startNoiseTagControlOn(noiseTaggingView: UIKit.UIView)
+  @objc public func respondToNoiseTagModeChange()
+  public func valueChangedOf(setting: NoiseTagging.Setting, inSet setOfSettings: NoiseTagging.SetOfSettings)
+  @objc override dynamic public func didReceiveMemoryWarning()
+  @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
 @objc public class NoiseTagButtonView : UIKit.UIView, NoiseTagging.SettingSubscriber {
+  public var titleLabel: UIKit.UILabel?
   public var title: Swift.String? {
     get
     set
@@ -309,7 +378,7 @@ public var NoiseTagging: NoiseTagging.NoiseTagController {
     get
     set
   }
-  @objc override dynamic public func setFlickerColor(color: UIKit.UIColor)
+  @objc override dynamic public func show(appearance: NoiseTagging.NoiseTagControlAppearance, withDefaultColor defaultColor: UIKit.UIColor)
   public func valueChangedOf(setting: NoiseTagging.Setting, inSet setOfSettings: NoiseTagging.SetOfSettings)
   @objc dynamic public init()
   @objc override dynamic public func layoutSubviews()
@@ -350,7 +419,7 @@ public var NoiseTagging: NoiseTagging.NoiseTagController {
   @objc deinit
 }
 @objc public protocol NoiseTagControl : ObjectiveC.NSObjectProtocol {
-  @objc func setFlickerColor(color: UIKit.UIColor)
+  @objc func show(appearance: NoiseTagging.NoiseTagControlAppearance, withDefaultColor defaultColor: UIKit.UIColor)
   @objc func setFeedbackColor(color: UIKit.UIColor?)
   @objc func layerToHandleNoiseTagTaps() -> QuartzCore.CALayer?
   @objc func layerForFeedbackAnimations() -> QuartzCore.CALayer
@@ -370,6 +439,17 @@ extension NoiseTagControl {
   public var defaultColorWhenDisabled: UIKit.UIColor {
     get
   }
+}
+public struct GenericKeyboardSettingTitles {
+  public static let keyboardLayout: Swift.String
+  public static let autoCompleteMode: Swift.String
+  public static let ttsMode: Swift.String
+  public static let languageCodeWordCompletion: Swift.String
+  public static let whenAcceptingWordCompletionsOnSpaceOnlySuggestIfCurrentTextIsNoWord: Swift.String
+}
+@objc public class SetOfSettingsGenericKeyboard : NoiseTagging.SetOfSettings {
+  @objc override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc deinit
 }
 @objc public class NoiseTagPopupButtonView : NoiseTagging.NoiseTagLabeledButtonView, UIKit.UIPopoverPresentationControllerDelegate, NoiseTagging.NoiseTagDelegate {
   public var items: [NoiseTagging.NoiseTagPopupItem] {
@@ -437,11 +517,11 @@ public protocol SettingSubscriber : AnyObject {
   public func set(value: Swift.Double, for settingTitle: Swift.String)
   public func set(value: Swift.String, for settingTitle: Swift.String)
   public func indexSelectionForEnumSettingWith(title: Swift.String) -> Swift.Int
-  public func selectedEnumForSettingWith(title: Swift.String) -> NoiseTagging.EnumAsSettingProtocol?
-  public func set(enumValue: NoiseTagging.EnumAsSettingProtocol, for settingTitle: Swift.String)
+  public func selectedEnumForSettingWith(title: Swift.String) -> NoiseTagging.EnumAsSetting?
+  public func set(enumValue: NoiseTagging.EnumAsSetting, for settingTitle: Swift.String)
   public func indexSelectionForItemOfArraySettingWith(title: Swift.String) -> Swift.Int
-  public func selectedItemOfArrayFor(title: Swift.String) -> NoiseTagging.ItemOfArrayInMenuProtocol?
-  public func set(itemOfArray: NoiseTagging.ItemOfArrayInMenuProtocol, for settingTitle: Swift.String)
+  public func selectedItemOfArrayFor(title: Swift.String) -> NoiseTagging.ItemOfArrayInMenu?
+  public func set(itemOfArray: NoiseTagging.ItemOfArrayInMenu, for settingTitle: Swift.String)
   public func colorFor(title: Swift.String) -> UIKit.UIColor
   public func textFor(title: Swift.String) -> Swift.String
   public func takeOnValuesOf(setOfSettings: NoiseTagging.SetOfSettings)
@@ -481,6 +561,18 @@ public protocol SettingSubscriber : AnyObject {
   }
   @objc deinit
 }
+public enum LettersLayoutType_genericKeyboard : Swift.Int, NoiseTagging.EnumAsSetting {
+  case ABC
+  case QWERTY
+  public var displayName: Swift.String {
+    get
+  }
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public class TextSetting : NoiseTagging.Setting_abstract, NoiseTagging.Setting, Foundation.NSCoding {
   final public let initialValue: Swift.String
   public var value: Swift.String {
@@ -513,7 +605,7 @@ public protocol SettingSubscriber : AnyObject {
   }
   @objc deinit
 }
-public enum ClickFeedbackMode : Swift.Int, NoiseTagging.EnumAsSettingProtocol {
+public enum ClickFeedbackMode : Swift.Int, NoiseTagging.EnumAsSetting {
   case None
   case NonselectedGray
   case SelectedAnimates
@@ -620,7 +712,7 @@ public enum ClickFeedbackMode : Swift.Int, NoiseTagging.EnumAsSettingProtocol {
   @objc override dynamic public init()
   @objc deinit
 }
-public enum ContrastMode : Swift.Int, NoiseTagging.EnumAsSettingProtocol {
+public enum ContrastMode : Swift.Int, NoiseTagging.EnumAsSetting {
   case Min
   case Low
   case Medium
@@ -644,16 +736,16 @@ public enum ContrastMode : Swift.Int, NoiseTagging.EnumAsSettingProtocol {
   public init?(rawValue: Swift.Int)
 }
 @objc public class EnumSetting : NoiseTagging.Setting_abstract, NoiseTagging.Setting {
-  final public let initialValue: NoiseTagging.EnumAsSettingProtocol
-  public var value: NoiseTagging.EnumAsSettingProtocol {
+  final public let initialValue: NoiseTagging.EnumAsSetting
+  public var value: NoiseTagging.EnumAsSetting {
     get
     set
   }
-  public init(title: Swift.String, value: NoiseTagging.EnumAsSettingProtocol, usePickerInsteadOfSegmentedControl: Swift.Bool = false, isEditable: Swift.Bool = true, help: Swift.String? = nil)
+  public init(title: Swift.String, value: NoiseTagging.EnumAsSetting, usePickerInsteadOfSegmentedControl: Swift.Bool = false, isEditable: Swift.Bool = true, help: Swift.String? = nil)
   public var caseCount: Swift.Int {
     get
   }
-  public func valueAt(index: Swift.Int) -> NoiseTagging.EnumAsSettingProtocol?
+  public func valueAt(index: Swift.Int) -> NoiseTagging.EnumAsSetting?
   public func displayNameAt(index: Swift.Int) -> Swift.String
   public func setValueWith(rawValue: Swift.Int)
   public func selectValueWith(displayName: Swift.String) -> Swift.Bool
@@ -680,7 +772,7 @@ public enum ContrastMode : Swift.Int, NoiseTagging.EnumAsSettingProtocol {
   }
   @objc deinit
 }
-public protocol EnumAsSettingProtocol {
+public protocol EnumAsSetting {
   static var caseCount: Swift.Int { get }
   static func valueAt(index: Swift.Int) -> Self?
   var displayName: Swift.String { get }
@@ -694,7 +786,7 @@ extension RawRepresentable where Self.RawValue == Swift.Int {
   }
   public static func valueAt(index: Swift.Int) -> Self?
 }
-extension EnumAsSettingProtocol {
+extension EnumAsSetting {
   public static func displayNameAt(index: Swift.Int) -> Swift.String
   public var subTitle: Swift.String? {
     get
@@ -733,7 +825,7 @@ extension EnumAsSettingProtocol {
     get
     set
   }
-  @objc override dynamic public func setFlickerColor(color: UIKit.UIColor)
+  @objc override dynamic public func show(appearance: NoiseTagging.NoiseTagControlAppearance, withDefaultColor defaultColor: UIKit.UIColor)
   @objc override dynamic public func updateUIDependingOnNoiseTagging()
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
@@ -775,7 +867,7 @@ extension EnumAsSettingProtocol {
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc override dynamic public func layerToHandleNoiseTagTaps() -> QuartzCore.CALayer?
-  @objc override dynamic public func setFlickerColor(color: UIKit.UIColor)
+  @objc override dynamic public func show(appearance: NoiseTagging.NoiseTagControlAppearance, withDefaultColor defaultColor: UIKit.UIColor)
   @objc public func noiseTagControlIsEnabled_didChangeValue()
   @objc override dynamic public init()
   @objc deinit
@@ -783,8 +875,16 @@ extension EnumAsSettingProtocol {
 extension NoiseTagging.NoiseTagMode : Swift.Equatable {}
 extension NoiseTagging.NoiseTagMode : Swift.Hashable {}
 extension NoiseTagging.NoiseTagMode : Swift.RawRepresentable {}
+extension NoiseTagging.NoiseTagControlAppearance : Swift.Equatable {}
+extension NoiseTagging.NoiseTagControlAppearance : Swift.Hashable {}
+extension NoiseTagging.NoiseTagControlAppearance : Swift.RawRepresentable {}
 extension NoiseTagging.CornerViewMode : Swift.Hashable {}
 extension NoiseTagging.CornerViewMode : Swift.RawRepresentable {}
+extension NoiseTagging.StandardCustomizableButton : Swift.Equatable {}
+extension NoiseTagging.StandardCustomizableButton : Swift.Hashable {}
+extension NoiseTagging.StandardCustomizableButton : Swift.RawRepresentable {}
+extension NoiseTagging.LettersLayoutType_genericKeyboard : Swift.Hashable {}
+extension NoiseTagging.LettersLayoutType_genericKeyboard : Swift.RawRepresentable {}
 extension NoiseTagging.ClickFeedbackMode : Swift.Hashable {}
 extension NoiseTagging.ClickFeedbackMode : Swift.RawRepresentable {}
 extension NoiseTagging.ContrastMode : Swift.Equatable {}

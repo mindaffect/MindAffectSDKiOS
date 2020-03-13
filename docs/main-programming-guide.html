@@ -99,6 +99,9 @@
                 <a href="Classes/SetOfSettings.html">SetOfSettings</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/NoiseTagSettingTitles.html">NoiseTagSettingTitles</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/BoolSetting.html">BoolSetting</a>
               </li>
               <li class="nav-group-task">
@@ -139,6 +142,31 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/NoiseTagKeyboardViewController.html">NoiseTagKeyboardViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SetOfSettingsGenericKeyboard.html">SetOfSettingsGenericKeyboard</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other%20Global%20Variables.html">Other Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other%20Global%20Variables.html#/s:12NoiseTagging22kColorMindAffectOrangeSo7UIColorCvp">kColorMindAffectOrange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Global%20Variables.html#/s:12NoiseTagging014kDefaultHeightA9TagButton12CoreGraphics7CGFloatVvp">kDefaultHeightNoiseTagButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Global%20Variables.html#/s:12NoiseTagging013kDefaultWidthA9TagButton12CoreGraphics7CGFloatVvp">kDefaultWidthNoiseTagButton</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -151,7 +179,19 @@
                 <a href="Enums/CornerViewMode.html">CornerViewMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/CustomizableButtonState.html">CustomizableButtonState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/LettersLayoutType_genericKeyboard.html">LettersLayoutType_genericKeyboard</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NoiseTagControlAppearance.html">NoiseTagControlAppearance</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/NoiseTagMode.html">NoiseTagMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/StandardCustomizableButton.html">StandardCustomizableButton</a>
               </li>
             </ul>
           </li>
@@ -173,19 +213,25 @@
               <li class="nav-group-task">
                 <a href="Extensions/UIView.html">UIView</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIViewController.html">UIViewController</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Other%20Protocols.html">Other Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/DelegateProtocolForSimplifiedBrainControl.html">DelegateProtocolForSimplifiedBrainControl</a>
+                <a href="Protocols/DelegateForSimplifiedBrainControl.html">DelegateForSimplifiedBrainControl</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/EnumAsSettingProtocol.html">EnumAsSettingProtocol</a>
+                <a href="Protocols/EnumAsSetting.html">EnumAsSetting</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/ItemOfArrayInMenuProtocol.html">ItemOfArrayInMenuProtocol</a>
+                <a href="Protocols/ItemOfArrayInMenu.html">ItemOfArrayInMenu</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/NoiseTaggingKeyboardDelegate.html">NoiseTaggingKeyboardDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/Setting.html">Setting</a>
@@ -202,7 +248,7 @@
             <a href="Other%20Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/NoiseTagSettingTitles.html">NoiseTagSettingTitles</a>
+                <a href="Structs/GenericKeyboardSettingTitles.html">GenericKeyboardSettingTitles</a>
               </li>
             </ul>
           </li>
@@ -225,6 +271,7 @@
 <li><a href="#settings">Settings</a></li>
 <li><a href="#using-noise-tag-controls">Using Noise Tag Controls</a></li>
 <li><a href="#custom-noise-tag-controls">Custom Noise Tag Controls</a></li>
+<li><a href="#logging">Logging</a></li>
 </ul>
 <h2 id='overview' class='heading'>Overview</h2>
 
@@ -292,7 +339,7 @@ class ViewController: UIViewController, NoiseTagDelegate {
         // Add noise tagging actions:
 
         // For some types of controls you add actions directly:
-        someNoiseTagButtonView.noiseTagging.addAction(timing: 1) {
+        someNoiseTagButtonView.noiseTagging.addAction(timing: 0) {
             // This code is executed when the button is pressed:
             print("Hello")
         }
@@ -382,7 +429,7 @@ NoiseTagging.blockTrials(forDuration: someDuration)
 <p>Each of the pressed button&rsquo;s actions is performed. Each action has a <code>timing</code>, which you pass when adding an action to a button. This timing determines when the action is performed <em>with respect to</em> the visual feedback. If <code>timing</code> is 0, the action is executed immediately. If it is 1, the action is executed once the visual feedback has finished. If it has a value in between, the action is executed during the visual feedback. </p>
 <h4 id='2-maximum-trial-durations' class='heading'>2. Maximum Trial Durations</h4>
 
-<p>Depending on the settings <code>maxTestTrialDuration</code> and <code>disableMaxTestTrialDuration</code>, trials may have a maximum duration. If this is the case and time runs out, the trial ends. If the <code>disableNoClicks</code> is <code>true</code>, the <em>most likely</em> button will be pressed, just like in the case of a &#39;normal&rsquo; button press. If  <code>disableNoClicks</code> is <code>false</code>, the framework gives visual feedback, indicating that no button is being pressed, and no button actions are performed. </p>
+<p>Depending on the settings <code>maxTestTrialDuration</code> and <code>disableMaxTestTrialDuration</code>, trials may have a maximum duration. If this is the case and time runs out, the trial ends. If the <code>disableNoClicks</code> setting is <code>true</code>, the <em>most likely</em> button will be pressed, just like in the case of a &#39;normal&rsquo; button press. If  <code>disableNoClicks</code> is <code>false</code>, the framework gives visual feedback, indicating that no button is being pressed, and no button actions are performed. </p>
 <h4 id='3-trials-stopped-mid-way' class='heading'>3. Trials Stopped Mid-Way</h4>
 
 <p>If <code>trialsAreRunning</code> is set to <code>false</code> while a trial is running – be it by your own code or because the user swipes up or down with one finger –, the current trial ends as well. In this case there is no visual feedback, except that the flickering stops. </p>
@@ -398,7 +445,7 @@ NoiseTagging.blockTrials(forDuration: someDuration)
 <p>You can use <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code>&lsquo;s <code>settings</code> property to customise how the framework operates. </p>
 <h3 id='the-settings-screen' class='heading'>The Settings Screen</h3>
 
-<p>If the <code>enableAccessDeveloperScreen</code> setting is <code>true</code>, the user can double tap with two fingers on the current unit&rsquo;s view in order to bring up the <em>Developer Screen</em>. From this screen the user can navigate to the <em>Settings Screen</em>, where all of <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code>&rsquo;s settings can be changed directly. </p>
+<p>If the <code>twoFingerDoubleTapOpensDeveloperScreen</code> setting is <code>true</code>, the user can double tap with two fingers on the current unit&rsquo;s view in order to bring up the <em>Developer Screen</em>. From this screen the user can navigate to the <em>Settings Screen</em>, where all of <code><a href="Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a></code>&rsquo;s settings can be changed directly. </p>
 <h3 id='changing-settings-programatically' class='heading'>Changing Settings Programatically</h3>
 
 <p>You access settings by their titles, which are defined in the struct <code><a href="Structs/NoiseTagSettingTitles.html">NoiseTagSettingTitles</a></code>. For example:</p>
@@ -428,7 +475,7 @@ NoiseTagging.blockTrials(forDuration: someDuration)
 <p>Each <code><a href="Protocols/NoiseTagControl.html">NoiseTagControl</a></code> has a <code>noiseTagging</code> property of type <code><a href="Classes/NoiseTagControlProperties.html">NoiseTagControlProperties</a></code>. The purpose of this <code>noiseTagging</code> property is to store a number of things that are needed to make noise tagging work. It is also your main point of access to define how each control behaves as a brain-pressable button. </p>
 
 <p>The most important public part of <code><a href="Classes/NoiseTagControlProperties.html">NoiseTagControlProperties</a></code> is the function <code>addAction(timing:closure:)</code>. As we have seen before, this lets you attach a noise tagging action to a control as follows:</p>
-<pre class="highlight swift"><code><span class="n">control</span><span class="o">.</span><span class="n">noiseTagging</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="nv">timing</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="n">control</span><span class="o">.</span><span class="n">noiseTagging</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="nv">timing</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -470,6 +517,45 @@ NoiseTagging.blockTrials(forDuration: someDuration)
 <pre class="highlight swift"><code><span class="c1">// By default we use setFlickerColor to show the default color for enabled/disabled controls:</span>
 <span class="k">self</span><span class="o">.</span><span class="nf">setFlickerColor</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">noiseTagging</span><span class="o">.</span><span class="n">enabled</span> <span class="p">?</span> <span class="k">self</span><span class="o">.</span><span class="n">defaultColorWhenEnabled</span> <span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">defaultColorWhenDisabled</span><span class="p">)</span>
 </code></pre>
+<h2 id='logging' class='heading'>Logging</h2>
+
+<p>The NoiseTagging framework logs data that might be useful for your own development or research as well. You can access this data in two ways:</p>
+<h3 id='access-log-files' class='heading'>Access Log Files</h3>
+
+<ol>
+<li>If the <code>twoFingerDoubleTapOpensDeveloperScreen</code> setting is <code>true</code>, within your app you can double tap with two fingers on the current unit&rsquo;s view in order to bring up the <em>Developer Screen</em>. From this screen you can navigate to the <em>Recordings Screen</em>, where you can find all log files stored by the framework.</li>
+<li>If you enable iTunes file sharing for your app, you can connect your iOS device to a computer and download the files.</li>
+</ol>
+<h3 id='recordings' class='heading'>Recordings</h3>
+
+<p>The NoiseTagging framework groups log files in <em>recordings</em>. Each recording contains the information that is logged in some meaningful bracket of time, plus optionally some feedback. </p>
+
+<p>The NoiseTagging framework creates multiple log files. E.g. one log file is about the communication with the Recogniser, another one is about rendering the flicker patterns, and yet another one is about the buttons that have been pressed. </p>
+<h4 id='time-brackets' class='heading'>Time Brackets</h4>
+
+<p>Each recording has a beginning and – at some point in time – an end. This way all logged information is grouped in meaningful brackets of time. There always is a <em>current recording</em>. Whatever is being logged is added to the current recording. Whenever a new recording is started, if there was already a recording running, that recording is stopped. These are the situations in which a new recording is started:</p>
+
+<ul>
+<li>App is launched.</li>
+<li>App has been in the background for at least 1 hour.</li>
+<li>We pass 00:00h and the recording has been running for over 23 hours. This way recordings never become ridiculously long.</li>
+<li>The Developer Screen is opened. Note that this means that you can deliberately end the current recording and start a new one.</li>
+<li>Whenever re-calibrating.</li>
+</ul>
+
+<p>The situations above are handled by the NoiseTagging framework, but clients of the framework – that is: specific apps – may also decide when to start a new recording. For example in a game it makes sense to start a new recording each time a new game starts, even if the user does not re-calibrate.</p>
+
+<p>Normally a recording only ends when another recording starts, but if the app crashes the current recording ends as well. In that case it is still safely stored to disk. </p>
+<h4 id='recording-names' class='heading'>Recording Names</h4>
+
+<p>Each Recording has a name which helps you find things back easier. For example:</p>
+
+<p>2019-09-23 09/44/45 +0000/ App started – 2.34h in background /2019-09-23 12/05/10 +0000</p>
+
+<p>The part left of the “–” is about the recording’s start: when it started and why it started. The part right of the “–” is about the recording’s end: why it ended and when. Since a recording ends whenever a new recording starts, the right part always matches the left part of the name of the next recording. If a recording ends because the app crashes, the right part of the name will be missing. </p>
+<h4 id='note-on-the-current-recording' class='heading'>Note on the Current Recording</h4>
+
+<p>The Recordings Screen only displays finished recordings, which means the current recording is not being displayed. Since we start a new recording whenever entering the Developer Screen and you enter the Recordings Screen via the Developer Screen, normally this does not matter. But if you want to look at information that was logged while you were in the Developer Screen, you first need to end that recording by exiting and reopening the Developer Screen. </p>
 
           </section>
         </section>

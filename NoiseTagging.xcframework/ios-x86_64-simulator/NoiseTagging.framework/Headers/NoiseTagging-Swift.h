@@ -532,13 +532,14 @@ SWIFT_CLASS("_TtC12NoiseTagging18ItemOfArraySetting")
 
 
 
+enum NoiseTagControlAppearance : NSInteger;
 @class UIColor;
 
 /// A button with either a title or an image.
 SWIFT_CLASS("_TtC12NoiseTagging18NoiseTagButtonView")
 @interface NoiseTagButtonView : UIView
 /// Implementation of <code>NoiseTagControl</code>‘s <code>setFlickerColor(color)</code> function. We simply set the passed <code>color</code> as our layer’s background color.
-- (void)setFlickerColorWithColor:(UIColor * _Nonnull)color;
+- (void)showWithAppearance:(enum NoiseTagControlAppearance)appearance withDefaultColor:(UIColor * _Nonnull)defaultColor;
 /// Initialize a new <code>NoiseTagButtonView</code>.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 /// We override <code>layoutSubviews</code> to keep our layout correct whenever our <code>bounds</code> change.
@@ -557,7 +558,7 @@ SWIFT_CLASS("_TtC12NoiseTagging25NoiseTagLabeledButtonView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 /// Implementation of <code>NoiseTagControl</code>’s <code>setFlickerColor(color)</code> function.
 /// The part of us where we display the image always flickers. The part of us where we display the title only flickers if the <code>labeledButtonsOnlyPartlyFlicker</code> setting is <code>false</code>.
-- (void)setFlickerColorWithColor:(UIColor * _Nonnull)color;
+- (void)showWithAppearance:(enum NoiseTagControlAppearance)appearance withDefaultColor:(UIColor * _Nonnull)defaultColor;
 /// We override this in order to hide the line that divides our two parts  when flickering is on.
 - (void)updateUIDependingOnNoiseTagging;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -589,9 +590,10 @@ SWIFT_CLASS("_TtC12NoiseTagging20NoiseTagCheckBoxView")
 SWIFT_PROTOCOL("_TtP12NoiseTagging15NoiseTagControl_")
 @protocol NoiseTagControl <NSObject>
 /// This function is called by <code>NoiseTagging</code> to show a noise tag on the control.
-/// \param color The current <em>flicker color</em>, which is a function of the current bit of the control’s noise tag. The control should show this color, e.g. by setting it as its background color.
+/// The control should update its appearance accordingly, e.g. by changing its background color. The default color for a bit can be obtained using <code>NoiseTagging.colorFor(bit:)</code>.
+/// \param noiseTagBit The current bit of the control’s noise tag.
 ///
-- (void)setFlickerColorWithColor:(UIColor * _Nonnull)color;
+- (void)showWithAppearance:(enum NoiseTagControlAppearance)appearance withDefaultColor:(UIColor * _Nonnull)defaultColor;
 /// This function is called by <code>NoiseTagging</code> to show <em>feedback</em> colors on the control, for example for <em>highlighting</em> – indicating that the user should look at the control during calibration –, or for providing visual feedback when there is a button press. By default <code>UIView</code> calls <code>setFlickerColor(color:)</code>, passing this color, or if the color is <code>nil</code>, it calls <code>self.updateUIDependingOnNoiseTagging()</code>.
 /// \param color The color that should be used for providing the feedback.
 ///
@@ -612,6 +614,15 @@ SWIFT_PROTOCOL("_TtP12NoiseTagging15NoiseTagControl_")
 /// Allows controls to respond when the value of <code>self.noiseTagging.enabled</code> changes.
 - (void)noiseTagControlIsEnabled_didChangeValue;
 @end
+
+/// todo…
+typedef SWIFT_ENUM(NSInteger, NoiseTagControlAppearance, open) {
+  NoiseTagControlAppearanceFlicker0 = 0,
+  NoiseTagControlAppearanceFlicker1 = 1,
+  NoiseTagControlAppearanceEnabled = 2,
+  NoiseTagControlAppearanceDisabled = 3,
+  NoiseTagControlAppearanceOther = 4,
+};
 
 
 /// Each <code>NoiseTagControl</code> has a <code>noiseTagging</code> property of type <code>NoiseTagControlProperties</code>. The purpose of this <code>noiseTagging</code> property is to store a number of things that are needed to make noise tagging work. It is also your main point of access to define how each control behaves as a brain-pressable button.
@@ -652,7 +663,7 @@ SWIFT_PROTOCOL("_TtP12NoiseTagging16NoiseTagDelegate_")
 ///        // Add noise tagging actions:
 ///
 ///        // For some types of controls you add actions directly:
-///        someNoiseTagButtonView.noiseTagging.addAction(timing: 1) {
+///        someNoiseTagButtonView.noiseTagging.addAction(timing: 0) {
 ///            // This code is executed when the button is pressed:
 ///            print("Hello")
 ///        }
@@ -680,6 +691,22 @@ SWIFT_PROTOCOL("_TtP12NoiseTagging16NoiseTagDelegate_")
 - (id <NoiseTagControl> _Nullable)nextTarget SWIFT_WARN_UNUSED_RESULT;
 /// This is part of functionality that will become available later on.
 - (void)trialEnded;
+@end
+
+@class NSBundle;
+
+/// A view controller which presents a brain-controllable keyboard.
+SWIFT_CLASS("_TtC12NoiseTagging30NoiseTagKeyboardViewController")
+@interface NoiseTagKeyboardViewController : UIViewController <NoiseTagDelegate>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)startNoiseTagControlOnNoiseTaggingView:(UIView * _Nonnull)noiseTaggingView;
+- (void)respondToNoiseTagModeChange;
+- (void)didReceiveMemoryWarning;
+@property (nonatomic, readonly) BOOL prefersStatusBarHidden;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 
@@ -751,11 +778,22 @@ SWIFT_CLASS("_TtC12NoiseTagging23NoiseTagShapeButtonView")
 /// See <code>NoiseTagControl</code>.
 - (CALayer * _Nullable)layerToHandleNoiseTagTaps SWIFT_WARN_UNUSED_RESULT;
 /// See <code>NoiseTagControl</code>.
-- (void)setFlickerColorWithColor:(UIColor * _Nonnull)color;
+- (void)showWithAppearance:(enum NoiseTagControlAppearance)appearance withDefaultColor:(UIColor * _Nonnull)defaultColor;
 /// See <code>NoiseTagControl</code>.
 - (void)noiseTagControlIsEnabled_didChangeValue;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// Protocol for the delegate of a <code>NoiseTagKeyboardViewController</code>.
+SWIFT_PROTOCOL("_TtP12NoiseTagging28NoiseTaggingKeyboardDelegate_")
+@protocol NoiseTaggingKeyboardDelegate
+@optional
+/// todo
+- (BOOL)customActionOnPressOnKeyWithIdInKeyboard:(NSString * _Nonnull)idInKeyboard SWIFT_WARN_UNUSED_RESULT;
+/// Called when the user presses the keyboard’s Ready button. Normally the delegate should dismiss the <code>NoiseTagKeyboardViewController</code>.
+- (void)readyButtonPressedInKeyboard;
 @end
 
 
@@ -773,6 +811,17 @@ SWIFT_CLASS("_TtC12NoiseTagging19ResultValidityCheck")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+
+/// Used to define settings for a <code>NoiseTagKeyboardViewController</code>.
+/// The setting titles of a <code>SetOfSettingsGenericKeyboard</code> are defined by <code>GenericKeyboardSettingTitles</code>.
+SWIFT_CLASS("_TtC12NoiseTagging28SetOfSettingsGenericKeyboard")
+@interface SetOfSettingsGenericKeyboard : SetOfSettings
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
+@end
 
 
 
@@ -826,13 +875,15 @@ SWIFT_CLASS("_TtC12NoiseTagging11TextSetting")
 
 @interface UIView (SWIFT_EXTENSION(NoiseTagging)) <NoiseTagControl>
 @property (nonatomic, readonly) BOOL isHiddenOrIsInHiddenView;
-- (void)setFlickerColorWithColor:(UIColor * _Nonnull)color;
+- (void)showWithAppearance:(enum NoiseTagControlAppearance)appearance withDefaultColor:(UIColor * _Nonnull)defaultColor;
 - (void)setFeedbackColorWithColor:(UIColor * _Nullable)color;
 - (CALayer * _Nullable)layerToHandleNoiseTagTaps SWIFT_WARN_UNUSED_RESULT;
 - (CALayer * _Nonnull)layerFlickeringPart SWIFT_WARN_UNUSED_RESULT;
 - (CALayer * _Nonnull)layerForFeedbackAnimations SWIFT_WARN_UNUSED_RESULT;
 - (void)updateUIDependingOnNoiseTagging;
 @end
+
+
 
 
 

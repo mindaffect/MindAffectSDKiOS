@@ -9,6 +9,7 @@ Table of Contents:
 - [Settings](#settings)
 - [Using Noise Tag Controls](#using-noise-tag-controls)
 - [Custom Noise Tag Controls](#custom-noise-tag-controls)
+- [Logging](#logging)
 
 
 ## Overview
@@ -91,7 +92,7 @@ class ViewController: UIViewController, NoiseTagDelegate {
 		// Add noise tagging actions:
 		
 		// For some types of controls you add actions directly:
-		someNoiseTagButtonView.noiseTagging.addAction(timing: 1) {
+		someNoiseTagButtonView.noiseTagging.addAction(timing: 0) {
 			// This code is executed when the button is pressed:
 			print("Hello")
 		}
@@ -195,7 +196,7 @@ Each of the pressed button's actions is performed. Each action has a `timing`, w
 
 #### 2. Maximum Trial Durations
 
-Depending on the settings `maxTestTrialDuration` and `disableMaxTestTrialDuration`, trials may have a maximum duration. If this is the case and time runs out, the trial ends. If the `disableNoClicks` is `true`, the *most likely* button will be pressed, just like in the case of a 'normal' button press. If  `disableNoClicks` is `false`, the framework gives visual feedback, indicating that no button is being pressed, and no button actions are performed. 
+Depending on the settings `maxTestTrialDuration` and `disableMaxTestTrialDuration`, trials may have a maximum duration. If this is the case and time runs out, the trial ends. If the `disableNoClicks` setting is `true`, the *most likely* button will be pressed, just like in the case of a 'normal' button press. If  `disableNoClicks` is `false`, the framework gives visual feedback, indicating that no button is being pressed, and no button actions are performed. 
 
 
 #### 3. Trials Stopped Mid-Way
@@ -219,7 +220,7 @@ You can use `NoiseTagging`'s `settings` property to customise how the framework 
 
 ### The Settings Screen
 
-If the `enableAccessDeveloperScreen` setting is `true`, the user can double tap with two fingers on the current unit's view in order to bring up the *Developer Screen*. From this screen the user can navigate to the *Settings Screen*, where all of `NoiseTagging`'s settings can be changed directly. 
+If the `twoFingerDoubleTapOpensDeveloperScreen` setting is `true`, the user can double tap with two fingers on the current unit's view in order to bring up the *Developer Screen*. From this screen the user can navigate to the *Settings Screen*, where all of `NoiseTagging`'s settings can be changed directly. 
 
 
 ### Changing Settings Programatically
@@ -261,7 +262,7 @@ Each `NoiseTagControl` has a `noiseTagging` property of type `NoiseTagControlPro
 The most important public part of `NoiseTagControlProperties` is the function `addAction(timing:closure:)`. As we have seen before, this lets you attach a noise tagging action to a control as follows:
 
 ```swift
-control.noiseTagging.addAction(timing: 1) {
+control.noiseTagging.addAction(timing: 0) {
 	print("Hello")
 }
 ```
@@ -314,3 +315,49 @@ This allows controls to respond when the state of `NoiseTagging` changes in some
 self.setFlickerColor(color: self.noiseTagging.enabled ? self.defaultColorWhenEnabled : self.defaultColorWhenDisabled)
 ```
 
+
+## Logging
+
+The NoiseTagging framework logs data that might be useful for your own development or research as well. You can access this data in two ways:
+
+
+### Access Log Files
+
+1. If the `twoFingerDoubleTapOpensDeveloperScreen` setting is `true`, within your app you can double tap with two fingers on the current unit's view in order to bring up the *Developer Screen*. From this screen you can navigate to the *Recordings Screen*, where you can find all log files stored by the framework. 
+2. If you enable iTunes file sharing for your app, you can connect your iOS device to a computer and download the files. 
+
+
+### Recordings
+
+The NoiseTagging framework groups log files in *recordings*. Each recording contains the information that is logged in some meaningful bracket of time, plus optionally some feedback. 
+
+The NoiseTagging framework creates multiple log files. E.g. one log file is about the communication with the Recogniser, another one is about rendering the flicker patterns, and yet another one is about the buttons that have been pressed. 
+
+
+#### Time Brackets
+
+Each recording has a beginning and – at some point in time – an end. This way all logged information is grouped in meaningful brackets of time. There always is a *current recording*. Whatever is being logged is added to the current recording. Whenever a new recording is started, if there was already a recording running, that recording is stopped. These are the situations in which a new recording is started:
+
+- App is launched.
+- App has been in the background for at least 1 hour. 
+- We pass 00:00h and the recording has been running for over 23 hours. This way recordings never become ridiculously long. 
+- The Developer Screen is opened. Note that this means that you can deliberately end the current recording and start a new one. 
+- Whenever re-calibrating. 
+
+The situations above are handled by the NoiseTagging framework, but clients of the framework – that is: specific apps – may also decide when to start a new recording. For example in a game it makes sense to start a new recording each time a new game starts, even if the user does not re-calibrate.
+
+Normally a recording only ends when another recording starts, but if the app crashes the current recording ends as well. In that case it is still safely stored to disk. 
+
+
+#### Recording Names
+
+Each Recording has a name which helps you find things back easier. For example:
+
+2019-09-23 09/44/45 +0000/ App started – 2.34h in background /2019-09-23 12/05/10 +0000
+
+The part left of the “–” is about the recording’s start: when it started and why it started. The part right of the “–” is about the recording’s end: why it ended and when. Since a recording ends whenever a new recording starts, the right part always matches the left part of the name of the next recording. If a recording ends because the app crashes, the right part of the name will be missing. 
+
+
+#### Note on the Current Recording
+
+The Recordings Screen only displays finished recordings, which means the current recording is not being displayed. Since we start a new recording whenever entering the Developer Screen and you enter the Recordings Screen via the Developer Screen, normally this does not matter. But if you want to look at information that was logged while you were in the Developer Screen, you first need to end that recording by exiting and reopening the Developer Screen. 

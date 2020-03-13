@@ -1,6 +1,104 @@
 {
   "warnings": [
     {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Class Extensions/UIViewController+NoiseTagging.swift",
+      "line": 13,
+      "symbol": "UIViewController.viewIsInCurrentNoiseTaggingUnit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
+      "line": 117,
+      "symbol": "NoiseTagKeyboardViewController.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
+      "line": 237,
+      "symbol": "NoiseTagKeyboardViewController.typedText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
+      "line": 362,
+      "symbol": "NoiseTagKeyboardViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
+      "line": 418,
+      "symbol": "NoiseTagKeyboardViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
+      "line": 949,
+      "symbol": "NoiseTagKeyboardViewController.valueChangedOf(setting:inSet:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
+      "line": 980,
+      "symbol": "NoiseTagKeyboardViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
+      "line": 985,
+      "symbol": "NoiseTagKeyboardViewController.prefersStatusBarHidden",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Model/SetOfSettingsGenericKeyboard.swift",
+      "line": 74,
+      "symbol": "SetOfSettingsGenericKeyboard.copy(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/NoiseTagControlAppearance.swift",
+      "line": 16,
+      "symbol": "NoiseTagControlAppearance.Flicker0",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/NoiseTagControlAppearance.swift",
+      "line": 17,
+      "symbol": "NoiseTagControlAppearance.Flicker1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/NoiseTagControlAppearance.swift",
+      "line": 18,
+      "symbol": "NoiseTagControlAppearance.Enabled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/NoiseTagControlAppearance.swift",
+      "line": 19,
+      "symbol": "NoiseTagControlAppearance.Disabled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/NoiseTagControlAppearance.swift",
+      "line": 20,
+      "symbol": "NoiseTagControlAppearance.Other",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Simple buttons/NoiseTagCheckBoxView.swift",
       "line": 17,
       "symbol": "NoiseTagCheckBoxView",
@@ -65,49 +163,49 @@
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Model/NoiseTagSetOfSettings.swift",
-      "line": 371,
+      "line": 385,
       "symbol": "NoiseTagSettingTitles.sayOutLoudWhenSendingModeToUtopia",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Model/NoiseTagSetOfSettings.swift",
-      "line": 372,
+      "line": 386,
       "symbol": "NoiseTagSettingTitles.ttsFailedClicks",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Model/NoiseTagSetOfSettings.swift",
-      "line": 373,
+      "line": 387,
       "symbol": "NoiseTagSettingTitles.playSoundAfterNoiseTaggingOn",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Model/NoiseTagSetOfSettings.swift",
-      "line": 374,
+      "line": 388,
       "symbol": "NoiseTagSettingTitles.intervalPlaySoundAfterNoiseTaggingOn",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Model/NoiseTagSetOfSettings.swift",
-      "line": 375,
+      "line": 389,
       "symbol": "NoiseTagSettingTitles.labeledButtonsOnlyPartlyFlicker",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Model/NoiseTagSetOfSettings.swift",
-      "line": 393,
+      "line": 407,
       "symbol": "NoiseTagSetOfSettings.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Model/NoiseTagSetOfSettings.swift",
-      "line": 421,
+      "line": 435,
       "symbol": "NoiseTagSetOfSettings.copy(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -115,14 +213,14 @@
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Model for setting types/ItemOfArraySetting.swift",
       "line": 15,
-      "symbol": "ItemOfArrayInMenuProtocol.displayName",
+      "symbol": "ItemOfArrayInMenu.displayName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Model for setting types/ItemOfArraySetting.swift",
       "line": 16,
-      "symbol": "ItemOfArrayInMenuProtocol.isEqual(_:)",
+      "symbol": "ItemOfArrayInMenu.isEqual(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
