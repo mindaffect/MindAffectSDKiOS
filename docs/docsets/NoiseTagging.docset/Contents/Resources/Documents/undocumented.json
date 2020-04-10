@@ -1,44 +1,450 @@
 {
   "warnings": [
     {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Alerts/AlertAction.swift",
+      "line": 19,
+      "symbol": "AlertAction.init(title:closure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Class Extensions/UIViewController+NoiseTagging.swift",
+      "line": 13,
+      "symbol": "UIViewController.viewIsInCurrentNoiseTaggingUnit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
-      "line": 242,
+      "line": 117,
+      "symbol": "NoiseTagKeyboardViewController.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
+      "line": 237,
       "symbol": "NoiseTagKeyboardViewController.typedText",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
-      "line": 367,
+      "line": 362,
       "symbol": "NoiseTagKeyboardViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
-      "line": 947,
+      "line": 418,
+      "symbol": "NoiseTagKeyboardViewController.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
+      "line": 955,
       "symbol": "NoiseTagKeyboardViewController.valueChangedOf(setting:inSet:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
-      "line": 978,
+      "line": 986,
       "symbol": "NoiseTagKeyboardViewController.didReceiveMemoryWarning()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Controller/NoiseTagKeyboardViewController.swift",
-      "line": 984,
+      "line": 991,
       "symbol": "NoiseTagKeyboardViewController.prefersStatusBarHidden",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Model/SetOfSettingsGenericKeyboard.swift",
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Keyboard/Model/SetOfSettingsNoiseTagKeyboard.swift",
       "line": 74,
-      "symbol": "SetOfSettingsGenericKeyboard.copy(with:)",
+      "symbol": "SetOfSettingsNoiseTagKeyboard.copy(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/NoiseTagControlAppearance.swift",
+      "line": 16,
+      "symbol": "NoiseTagControlAppearance.Flicker0",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/NoiseTagControlAppearance.swift",
+      "line": 17,
+      "symbol": "NoiseTagControlAppearance.Flicker1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/NoiseTagControlAppearance.swift",
+      "line": 18,
+      "symbol": "NoiseTagControlAppearance.Enabled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/NoiseTagControlAppearance.swift",
+      "line": 19,
+      "symbol": "NoiseTagControlAppearance.Disabled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/NoiseTagControlAppearance.swift",
+      "line": 20,
+      "symbol": "NoiseTagControlAppearance.Other",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 22,
+      "symbol": "PageAnimationType.None",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 23,
+      "symbol": "PageAnimationType.Left",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 24,
+      "symbol": "PageAnimationType.Right",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 25,
+      "symbol": "PageAnimationType.FadeIn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 38,
+      "symbol": "NavigatorTreeOfPages.presentingView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 41,
+      "symbol": "NavigatorTreeOfPages.closureToPerformOnClose",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 111,
+      "symbol": "NavigatorTreeOfPages.frameBackButton",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 118,
+      "symbol": "NavigatorTreeOfPages.init(presentingView:initialPage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 189,
+      "symbol": "NavigatorTreeOfPages.push(page:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 211,
+      "symbol": "NavigatorTreeOfPages.reloadPage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 215,
+      "symbol": "NavigatorTreeOfPages.pop(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 238,
+      "symbol": "NavigatorTreeOfPages.popBackTill(page:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 256,
+      "symbol": "NavigatorTreeOfPages.popAndPush(page:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 282,
+      "symbol": "NavigatorTreeOfPages.navigateToInitialPage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 463,
+      "symbol": "NavigatorTreeOfPages.pageIsOnStack(page:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 467,
+      "symbol": "NavigatorTreeOfPages.startNoiseTagControl()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/NavigatorTreeOfPages.swift",
+      "line": 476,
+      "symbol": "NavigatorTreeOfPages.pageRequestsTitleBarToBe(hidden:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 25,
+      "symbol": "PageDelegate.pageRequestsTitleBarToBe(hidden:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 36,
+      "symbol": "Page.pageDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 39,
+      "symbol": "Page.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 42,
+      "symbol": "Page.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 43,
+      "symbol": "Page.viewContainsFakeNavigationBar",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 44,
+      "symbol": "Page.isOpenableFromSuperPage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 45,
+      "symbol": "Page.buttonToOpenFromSuperPageWiggles",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 48,
+      "symbol": "Page.settings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 52,
+      "symbol": "Page.subPages",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 53,
+      "symbol": "Page.customViewInRow",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 54,
+      "symbol": "Page.extraSpaceBetweenCustomViewInRowAndLabels",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 58,
+      "symbol": "Page.noiseTagDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 61,
+      "symbol": "Page.titleInList",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 62,
+      "symbol": "Page.subTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 63,
+      "symbol": "Page.leftViewInTitleBar",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 64,
+      "symbol": "Page.rightViewInTitleBar",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 67,
+      "symbol": "Page.isListPage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 78,
+      "symbol": "Page.init(title:view:viewContainsFakeNavigationBar:delegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 90,
+      "symbol": "Page.init(title:settings:frame:delegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 140,
+      "symbol": "Page.setNoiseTagActionsForSettingViews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 149,
+      "symbol": "Page.init(title:subPages:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/PageRowView.swift",
+      "line": 33,
+      "symbol": "PageRowView.page",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/PageRowView.swift",
+      "line": 98,
+      "symbol": "PageRowView.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/PageRowView.swift",
+      "line": 103,
+      "symbol": "PageRowView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Popover with buttons/Helper_PopoverWithNoiseTagButtons.swift",
+      "line": 31,
+      "symbol": "Helper_PopoverWithNoiseTagContent.buttonViews",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Popover with buttons/Helper_PopoverWithNoiseTagButtons.swift",
+      "line": 32,
+      "symbol": "Helper_PopoverWithNoiseTagContent.showCloseButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Popover with buttons/Helper_PopoverWithNoiseTagButtons.swift",
+      "line": 33,
+      "symbol": "Helper_PopoverWithNoiseTagContent.buttonViewClose",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Popover with buttons/Helper_PopoverWithNoiseTagButtons.swift",
+      "line": 36,
+      "symbol": "Helper_PopoverWithNoiseTagContent.customView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Popover with buttons/Helper_PopoverWithNoiseTagButtons.swift",
+      "line": 41,
+      "symbol": "Helper_PopoverWithNoiseTagContent.viewWithPopoverContents",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Popover with buttons/Helper_PopoverWithNoiseTagButtons.swift",
+      "line": 48,
+      "symbol": "Helper_PopoverWithNoiseTagContent.presentFrom(sourceView:withNoiseTagDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Popover with buttons/Helper_PopoverWithNoiseTagButtons.swift",
+      "line": 170,
+      "symbol": "Helper_PopoverWithNoiseTagContent.dismiss(withCompletion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Popover with buttons/Helper_PopoverWithNoiseTagButtons.swift",
+      "line": 192,
+      "symbol": "Helper_PopoverWithNoiseTagContent.popoverPresentationControllerDidDismissPopover(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -106,6 +512,412 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/FeedbackOnCalibration.swift",
+      "line": 31,
+      "symbol": "FeedbackOnCalibration.encode(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/FeedbackOnCalibration.swift",
+      "line": 36,
+      "symbol": "FeedbackOnCalibration.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/FeedbackOnClick.swift",
+      "line": 35,
+      "symbol": "FeedbackOnClick.encode(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/FeedbackOnClick.swift",
+      "line": 42,
+      "symbol": "FeedbackOnClick.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/Rating.swift",
+      "line": 18,
+      "symbol": "Rating.Stars1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/Rating.swift",
+      "line": 19,
+      "symbol": "Rating.Stars2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/Rating.swift",
+      "line": 20,
+      "symbol": "Rating.Stars3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/Rating.swift",
+      "line": 21,
+      "symbol": "Rating.Stars4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/Rating.swift",
+      "line": 22,
+      "symbol": "Rating.Stars5",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/RunType.swift",
+      "line": 16,
+      "symbol": "RunType.Development",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/RunType.swift",
+      "line": 17,
+      "symbol": "RunType.Experiment",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Feedback/RunType.swift",
+      "line": 18,
+      "symbol": "RunType.Demo",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/FileOfRecording.swift",
+      "line": 36,
+      "symbol": "FileOfRecording.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/FileOfRecording.swift",
+      "line": 42,
+      "symbol": "FileOfRecording.encode(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 27,
+      "symbol": "Recording.commentsOnStartOfRecording",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 28,
+      "symbol": "Recording.commentsOnEndOfRecording",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 29,
+      "symbol": "Recording.dateStart",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 30,
+      "symbol": "Recording.dateEnd",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 36,
+      "symbol": "Recording.titleToShowUser",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 217,
+      "symbol": "Recording.recordType",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 221,
+      "symbol": "Recording.recordName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 222,
+      "symbol": "Recording.creationDateICloud",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 224,
+      "symbol": "Recording.syncableFields",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 228,
+      "symbol": "Recording.init(cloudKitRecord:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 235,
+      "symbol": "Recording.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recording/Recording.swift",
+      "line": 250,
+      "symbol": "Recording.encode(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recordingsdatabase.swift",
+      "line": 59,
+      "symbol": "Recordingsdatabase.numberOfClosedRecordings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recordingsdatabase.swift",
+      "line": 64,
+      "symbol": "Recordingsdatabase.closedRecordingAt(index:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recordingsdatabase.swift",
+      "line": 70,
+      "symbol": "Recordingsdatabase.kNotificationName_newRecordingStarted",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recordingsdatabase.swift",
+      "line": 72,
+      "symbol": "Recordingsdatabase.recordingContaining(file:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recordingsdatabase.swift",
+      "line": 87,
+      "symbol": "Recordingsdatabase.startNewRecording(withComments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recordingsdatabase.swift",
+      "line": 141,
+      "symbol": "Recordingsdatabase.append(text:toFileNamed:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recordingsdatabase.swift",
+      "line": 146,
+      "symbol": "Recordingsdatabase.append(line:toFileNamed:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recordingsdatabase.swift",
+      "line": 151,
+      "symbol": "Recordingsdatabase.append(toCSVNamed:cells:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recordingsdatabase.swift",
+      "line": 156,
+      "symbol": "Recordingsdatabase.store(image:underFileName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/Recordingsdatabase.swift",
+      "line": 170,
+      "symbol": "Recordingsdatabase.folderNameCurrentRecording",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingTableViewCell.swift",
+      "line": 17,
+      "symbol": "RecordingTableViewCellDelegate.feedbackPressedFor(recording:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingTableViewCell.swift",
+      "line": 18,
+      "symbol": "RecordingTableViewCellDelegate.logFilesPressedFor(recording:fromView:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingTableViewCell.swift",
+      "line": 48,
+      "symbol": "RecordingTableViewCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingTableViewCell.swift",
+      "line": 56,
+      "symbol": "RecordingTableViewCell.setSelected(_:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingsViewController.swift",
+      "line": 40,
+      "symbol": "RecordingsViewController.prefersStatusBarHidden",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingsViewController.swift",
+      "line": 46,
+      "symbol": "RecordingsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingsViewController.swift",
+      "line": 62,
+      "symbol": "RecordingsViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingsViewController.swift",
+      "line": 69,
+      "symbol": "RecordingsViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingsViewController.swift",
+      "line": 78,
+      "symbol": "RecordingsViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingsViewController.swift",
+      "line": 219,
+      "symbol": "RecordingsViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingsViewController.swift",
+      "line": 223,
+      "symbol": "RecordingsViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingsViewController.swift",
+      "line": 245,
+      "symbol": "RecordingsViewController.tableView(_:heightForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingsViewController.swift",
+      "line": 252,
+      "symbol": "RecordingsViewController.feedbackPressedFor(recording:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Data Recordings/UI/RecordingsViewController.swift",
+      "line": 260,
+      "symbol": "RecordingsViewController.logFilesPressedFor(recording:fromView:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/SoundsHelper.swift",
+      "line": 23,
+      "symbol": "NoiseTaggingSounds.click",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/SoundsHelper.swift",
+      "line": 24,
+      "symbol": "NoiseTaggingSounds.plop",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/SoundsHelper.swift",
+      "line": 25,
+      "symbol": "NoiseTaggingSounds.toggle",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/SoundsHelper.swift",
+      "line": 42,
+      "symbol": "SoundsHelper.play(noiseTaggingSound:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/SoundsHelper.swift",
+      "line": 53,
+      "symbol": "SoundsHelper.play(filename:fileExtension:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/SoundsHelper.swift",
+      "line": 62,
+      "symbol": "SoundsHelper.play(url:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/SoundsHelper.swift",
+      "line": 89,
+      "symbol": "SoundsHelper.audioPlayerDidFinishPlaying(_:successfully:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/Support for NoiseTagController/DataCollectionHelperProtocol.swift",
+      "line": 17,
+      "symbol": "DataCollectionHelperProtocol.shouldProceedWith(trial:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Model/NoiseTagSetOfSettings.swift",
       "line": 385,
       "symbol": "NoiseTagSettingTitles.sayOutLoudWhenSendingModeToUtopia",
@@ -151,6 +963,132 @@
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Model/NoiseTagSetOfSettings.swift",
       "line": 435,
       "symbol": "NoiseTagSetOfSettings.copy(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 31,
+      "symbol": "SetOfSettingsTableViewController.footerView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 48,
+      "symbol": "SetOfSettingsTableViewController.extraContentProvider",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 56,
+      "symbol": "SetOfSettingsTableViewController.setsOfSettings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 100,
+      "symbol": "SetOfSettingsTableViewController.prefersStatusBarHidden",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 104,
+      "symbol": "SetOfSettingsTableViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 115,
+      "symbol": "SetOfSettingsTableViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 123,
+      "symbol": "SetOfSettingsTableViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 178,
+      "symbol": "SetOfSettingsTableViewController.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 193,
+      "symbol": "SetOfSettingsTableViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 207,
+      "symbol": "SetOfSettingsTableViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 242,
+      "symbol": "SetOfSettingsTableViewController.tableView(_:heightForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 261,
+      "symbol": "SetOfSettingsTableViewController.tableView(_:titleForHeaderInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/Development UI/SetOfSettingsTableViewController.swift",
+      "line": 275,
+      "symbol": "SetOfSettingsTableViewController.tableView(_:heightForHeaderInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/End users UI/NTSettingView.swift",
+      "line": 31,
+      "symbol": "NTSettingView.init(frame:setting:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/End users UI/NTSettingView.swift",
+      "line": 59,
+      "symbol": "NTSettingView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/End users UI/NTSettingView.swift",
+      "line": 63,
+      "symbol": "NTSettingView.noiseTagControlIsOn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/End users UI/Views for setting types, NT-compatible/NTEnumSettingView.swift",
+      "line": 20,
+      "symbol": "NTEnumSettingView.init(frame:setting:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/Interface/End users UI/Views for setting types, NT-compatible/NTEnumSettingView.swift",
+      "line": 24,
+      "symbol": "NTEnumSettingView.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -201,6 +1139,13 @@
       "line": 12,
       "symbol": "ResultValidityCheck",
       "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
+      "line": 21,
+      "symbol": "SetOfSettingsDelegate.valueChangedOf(setting:inSet:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -484,6 +1429,993 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 28,
+      "symbol": "Sayer.setOfSettings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 29,
+      "symbol": "Sayer.voiceDefinition",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 36,
+      "symbol": "Sayer.voice",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 39,
+      "symbol": "Sayer.voiceDeveloper",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 40,
+      "symbol": "Sayer.speechRateOnAScaleFrom0To1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 48,
+      "symbol": "Sayer.say(text:useDeveloperVoice:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 104,
+      "symbol": "Sayer.speechRateFor(fraction:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 113,
+      "symbol": "Sayer.add(customVoice:withDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 133,
+      "symbol": "CustomVoiceDelegate.say(text:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/SpeechRate.swift",
+      "line": 18,
+      "symbol": "SpeechRate.VerySlow",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/SpeechRate.swift",
+      "line": 19,
+      "symbol": "SpeechRate.Slow",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/SpeechRate.swift",
+      "line": 20,
+      "symbol": "SpeechRate.Normal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/SpeechRate.swift",
+      "line": 21,
+      "symbol": "SpeechRate.Fast",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/SpeechRate.swift",
+      "line": 22,
+      "symbol": "SpeechRate.VeryFast",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/SpeechRate.swift",
+      "line": 41,
+      "symbol": "SpeechRate.speechRateOnAScaleFrom0to1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/VoiceDefinition.swift",
+      "line": 18,
+      "symbol": "VoiceDefinition.languageIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/VoiceDefinition.swift",
+      "line": 19,
+      "symbol": "VoiceDefinition.displayName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/VoiceDefinition.swift",
+      "line": 20,
+      "symbol": "VoiceDefinition.exampleSentence",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/VoiceDefinition.swift",
+      "line": 25,
+      "symbol": "VoiceDefinition.init(languageIdentifier:userDescription:exampleSentence:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/VoiceDefinition.swift",
+      "line": 46,
+      "symbol": "VoiceDefinition.availableVoices",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/VoiceDefinition.swift",
+      "line": 55,
+      "symbol": "VoiceDefinition.indexVoiceFor(languageIdentifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/VoiceDefinition.swift",
+      "line": 64,
+      "symbol": "VoiceDefinition.indexDefaultVoiceFor(languageCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/VoiceDefinition.swift",
+      "line": 83,
+      "symbol": "VoiceDefinition.indexOfVoiceDefinitionForLanguageIdentifier(languageIdentifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/CALayer+JvHAnimations.swift",
+      "line": 32,
+      "symbol": "CALayer.animateForKeypath(_:fromValue:toValue:relativeStart:relativeEnd:actuallyChangeValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/CALayer+JvHAnimations.swift",
+      "line": 57,
+      "symbol": "CALayer.animateOpacity(fromOpacity:toOpacity:relativeStart:relativeEnd:actuallyChangeValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/CALayer+JvHAnimations.swift",
+      "line": 68,
+      "symbol": "CALayer.animateTransform(_:toTransform:relativeStart:relativeEnd:actuallyChangeValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/CALayer+JvHAnimations.swift",
+      "line": 83,
+      "symbol": "CALayer.animateFrame(_:toFrame:relativeStart:relativeEnd:actuallyChangeValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/CALayer+JvHAnimations.swift",
+      "line": 98,
+      "symbol": "CALayer.startPulsatingWithScale(_:duration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/CALayer+JvHAnimations.swift",
+      "line": 109,
+      "symbol": "CALayer.stopPulsating()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/CALayer+JvHAnimations.swift",
+      "line": 114,
+      "symbol": "CALayer.wiggleWith(repeatCount:duration:angle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/ObserverOfSyncableDatabase.swift",
+      "line": 17,
+      "symbol": "ObserverOfSyncableDatabase.syncableObjects(objects:wereAddedTo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/ObserverOfSyncableDatabase.swift",
+      "line": 18,
+      "symbol": "ObserverOfSyncableDatabase.syncableObjects(objects:wereChangedIn:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/SyncableDatabase.swift",
+      "line": 133,
+      "symbol": "SyncableDatabase.add(observer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/SyncableDatabase.swift",
+      "line": 137,
+      "symbol": "SyncableDatabase.remove(observer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/SyncableDatabase.swift",
+      "line": 162,
+      "symbol": "SyncableDatabase.viewControllerForPresentingAlerts",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/SyncableObject.swift",
+      "line": 22,
+      "symbol": "SyncableObject.recordType",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/SyncableObject.swift",
+      "line": 23,
+      "symbol": "SyncableObject.syncableFields",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/SyncableObject.swift",
+      "line": 25,
+      "symbol": "SyncableObject.init(cloudKitRecord:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/SyncableObject.swift",
+      "line": 27,
+      "symbol": "SyncableObject.recordName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/SyncableObject.swift",
+      "line": 28,
+      "symbol": "SyncableObject.creationDateICloud",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Borders.swift",
+      "line": 16,
+      "symbol": "Borders.top",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Borders.swift",
+      "line": 17,
+      "symbol": "Borders.bottom",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Borders.swift",
+      "line": 18,
+      "symbol": "Borders.left",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Borders.swift",
+      "line": 19,
+      "symbol": "Borders.right",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Borders.swift",
+      "line": 21,
+      "symbol": "Borders.all(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Borders.swift",
+      "line": 31,
+      "symbol": "BorderStyle.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Borders.swift",
+      "line": 32,
+      "symbol": "BorderStyle.solid(width:color:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 16,
+      "symbol": "Cell.contentView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 18,
+      "symbol": "Cell.backgroundView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 31,
+      "symbol": "Cell.selectedBackgroundView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 50,
+      "symbol": "Cell.isHighlighted",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 55,
+      "symbol": "Cell.isSelected",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 61,
+      "symbol": "Cell.gridlines",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 62,
+      "symbol": "Cell.grids",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 70,
+      "symbol": "Cell.borders",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 77,
+      "symbol": "Cell.reuseIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 81,
+      "symbol": "Cell.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 86,
+      "symbol": "Cell.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Cell.swift",
+      "line": 99,
+      "symbol": "Cell.prepareForReuse()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CellRange.swift",
+      "line": 16,
+      "symbol": "CellRange.from",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CellRange.swift",
+      "line": 17,
+      "symbol": "CellRange.to",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CellRange.swift",
+      "line": 19,
+      "symbol": "CellRange.columnCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CellRange.swift",
+      "line": 20,
+      "symbol": "CellRange.rowCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CellRange.swift",
+      "line": 24,
+      "symbol": "CellRange.init(from:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CellRange.swift",
+      "line": 29,
+      "symbol": "CellRange.init(from:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CellRange.swift",
+      "line": 44,
+      "symbol": "CellRange.contains(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CellRange.swift",
+      "line": 49,
+      "symbol": "CellRange.contains(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 16,
+      "symbol": "CircularScrolling.Configuration",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 17,
+      "symbol": "CircularScrolling.Configuration.none",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 20,
+      "symbol": "CircularScrolling.Configuration.horizontally",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 23,
+      "symbol": "CircularScrolling.Configuration.vertically",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 26,
+      "symbol": "CircularScrolling.Configuration.both",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 32,
+      "symbol": "CircularScrolling.Configuration.Options",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 39,
+      "symbol": "CircularScrolling.None",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 40,
+      "symbol": "CircularScrolling.Horizontally",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 41,
+      "symbol": "CircularScrolling.Horizontally.ColumnHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 42,
+      "symbol": "CircularScrolling.Horizontally.ColumnHeaderNotRepeated.RowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 44,
+      "symbol": "CircularScrolling.Horizontally.RowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 46,
+      "symbol": "CircularScrolling.Vertically",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 47,
+      "symbol": "CircularScrolling.Vertically.RowHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 48,
+      "symbol": "CircularScrolling.Vertically.RowHeaderNotRepeated.ColumnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 50,
+      "symbol": "CircularScrolling.Vertically.ColumnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 53,
+      "symbol": "CircularScrolling.Both",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 54,
+      "symbol": "CircularScrolling.Both.ColumnHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 55,
+      "symbol": "CircularScrolling.Both.ColumnHeaderNotRepeated.RowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 56,
+      "symbol": "CircularScrolling.Both.ColumnHeaderNotRepeated.ColumnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 57,
+      "symbol": "CircularScrolling.Both.ColumnHeaderNotRepeated.RowHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 58,
+      "symbol": "CircularScrolling.Both.ColumnHeaderNotRepeated.RowHeaderNotRepeated.RowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 59,
+      "symbol": "CircularScrolling.Both.ColumnHeaderNotRepeated.RowHeaderNotRepeated.ColumnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 62,
+      "symbol": "CircularScrolling.Both.RowHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 63,
+      "symbol": "CircularScrolling.Both.RowHeaderNotRepeated.RowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 64,
+      "symbol": "CircularScrolling.Both.RowHeaderNotRepeated.ColumnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 65,
+      "symbol": "CircularScrolling.Both.RowHeaderNotRepeated.ColumnHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 66,
+      "symbol": "CircularScrolling.Both.RowHeaderNotRepeated.ColumnHeaderNotRepeated.RowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 67,
+      "symbol": "CircularScrolling.Both.RowHeaderNotRepeated.ColumnHeaderNotRepeated.ColumnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 70,
+      "symbol": "CircularScrolling.Both.RowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 71,
+      "symbol": "CircularScrolling.Both.RowHeaderStartsFirstColumn.RowHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 73,
+      "symbol": "CircularScrolling.Both.ColumnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 74,
+      "symbol": "CircularScrolling.Both.ColumnHeaderStartsFirstRow.ColumnHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 116,
+      "symbol": "CircularScrollingConfiguration.options",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 124,
+      "symbol": "CircularScrollingConfigurationBuilder.options",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 189,
+      "symbol": "CircularScrollingConfigurationBuilder.rowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 192,
+      "symbol": "CircularScrollingConfigurationBuilder.columnHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 206,
+      "symbol": "CircularScrollingConfigurationBuilder.rowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 221,
+      "symbol": "CircularScrollingConfigurationBuilder.columnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 224,
+      "symbol": "CircularScrollingConfigurationBuilder.rowHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 238,
+      "symbol": "CircularScrollingConfigurationBuilder.columnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 253,
+      "symbol": "CircularScrollingConfigurationBuilder.rowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 256,
+      "symbol": "CircularScrollingConfigurationBuilder.columnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 259,
+      "symbol": "CircularScrollingConfigurationBuilder.columnHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 262,
+      "symbol": "CircularScrollingConfigurationBuilder.rowHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 271,
+      "symbol": "CircularScrollingConfigurationBuilder.rowHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 280,
+      "symbol": "CircularScrollingConfigurationBuilder.columnHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 299,
+      "symbol": "CircularScrollingConfigurationBuilder.rowHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 302,
+      "symbol": "CircularScrollingConfigurationBuilder.rowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 305,
+      "symbol": "CircularScrollingConfigurationBuilder.columnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 314,
+      "symbol": "CircularScrollingConfigurationBuilder.rowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 317,
+      "symbol": "CircularScrollingConfigurationBuilder.columnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 336,
+      "symbol": "CircularScrollingConfigurationBuilder.columnHeaderNotRepeated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 339,
+      "symbol": "CircularScrollingConfigurationBuilder.rowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 342,
+      "symbol": "CircularScrollingConfigurationBuilder.columnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 351,
+      "symbol": "CircularScrollingConfigurationBuilder.rowHeaderStartsFirstColumn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/CircularScrolling.swift",
+      "line": 354,
+      "symbol": "CircularScrollingConfigurationBuilder.columnHeaderStartsFirstRow",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Gridlines.swift",
+      "line": 16,
+      "symbol": "Gridlines.top",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Gridlines.swift",
+      "line": 17,
+      "symbol": "Gridlines.bottom",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Gridlines.swift",
+      "line": 18,
+      "symbol": "Gridlines.left",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Gridlines.swift",
+      "line": 19,
+      "symbol": "Gridlines.right",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Gridlines.swift",
+      "line": 21,
+      "symbol": "Gridlines.all(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Gridlines.swift",
+      "line": 37,
+      "symbol": "GridStyle.default",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Gridlines.swift",
+      "line": 38,
+      "symbol": "GridStyle.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Gridlines.swift",
+      "line": 39,
+      "symbol": "GridStyle.solid(width:color:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/IndexPath+Column.swift",
+      "line": 16,
+      "symbol": "IndexPath.column",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/IndexPath+Column.swift",
+      "line": 20,
+      "symbol": "IndexPath.init(row:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Location.swift",
+      "line": 16,
+      "symbol": "Location.row",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/Location.swift",
+      "line": 17,
+      "symbol": "Location.column",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/ScrollPosition.swift",
+      "line": 18,
+      "symbol": "ScrollPosition.top",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/ScrollPosition.swift",
+      "line": 19,
+      "symbol": "ScrollPosition.centeredVertically",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/ScrollPosition.swift",
+      "line": 20,
+      "symbol": "ScrollPosition.bottom",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/ScrollPosition.swift",
+      "line": 23,
+      "symbol": "ScrollPosition.left",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/ScrollPosition.swift",
+      "line": 24,
+      "symbol": "ScrollPosition.centeredHorizontally",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/ScrollPosition.swift",
+      "line": 25,
+      "symbol": "ScrollPosition.right",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView+Layout.swift",
       "line": 12,
       "symbol": "SpreadsheetView.layoutSubviews()",
@@ -506,56 +2438,56 @@
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView+UIScrollView.swift",
-      "line": 30,
+      "line": 31,
       "symbol": "SpreadsheetView.contentSize",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView+UIScrollView.swift",
-      "line": 36,
+      "line": 37,
       "symbol": "SpreadsheetView.contentInset",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView+UIScrollView.swift",
-      "line": 48,
+      "line": 49,
       "symbol": "SpreadsheetView.adjustedContentInset",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView+UIScrollView.swift",
-      "line": 55,
+      "line": 56,
       "symbol": "SpreadsheetView.flashScrollIndicators()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView+UIScrollView.swift",
-      "line": 59,
+      "line": 60,
       "symbol": "SpreadsheetView.setContentOffset(_:animated:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView+UIScrollView.swift",
-      "line": 63,
+      "line": 64,
       "symbol": "SpreadsheetView.scrollRectToVisible(_:animated:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView+UIScrollView.swift",
-      "line": 71,
+      "line": 72,
       "symbol": "SpreadsheetView.isKind(of:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView+UIScrollView.swift",
-      "line": 79,
+      "line": 80,
       "symbol": "SpreadsheetView.forwardingTarget(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -621,6 +2553,314 @@
       "line": 28,
       "symbol": "SpreadsheetView.insertSubview(_:aboveSubview:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 37,
+      "symbol": "SpreadsheetView.gridStyle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 105,
+      "symbol": "SpreadsheetView.circularScrolling",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 145,
+      "symbol": "SpreadsheetView.safeAreaInsetsDidChange()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 174,
+      "symbol": "SpreadsheetView.indexPathForSelectedItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 301,
+      "symbol": "SpreadsheetView.numberOfColumns",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 304,
+      "symbol": "SpreadsheetView.numberOfRows",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 307,
+      "symbol": "SpreadsheetView.frozenColumns",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 310,
+      "symbol": "SpreadsheetView.frozenRows",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 313,
+      "symbol": "SpreadsheetView.mergedCells",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 317,
+      "symbol": "SpreadsheetView.scrollView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 347,
+      "symbol": "SpreadsheetView.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 352,
+      "symbol": "SpreadsheetView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 416,
+      "symbol": "SpreadsheetView.register(_:forCellWithReuseIdentifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 421,
+      "symbol": "SpreadsheetView.register(_:forCellWithReuseIdentifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 425,
+      "symbol": "SpreadsheetView.reloadData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 470,
+      "symbol": "SpreadsheetView.dequeueReusableCell(withReuseIdentifier:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 519,
+      "symbol": "SpreadsheetView.scrollToItem(at:at:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 612,
+      "symbol": "SpreadsheetView.selectItem(at:animated:scrollPosition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 639,
+      "symbol": "SpreadsheetView.deselectItem(at:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 650,
+      "symbol": "SpreadsheetView.indexPathForItem(at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 721,
+      "symbol": "SpreadsheetView.cellForItem(at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 749,
+      "symbol": "SpreadsheetView.cellsForItem(at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SpreadsheetView/SpreadsheetView.swift",
+      "line": 774,
+      "symbol": "SpreadsheetView.rectForItem(at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/String+SanitizedFilename.swift",
+      "line": 17,
+      "symbol": "String.sanitizedFileName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 32,
+      "symbol": "SwiftyJSONError.unsupportedType",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 33,
+      "symbol": "SwiftyJSONError.indexOutOfBounds",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 34,
+      "symbol": "SwiftyJSONError.elementTooDeep",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 35,
+      "symbol": "SwiftyJSONError.wrongType",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 36,
+      "symbol": "SwiftyJSONError.notExist",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 37,
+      "symbol": "SwiftyJSONError.invalidJSON",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 79,
+      "symbol": "JSONType.number",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 80,
+      "symbol": "JSONType.string",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 81,
+      "symbol": "JSONType.bool",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 82,
+      "symbol": "JSONType.array",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 83,
+      "symbol": "JSONType.dictionary",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 84,
+      "symbol": "JSONType.null",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 85,
+      "symbol": "JSONType.unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 275,
+      "symbol": "JSON.null",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 301,
+      "symbol": "Index.array(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 302,
+      "symbol": "Index.dictionary(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 303,
+      "symbol": "Index.null",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 400,
+      "symbol": "JSONKey.index(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 401,
+      "symbol": "JSONKey.key(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 409,
+      "symbol": "JSONSubscriptType.jsonKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -915,6 +3155,62 @@
       "line": 1273,
       "symbol": "JSON.uInt64Value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 1477,
+      "symbol": "writingOptionsKeys.jsonSerialization",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 1478,
+      "symbol": "writingOptionsKeys.castNilToNSNull",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 1479,
+      "symbol": "writingOptionsKeys.maxObjextDepth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
+      "line": 1480,
+      "symbol": "writingOptionsKeys.encoding",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/UIColor+RGB.swift",
+      "line": 16,
+      "symbol": "UIColor.init(r255:g255:b255:alpha:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/UIColor+RGB.swift",
+      "line": 20,
+      "symbol": "UIColor.equals(color:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/UIWindow+VisibleViewController.swift",
+      "line": 19,
+      "symbol": "UIWindow.visibleViewController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/UIWindow+VisibleViewController.swift",
+      "line": 23,
+      "symbol": "UIWindow.getVisibleViewControllerFrom(vc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     }
   ],

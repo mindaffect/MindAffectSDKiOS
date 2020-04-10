@@ -26,8 +26,9 @@ class StartBrainSetupViewController: UIViewController {
 	@IBAction func setupBrainControl(_ sender: Any) {
 		// The NoiseTagging framework provides UI for letting setup brain control. By default the user can enter this UI by double tapping on the view of the current noise tagging unit. But you can also present this UI yourselves, optionally in an existing navigation controller, like we do here:
 		NoiseTagging.startBrainSetup(pushedFromNavigationController: self.navigationController) {
-			// Once brain setup has finished, we pop ourselves of the navigation stack:
-//			self.navigationController?.popViewController(animated: true)
+			// Once brain setup has finished, we first pop the Brain Setup UI of the navigation stack, and than ourselves. Note that the Brain Setup UI does not pop itself, because you could also want to push the next VC on the navigation stack:
+			self.navigationController?.popViewController(animated: true)
+			self.navigationController?.popViewController(animated: true)
 		}
 	}
 	

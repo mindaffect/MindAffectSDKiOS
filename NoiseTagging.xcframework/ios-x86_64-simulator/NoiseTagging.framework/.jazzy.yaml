@@ -13,6 +13,7 @@ custom_categories:
       - NoiseTagDelegate
   - name: Controls
     children:
+      - NoiseTagControlAppearance
       - NoiseTagButtonView
       - NoiseTagShapeButtonView
       - NoiseTagLabeledButtonView
@@ -21,8 +22,18 @@ custom_categories:
       - NoiseTagRadioButton
       - NoiseTagPopupButtonView
       - NoiseTagPopupItem
+  - name: Keyboard
+    children:
+      - NoiseTagKeyboardViewController
+      - NoiseTaggingKeyboardDelegate
+      - SetOfSettingsNoiseTagKeyboard
+      - NoiseTagKeyboardSettingTitles
+      - CustomizableButtonState
+      - StandardCustomizableKeyboardButton
+      - LettersLayoutType
   - name: Settings
     children:
+      - Setting
       - NoiseTagSetOfSettings
       - SetOfSettings
       - NoiseTagSettingTitles
@@ -31,11 +42,16 @@ custom_categories:
       - DoubleSetting
       - TextSetting
       - EnumSetting
+      - EnumAsSetting
       - ItemOfArraySetting
+      - ItemOfArrayInMenu
       - ColorSetting
       - PickableColor
       - ResultValidityCheck
       - Setting_abstract
+      - SettingObserver
+      - SettingSubscriber
+
       
 module: NoiseTagging
 

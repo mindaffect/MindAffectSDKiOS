@@ -247,7 +247,7 @@ NoiseTagging.settings.set(value: 2, for: NoiseTagSettingTitles.framesPerBit)
 You can go through all settings to check which ones are relevant for you, but we want to highlight these two:
 
 - **`timeInBetweenTrials`**: By default this is set to 1 second. Once a user is used to the system, you probably want to decrease this value, increasing overall speed. 
-- **`certaintyRequiredForClick`**: The MindAffect Decoder sends predictions to iOS about where the user is looking. Each prediction contains a probability. A button is pressed once this probability passes a certain threshold, which is defined by this setting. If a user has a difficulty brain-pressing any buttons, you may want to lower this threshold. This does mean the chance of the wrong button being pressed increases as well.
+- **`certaintyRequiredForPress`**: The MindAffect Decoder sends predictions to iOS about where the user is looking. Each prediction contains a probability. A button is pressed once this probability passes a certain threshold, which is defined by this setting. If a user has a difficulty brain-pressing any buttons, you may want to lower this threshold. This does mean the chance of the wrong button being pressed increases as well.
 
 
 ## Using Noise Tag Controls
