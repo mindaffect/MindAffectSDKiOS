@@ -31,13 +31,13 @@ class LabeledButtonsViewController: UIViewController, NoiseTagDelegate {
 		
 		// Prepare the first labeled button:
 		let margin: CGFloat = 20
-		self.button1 = NoiseTagLabeledButtonView(frame: CGRect(x: margin, y: 100, width: min(600, self.view.frame.width - 2 * margin), height: kDefaultHeightNoiseTagButton))
+		self.button1 = NoiseTagLabeledButtonView(frame: CGRect(x: margin, y: 100, width: min(600, self.view.frame.width - 2 * margin), height: kDefaultHeightNoiseTagButton), locationLabel: .Right)
 		self.button1.title = "One"
 		self.button1.image = UIImage(named: "Speak")
 		self.view.addSubview(self.button1)
 		
 		// Set images and titles on the second labeled button:
-		self.button2 = NoiseTagLabeledButtonView(frame: CGRect(x: margin, y: self.button1.frame.origin.y + self.button1.frame.height + margin, width: self.button1.frame.width, height: kDefaultHeightNoiseTagButton))
+		self.button2 = NoiseTagLabeledButtonView(frame: CGRect(x: margin, y: self.button1.frame.origin.y + self.button1.frame.height + margin, width: self.button1.frame.width, height: kDefaultHeightNoiseTagButton), locationLabel: .Right)
 		self.button2.title = "Two"
 		self.button2.image = UIImage(named: "Speak")
 		self.view.addSubview(self.button2)
