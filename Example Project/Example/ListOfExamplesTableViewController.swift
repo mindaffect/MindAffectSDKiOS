@@ -1,24 +1,28 @@
-//
-//  ListOfExamplesTableViewController.swift
-//  Example
-//
-//  Created by Jop van Heesch on 02/03/2020.
-//  Copyright © 2020 MindAffect. All rights reserved.
-//
+/* Copyright (c) 2016-2020 MindAffect.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
+
 
 import UIKit
 import NoiseTagging
 
 
-class ListOfExamplesTableViewController: UITableViewController, UINavigationControllerDelegate {
+/**
+This VC shows a list of examples, which all are `ExampleViewController`s.
+*/
+class ListOfExamplesTableViewController: UITableViewController, UINavigationControllerDelegate, NoiseTagDelegate {
 	
 	private let kCellReuseIdentifier = "Example"
-	var exampleViewControllers = [UIViewController]()
+	var exampleViewControllers = [ExampleViewController]()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		// Set our own title:
+		// Set our title, which is shown in the navigation bar:
 		self.title = "Examples"
 		
 		// Prepare our array of 'example view controllers'. We will display these in a list. The user can go to an example by pressing it in the list:
@@ -28,14 +32,31 @@ class ListOfExamplesTableViewController: UITableViewController, UINavigationCont
 			LabeledButtonsViewController(),
 			PopupButtonViewController(),
 			KeyboardViewController(nibName: "KeyboardViewController", bundle: nil),
+			NavigationViewController(),
 			CustomControlsViewController(nibName: "CustomControlsViewController", bundle: nil),
 			]
 		
 		// Prepare our table view:
-		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCellReuseIdentifier)
 		self.tableView.reloadData()
     }
 	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		// While presenting an Example VC, we may hide our navigation bar. Make sure it is visible again:
+		self.navigationController?.setNavigationBarHidden(false, animated: true)
+		
+		// Once we have been presented, push ourselves on the noise tagging stack. We do not show any noise tagging controls, but this way the gestures provided by the NoiseTagging framework, such as opening the Developer Screen by double tapping with two fingers, work on our view as well. The only downside is that the NoiseTagging framework will change our view's background color, which is why we override `customBackgroundColorFor:noiseTaggingView`:
+		NoiseTagging.push(view: self.view, forNoiseTaggingWithDelegate: self)
+	}
+	
+	/**
+	See `NoiseTagDelegate`. Also see the comments in our `viewDidAppear:animated` implementation.
+	*/
+	func customBackgroundColorFor(noiseTaggingView: UIView) -> UIColor? {
+		return UIColor.white
+	}
+
 	
     // MARK: - Table view data source and delegate
 
@@ -48,10 +69,11 @@ class ListOfExamplesTableViewController: UITableViewController, UINavigationCont
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: kCellReuseIdentifier, for: indexPath)
+		let cell = UITableViewCell(style: .subtitle, reuseIdentifier: kCellReuseIdentifier)
 		
-        // Let the cell display the example VC's title:
+        // Let the cell display the example VC's title and subTitle:
 		cell.textLabel?.text = self.exampleViewControllers[indexPath.row].title
+		cell.detailTextLabel?.numberOfLines = 0
 		
 		cell.accessoryType = .disclosureIndicator
 
@@ -61,14 +83,12 @@ class ListOfExamplesTableViewController: UITableViewController, UINavigationCont
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		// Push the selected example:
 		let exampleViewController = self.exampleViewControllers[indexPath.row]
+		if exampleViewController.wantsFullscreen {
+			self.navigationController?.setNavigationBarHidden(true, animated: true)
+		}
 		self.navigationController?.pushViewController(exampleViewController, animated: true)
 		
-		// If the example VC is a NoiseTagDelegate, also push a new unit onto the Noise Tagging stack:
-		if let noiseTagDelegate = exampleViewController as? NoiseTagDelegate {
-			NoiseTagging.push(view: exampleViewController.view, forNoiseTaggingWithDelegate: noiseTagDelegate)
-		}
+		// Also push a new unit onto the Noise Tagging stack:
+		NoiseTagging.push(view: exampleViewController.view, forNoiseTaggingWithDelegate: exampleViewController)
 	}
-
-
-
 }

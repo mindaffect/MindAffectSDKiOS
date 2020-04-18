@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ScalingUI Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/ScalingUI" class="dashAnchor"></a>
+    <a title="ScalingUI Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NoiseTagging Docs</a> (74% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NoiseTagging Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ScalingUI Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Programming%20Guides.html">Programming Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../readme.html">README</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../quick-start.html">Quick Start</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../main-programming-guide.html">Main Programming Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Main%20Symbols.html">Main Symbols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Main%20Symbols.html#/s:12NoiseTaggingA2A0A13TagControllerCvp">NoiseTagging</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagController.html">NoiseTagController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NoiseTagControl.html">NoiseTagControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagControlProperties.html">NoiseTagControlProperties</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NoiseTagDelegate.html">NoiseTagDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Controls.html">Controls</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/NoiseTagControlAppearance.html">NoiseTagControlAppearance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagButtonView.html">NoiseTagButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagShapeButtonView.html">NoiseTagShapeButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagLabeledButtonView.html">NoiseTagLabeledButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagLabeledButtonView/LocationLabel.html">– LocationLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagCheckBoxView.html">NoiseTagCheckBoxView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagRadioButton.html">NoiseTagRadioButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagPopupButtonView.html">NoiseTagPopupButtonView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagPopupItem.html">NoiseTagPopupItem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Keyboard.html">Keyboard</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagKeyboardViewController.html">NoiseTagKeyboardViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NoiseTaggingKeyboardDelegate.html">NoiseTaggingKeyboardDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SetOfSettingsNoiseTagKeyboard.html">SetOfSettingsNoiseTagKeyboard</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NoiseTagKeyboardSettingTitles.html">NoiseTagKeyboardSettingTitles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CustomizableButtonState.html">CustomizableButtonState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StandardCustomizableKeyboardButton.html">StandardCustomizableKeyboardButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LettersLayoutType.html">LettersLayoutType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Settings.html">Settings</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Setting.html">Setting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoiseTagSetOfSettings.html">NoiseTagSetOfSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SetOfSettings.html">SetOfSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NoiseTagSettingTitles.html">NoiseTagSettingTitles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BoolSetting.html">BoolSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IntSetting.html">IntSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DoubleSetting.html">DoubleSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextSetting.html">TextSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EnumSetting.html">EnumSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EnumAsSetting.html">EnumAsSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ItemOfArraySetting.html">ItemOfArraySetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ItemOfArrayInMenu.html">ItemOfArrayInMenu</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ColorSetting.html">ColorSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PickableColor.html">PickableColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Settings.html#/c:@M@NoiseTagging@objc(cs)ResultValidityCheck">ResultValidityCheck</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Setting_abstract.html">Setting_abstract</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SettingObserver.html">SettingObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SettingSubscriber.html">SettingSubscriber</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Guides.html">Other Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../license.html">LICENSE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NavigatorTreeOfPages.html">NavigatorTreeOfPages</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Page.html">Page</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sayer.html">Sayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SoundsHelper.html">SoundsHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VoiceDefinition.html">VoiceDefinition</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Global%20Variables.html">Other Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTagging6SayingAA5SayerCvp">Saying</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:12NoiseTagging5SoundAA12SoundsHelperCvp">Sound</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ClickFeedbackMode.html">ClickFeedbackMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ContrastMode.html">ContrastMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CornerViewMode.html">CornerViewMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Layout.html">Layout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Layout/Buttons.html">– Buttons</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Layout/Popovers.html">– Popovers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NoiseTagMode.html">NoiseTagMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PageAnimationType.html">PageAnimationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SpeechRate.html">SpeechRate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Extensions.html#/CircularScrolling">CircularScrolling</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CustomVoiceDelegate.html">CustomVoiceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DelegateForSimplifiedBrainControl.html">DelegateForSimplifiedBrainControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PageDelegate.html">PageDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Structs.html">Other Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ScalingUI.html">ScalingUI</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ScalingUI</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScalingUI</span></code></pre>
+
+                </div>
+              </div>
+            <p>On iOS normally you use auto-layout to make UI work for different screen sizes. However, when designing UI that can be controlled using noise tagging, there are two important limitations:</p>
+
+<ol>
+<li>Changing the dimensions of a control may negatively influence how easily the MindAffect Decoder recognises that the user is looking at it.</li>
+<li>Users cannot scroll simply by dragging a finger.</li>
+</ol>
+
+<p>Therefore for NoiseTagging apps sometimes it makes more sense to only support iPad, which provides more screen estate. An advantage of iPad is that all iPads ever released have the same screen ratio, so we can design our UI for one iPad model and simply scale everything to support other iPad models as well. This struct helps you do this.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging9ScalingUIV25scaleWRTRegularIPadScreen12CoreGraphics7CGFloatVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/scaleWRTRegularIPadScreen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging9ScalingUIV25scaleWRTRegularIPadScreen12CoreGraphics7CGFloatVvpZ">scaleWRTRegularIPadScreen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The scale of the current device w.r.t. a regular iPad (1024 x 768 points).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">scaleWRTRegularIPadScreen</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging9ScalingUIV25scaleWRT12inch9IPadScreen12CoreGraphics7CGFloatVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/scaleWRT12inch9IPadScreen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging9ScalingUIV25scaleWRT12inch9IPadScreen12CoreGraphics7CGFloatVvpZ">scaleWRT12inch9IPadScreen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The scale of the current device w.r.t. a 12.9 inch iPad (1366 x 1024 points).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">scaleWRT12inch9IPadScreen</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging9ScalingUIV15scaleCompletely4view9withScaleySo6UIViewC_12CoreGraphics7CGFloatVtFZ"></a>
+                    <a name="//apple_ref/swift/Method/scaleCompletely(view:withScale:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging9ScalingUIV15scaleCompletely4view9withScaleySo6UIViewC_12CoreGraphics7CGFloatVtFZ">scaleCompletely(view:withScale:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When using NoiseTagging, you may want to use the same layout independent from the screen size (in points). E.g. if you have a layout defined for a regular iPad screen, if your app runs on an iPad with a larger screen, you might simply want to scale everything up. This is hard to do with autolayout, because that is better suited to fitting more content in if there is more space (which for most apps is what you want). This function makes it easy to scale everything up, but it only works for views in which no autolayout constraints are defined. Note that only view frames, layer frames, and fonts are scaled. Also note that there is a convenience function for going from a normal sized iPad to any other iPad.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">scaleCompletely</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">withScale</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging9ScalingUIV39scaleCompletelyFromRegularToCurrentIPad4viewySo6UIViewC_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/scaleCompletelyFromRegularToCurrentIPad(view:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging9ScalingUIV39scaleCompletelyFromRegularToCurrentIPad4viewySo6UIViewC_tFZ">scaleCompletelyFromRegularToCurrentIPad(view:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>scaleCompletely:view:withScale</code>. Apply this to views whose layout fit a regular iPad.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">scaleCompletelyFromRegularToCurrentIPad</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging9ScalingUIV39scaleCompletelyFrom12inch9ToCurrentIPad4viewySo6UIViewC_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/scaleCompletelyFrom12inch9ToCurrentIPad(view:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging9ScalingUIV39scaleCompletelyFrom12inch9ToCurrentIPad4viewySo6UIViewC_tFZ">scaleCompletelyFrom12inch9ToCurrentIPad(view:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>scaleCompletely:view:withScale</code>. Apply this to views whose layout fit a 12.9 inch iPad.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">scaleCompletelyFrom12inch9ToCurrentIPad</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging9ScalingUIV30imageScaledWRTNormalIPadScreen0E0So7UIImageCSgAH_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/imageScaledWRTNormalIPadScreen(image:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging9ScalingUIV30imageScaledWRTNormalIPadScreen0E0So7UIImageCSgAH_tFZ">imageScaledWRTNormalIPadScreen(image:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Also see <code>scaleCompletely:view:withScale</code>. Apply this to images that have the proper size for a regular iPad.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">imageScaledWRTNormalIPadScreen</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging9ScalingUIV31imageScaledWRT12inch9IPadScreen0E0So7UIImageCSgAH_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/imageScaledWRT12inch9IPadScreen(image:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging9ScalingUIV31imageScaledWRT12inch9IPadScreen0E0So7UIImageCSgAH_tFZ">imageScaledWRT12inch9IPadScreen(image:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Also see <code>scaleCompletely:view:withScale</code>. Apply this to images that have the proper size for a 12.9 inch iPad.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">imageScaledWRT12inch9IPadScreen</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>MindAffect 2020</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
+// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
 // swift-module-flags: -target arm64-apple-ios13.2 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name NoiseTagging
 import AVFoundation
 import AudioToolbox
@@ -175,6 +175,23 @@ public protocol DelegateForSimplifiedBrainControl : AnyObject {
   override public init(frame: CoreGraphics.CGRect, locationLabel: NoiseTagging.NoiseTagLabeledButtonView.LocationLabel = super)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
 }
+public enum ScalingUI {
+  public static let scaleWRTRegularIPadScreen: CoreGraphics.CGFloat
+  public static let scaleWRT12inch9IPadScreen: CoreGraphics.CGFloat
+  public static func scaleCompletely(view: UIKit.UIView, withScale scale: CoreGraphics.CGFloat)
+  public static func scaleCompletelyFromRegularToCurrentIPad(view: UIKit.UIView)
+  public static func scaleCompletelyFrom12inch9ToCurrentIPad(view: UIKit.UIView)
+  public static func imageScaledWRTNormalIPadScreen(image: UIKit.UIImage?) -> UIKit.UIImage?
+  public static func imageScaledWRT12inch9IPadScreen(image: UIKit.UIImage?) -> UIKit.UIImage?
+}
+@objc @_inheritsConvenienceInitializers public class SoundsHelper : ObjectiveC.NSObject, AVFoundation.AVAudioPlayerDelegate {
+  public func play(filename: Swift.String, fileExtension: Swift.String = "wav")
+  public func play(url: Foundation.URL)
+  @objc public func audioPlayerDidFinishPlaying(_ player: AVFoundation.AVAudioPlayer, successfully flag: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init()
+}
+public let Sound: NoiseTagging.SoundsHelper
 extension UIViewController {
   public var viewIsInCurrentNoiseTaggingUnit: Swift.Bool {
     get
@@ -222,6 +239,9 @@ extension UIViewController {
   @objc deinit
 }
 extension NoiseTagController {
+  public var mode: NoiseTagging.NoiseTagMode {
+    get
+  }
   @objc dynamic public class func nFramesPerBit() -> Swift.Int
 }
 extension UIView : NoiseTagging.NoiseTagControl {
@@ -236,9 +256,43 @@ extension UIView : NoiseTagging.NoiseTagControl {
   @objc dynamic public func noiseTagControlIsEnabled_didChangeValue()
   @objc dynamic public func updateUIDependingOnNoiseTagging()
 }
-public let kColorMindAffectOrange: UIKit.UIColor
-public let kDefaultHeightNoiseTagButton: CoreGraphics.CGFloat
-public let kDefaultWidthNoiseTagButton: CoreGraphics.CGFloat
+public protocol PageDelegate {
+  func pageRequestsTitleBarToBe(hidden: Swift.Bool)
+}
+@objc public class Page : ObjectiveC.NSObject {
+  public enum Kind {
+    case View
+    case List
+    case Settings
+    public static func == (a: NoiseTagging.Page.Kind, b: NoiseTagging.Page.Kind) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public var pageDelegate: NoiseTagging.PageDelegate?
+  final public let title: Swift.String
+  final public let kind: NoiseTagging.Page.Kind
+  final public let view: UIKit.UIView?
+  final public let viewContainsFakeNavigationBar: Swift.Bool
+  public init(title: Swift.String, view: UIKit.UIView, viewContainsFakeNavigationBar: Swift.Bool = false, delegate: NoiseTagging.NoiseTagDelegate? = nil)
+  final public let settings: [NoiseTagging.Setting]
+  public init(title: Swift.String, settings: [NoiseTagging.Setting], frame: CoreGraphics.CGRect, delegate: NoiseTagging.NoiseTagDelegate? = nil)
+  public func setNoiseTagActionsForSettingViews()
+  final public let subPages: [NoiseTagging.Page]?
+  public init(title: Swift.String, subPages: [NoiseTagging.Page])
+  public var isOpenableFromSuperPage: Swift.Bool
+  public var buttonToOpenFromSuperPageWiggles: Swift.Bool
+  public var customViewInRow: UIKit.UIView?
+  public var extraSpaceBetweenCustomViewInRowAndLabels: CoreGraphics.CGFloat
+  final public let noiseTagDelegate: NoiseTagging.NoiseTagDelegate?
+  public var titleInList: Swift.String?
+  public var subTitle: Swift.String?
+  public var leftViewInTitleBar: UIKit.UIView?
+  public var rightViewInTitleBar: UIKit.UIView?
+  @objc deinit
+  @objc override dynamic public init()
+}
 public enum CornerViewMode : Swift.Int, NoiseTagging.EnumAsSetting {
   case Off
   case Sync
@@ -253,6 +307,56 @@ public enum CornerViewMode : Swift.Int, NoiseTagging.EnumAsSetting {
     get
   }
 }
+public enum Layout {
+  public static let defaultFontWeightOfControls: UIKit.UIFont.Weight
+  public static let defaultCornerRadiusOfControls: CoreGraphics.CGFloat
+  public enum Buttons {
+    public static let defaultHeight: CoreGraphics.CGFloat
+    public static let defaultRatio: CoreGraphics.CGFloat
+    public static let defaultWidth: CoreGraphics.CGFloat
+    public static let defaultFontSizeTitle: CoreGraphics.CGFloat
+    public static let defaultFontTitle: UIKit.UIFont
+    public static let defaultFontSubTitle: UIKit.UIFont
+  }
+  public enum Popovers {
+    public static let defaultRatioButtons: CoreGraphics.CGFloat
+  }
+}
+public enum PageAnimationType : Swift.Int {
+  case None
+  case Left
+  case Right
+  case FadeIn
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class NavigatorTreeOfPages : ObjectiveC.NSObject, NoiseTagging.NoiseTagDelegate, NoiseTagging.PageDelegate {
+  final public let presentingView: UIKit.UIView
+  public var closureToPerformOnClose: (() -> ())? {
+    get
+    set
+  }
+  public static var frameBackButton: CoreGraphics.CGRect {
+    get
+  }
+  public init(presentingView: UIKit.UIView, initialPage: NoiseTagging.Page)
+  public func present()
+  public func push(page: NoiseTagging.Page, completion: (() -> ())? = nil)
+  public func reloadPage()
+  @objc public func pop(completion: (() -> ())? = nil)
+  public func popBackTill(page: NoiseTagging.Page, completion: (() -> ())? = nil)
+  public func popAndPush(page: NoiseTagging.Page)
+  public func navigateToInitialPage()
+  public func pageIsOnStack(page: NoiseTagging.Page) -> Swift.Bool
+  public func startNoiseTagControl()
+  public func pageRequestsTitleBarToBe(hidden: Swift.Bool)
+  @objc public func startNoiseTagControlOn(noiseTaggingView: UIKit.UIView)
+  @objc deinit
+  @objc override dynamic public init()
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NoiseTagController : ObjectiveC.NSObject {
   public func colorFor(bit: Swift.Bool) -> UIKit.UIColor
   public func updateControls(updateCode: @escaping () -> ())
@@ -266,12 +370,35 @@ public enum CornerViewMode : Swift.Int, NoiseTagging.EnumAsSetting {
   public func blockTrials(forDuration duration: Foundation.TimeInterval? = nil)
   public func unblockTrials()
   final public let settings: NoiseTagging.NoiseTagSetOfSettings
+  public func enterBrainControlLayerFrom(view: UIKit.UIView, completion: (() -> ())? = nil)
   public func startBrainSetup(pushedFromNavigationController clientNavigationController: UIKit.UINavigationController?, withCompletionAfterBrainSetup completionAfterBrainSetup: @escaping () -> ())
   @objc deinit
 }
 public var NoiseTagging: NoiseTagging.NoiseTagController {
   get
 }
+public protocol CustomVoiceDelegate {
+  func say(text: Swift.String, with customVoice: NoiseTagging.VoiceDefinition)
+}
+@objc @_inheritsConvenienceInitializers public class Sayer : ObjectiveC.NSObject {
+  public var setOfSettings: NoiseTagging.SetOfSettings?
+  public var voiceDefinition: NoiseTagging.VoiceDefinition {
+    get
+  }
+  public var voice: AVFoundation.AVSpeechSynthesisVoice? {
+    get
+  }
+  final public let voiceDeveloper: AVFoundation.AVSpeechSynthesisVoice?
+  public var speechRateOnAScaleFrom0To1: Swift.Float {
+    get
+  }
+  public func say(text: Swift.String, useDeveloperVoice: Swift.Bool = false)
+  public func speechRateFor(fraction: Swift.Float) -> Swift.Float
+  public func add(customVoice: NoiseTagging.VoiceDefinition, withDelegate delegate: NoiseTagging.CustomVoiceDelegate)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public let Saying: NoiseTagging.Sayer
 @objc @_inheritsConvenienceInitializers open class NoiseTagCheckBoxView : NoiseTagging.NoiseTagLabeledButtonView {
   public var isOn: Swift.Bool {
     get
@@ -531,6 +658,24 @@ public protocol SettingSubscriber : AnyObject {
   @objc public func valueChangedFor(setting: NoiseTagging.Setting)
   @objc deinit
 }
+public enum SpeechRate : Swift.Int, NoiseTagging.EnumAsSetting {
+  case VerySlow
+  case Slow
+  case Normal
+  case Fast
+  case VeryFast
+  public var displayName: Swift.String {
+    get
+  }
+  public var speechRateOnAScaleFrom0to1: Swift.Float {
+    get
+  }
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc @_hasMissingDesignatedInitializers public class BoolSetting : NoiseTagging.Setting_abstract, NoiseTagging.Setting, Foundation.NSCoding {
   final public let initialValue: Swift.Bool
   public var value: Swift.Bool {
@@ -622,14 +767,14 @@ public enum ClickFeedbackMode : Swift.Int, NoiseTagging.EnumAsSetting {
   }
 }
 @objc public protocol NoiseTagDelegate : AnyObject {
-  @objc func startNoiseTagControlOn(noiseTaggingView: UIKit.UIView)
+  @objc optional func startNoiseTagControlOn(noiseTaggingView: UIKit.UIView)
   @objc optional func respondToNoiseTagModeChange()
   @objc optional func contextDescription() -> Swift.String?
   @objc optional func respondToNoClick()
   @objc optional func preparePlay() -> Foundation.NSNumber?
   @objc optional func trialsWillStartRunning()
   @objc optional func trialsStoppedRunning()
-  @objc optional func customBackgroundColorFor(view: UIKit.UIView) -> UIKit.UIColor?
+  @objc optional func customBackgroundColorFor(noiseTaggingView: UIKit.UIView) -> UIKit.UIColor?
   @objc optional func idsOfControlsToIncludeAsTargetInVerifyMode(noiseTaggingView: UIKit.UIView) -> [Swift.String]?
   @objc optional func nextTarget() -> NoiseTagging.NoiseTagControl
   @objc optional func thereWillBeANextTarget() -> Swift.Bool
@@ -797,7 +942,7 @@ extension EnumAsSetting {
     get
   }
 }
-@objc open class NoiseTagLabeledButtonView : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers open class NoiseTagLabeledButtonView : UIKit.UIView {
   public enum LocationLabel : Swift.Int {
     case Right
     case Top
@@ -808,6 +953,7 @@ extension EnumAsSetting {
       get
     }
   }
+  @objc override convenience dynamic public init(frame: CoreGraphics.CGRect)
   public init(frame: CoreGraphics.CGRect, locationLabel: NoiseTagging.NoiseTagLabeledButtonView.LocationLabel = .Right)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   public var title: Swift.String? {
@@ -832,7 +978,6 @@ extension EnumAsSetting {
   }
   @objc override dynamic public func show(appearance: NoiseTagging.NoiseTagControlAppearance, withDefaultColor defaultColor: UIKit.UIColor)
   @objc override dynamic public func updateUIDependingOnNoiseTagging()
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
 }
 @objc open class PickableColor : ObjectiveC.NSObject {
@@ -860,6 +1005,17 @@ extension EnumAsSetting {
   @objc override dynamic public init()
   @objc deinit
 }
+@objc open class VoiceDefinition : ObjectiveC.NSObject, NoiseTagging.ItemOfArrayInMenu {
+  public var languageIdentifier: Swift.String
+  public var displayName: Swift.String
+  public var exampleSentence: Swift.String?
+  public init(languageIdentifier: Swift.String, userDescription: Swift.String? = nil, exampleSentence: Swift.String? = nil)
+  public static var availableVoices: [NoiseTagging.VoiceDefinition] {
+    get
+  }
+  @objc deinit
+  @objc override dynamic public init()
+}
 @objc public class NoiseTagShapeButtonView : NoiseTagging.NoiseTagButtonView {
   public var path: CoreGraphics.CGPath? {
     get
@@ -883,12 +1039,20 @@ extension NoiseTagging.NoiseTagMode : Swift.RawRepresentable {}
 extension NoiseTagging.NoiseTagControlAppearance : Swift.Equatable {}
 extension NoiseTagging.NoiseTagControlAppearance : Swift.Hashable {}
 extension NoiseTagging.NoiseTagControlAppearance : Swift.RawRepresentable {}
+extension NoiseTagging.Page.Kind : Swift.Equatable {}
+extension NoiseTagging.Page.Kind : Swift.Hashable {}
 extension NoiseTagging.CornerViewMode : Swift.Equatable {}
 extension NoiseTagging.CornerViewMode : Swift.Hashable {}
 extension NoiseTagging.CornerViewMode : Swift.RawRepresentable {}
+extension NoiseTagging.PageAnimationType : Swift.Equatable {}
+extension NoiseTagging.PageAnimationType : Swift.Hashable {}
+extension NoiseTagging.PageAnimationType : Swift.RawRepresentable {}
 extension NoiseTagging.StandardCustomizableKeyboardButton : Swift.Equatable {}
 extension NoiseTagging.StandardCustomizableKeyboardButton : Swift.Hashable {}
 extension NoiseTagging.StandardCustomizableKeyboardButton : Swift.RawRepresentable {}
+extension NoiseTagging.SpeechRate : Swift.Equatable {}
+extension NoiseTagging.SpeechRate : Swift.Hashable {}
+extension NoiseTagging.SpeechRate : Swift.RawRepresentable {}
 extension NoiseTagging.LettersLayoutType : Swift.Equatable {}
 extension NoiseTagging.LettersLayoutType : Swift.Hashable {}
 extension NoiseTagging.LettersLayoutType : Swift.RawRepresentable {}

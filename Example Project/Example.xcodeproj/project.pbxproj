@@ -7,24 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480DFD4B2449AAE500AC87BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DFD4A2449AAE500AC87BB /* Constants.swift */; };
+		480DFD4F2449ACCC00AC87BB /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DFD4E2449ACCC00AC87BB /* ExampleViewController.swift */; };
+		480DFD522449B9AE00AC87BB /* ViewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DFD502449B9AE00AC87BB /* ViewPageViewController.swift */; };
+		480DFD532449B9AE00AC87BB /* ViewPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 480DFD512449B9AE00AC87BB /* ViewPageViewController.xib */; };
+		480DFD5C2449EE2400AC87BB /* ListOfExamplesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DFD5A2449EE2400AC87BB /* ListOfExamplesTableViewController.swift */; };
+		480DFD5D2449EE2400AC87BB /* ListOfExamplesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 480DFD5B2449EE2400AC87BB /* ListOfExamplesTableViewController.xib */; };
 		482431A2241BBB8000E7285B /* CustomControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482431A0241BBB8000E7285B /* CustomControlsViewController.swift */; };
 		482431A3241BBB8000E7285B /* CustomControlsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482431A1241BBB8000E7285B /* CustomControlsViewController.xib */; };
 		482431AD241BBC9B00E7285B /* NoiseTagButtonUsingImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482431AC241BBC9B00E7285B /* NoiseTagButtonUsingImages.swift */; };
 		482431B0241BBE2C00E7285B /* Image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 482431AE241BBE2C00E7285B /* Image1.png */; };
 		482431B1241BBE2C00E7285B /* Image0.png in Resources */ = {isa = PBXBuildFile; fileRef = 482431AF241BBE2C00E7285B /* Image0.png */; };
-		482DEADE244093470018E18F /* NoiseTagging.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482DEADD244093470018E18F /* NoiseTagging.xcframework */; };
-		482DEADF244093470018E18F /* NoiseTagging.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482DEADD244093470018E18F /* NoiseTagging.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		482EAE852417958600AABAED /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482EAE832417958600AABAED /* KeyboardViewController.swift */; };
 		482EAE862417958600AABAED /* KeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482EAE842417958600AABAED /* KeyboardViewController.xib */; };
 		4846FA5C240EA1F10071BFE0 /* StartBrainSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4846FA5A240EA1F10071BFE0 /* StartBrainSetupViewController.swift */; };
 		4846FA5D240EA1F10071BFE0 /* StartBrainSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4846FA5B240EA1F10071BFE0 /* StartBrainSetupViewController.xib */; };
+		48A882FC244B07F400A7B83A /* NoiseTagging.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A882FB244B07F400A7B83A /* NoiseTagging.xcframework */; };
+		48A882FD244B07F400A7B83A /* NoiseTagging.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48A882FB244B07F400A7B83A /* NoiseTagging.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		48BCE04624432C56007BFEFA /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BCE04524432C56007BFEFA /* NavigationViewController.swift */; };
 		48C31380240CFD4300ABC1A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3137F240CFD4300ABC1A2 /* AppDelegate.swift */; };
 		48C31382240CFD4300ABC1A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C31381240CFD4300ABC1A2 /* SceneDelegate.swift */; };
 		48C31384240CFD4300ABC1A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C31383240CFD4300ABC1A2 /* ViewController.swift */; };
 		48C31387240CFD4300ABC1A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C31385240CFD4300ABC1A2 /* Main.storyboard */; };
 		48C31389240CFD4500ABC1A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C31388240CFD4500ABC1A2 /* Assets.xcassets */; };
 		48C3138C240CFD4500ABC1A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C3138A240CFD4500ABC1A2 /* LaunchScreen.storyboard */; };
-		48C3139C240D114000ABC1A2 /* ListOfExamplesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3139B240D114000ABC1A2 /* ListOfExamplesTableViewController.swift */; };
 		48C3139F240D116D00ABC1A2 /* SimpleButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3139D240D116D00ABC1A2 /* SimpleButtonsViewController.swift */; };
 		48C313A0240D116D00ABC1A2 /* SimpleButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48C3139E240D116D00ABC1A2 /* SimpleButtonsViewController.xib */; };
 		48C313B7240D2B5000ABC1A2 /* LabeledButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C313B5240D2B5000ABC1A2 /* LabeledButtonsViewController.swift */; };
@@ -38,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				482DEADF244093470018E18F /* NoiseTagging.xcframework in Embed Frameworks */,
+				48A882FD244B07F400A7B83A /* NoiseTagging.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,16 +52,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		480DFD4A2449AAE500AC87BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		480DFD4E2449ACCC00AC87BB /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		480DFD502449B9AE00AC87BB /* ViewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPageViewController.swift; sourceTree = "<group>"; };
+		480DFD512449B9AE00AC87BB /* ViewPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewPageViewController.xib; sourceTree = "<group>"; };
+		480DFD5A2449EE2400AC87BB /* ListOfExamplesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfExamplesTableViewController.swift; sourceTree = "<group>"; };
+		480DFD5B2449EE2400AC87BB /* ListOfExamplesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListOfExamplesTableViewController.xib; sourceTree = "<group>"; };
 		482431A0241BBB8000E7285B /* CustomControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControlsViewController.swift; sourceTree = "<group>"; };
 		482431A1241BBB8000E7285B /* CustomControlsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomControlsViewController.xib; sourceTree = "<group>"; };
 		482431AC241BBC9B00E7285B /* NoiseTagButtonUsingImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseTagButtonUsingImages.swift; sourceTree = "<group>"; };
 		482431AE241BBE2C00E7285B /* Image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image1.png; sourceTree = "<group>"; };
 		482431AF241BBE2C00E7285B /* Image0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image0.png; sourceTree = "<group>"; };
-		482DEADD244093470018E18F /* NoiseTagging.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NoiseTagging.xcframework; path = ../NoiseTagging.xcframework; sourceTree = "<group>"; };
 		482EAE832417958600AABAED /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		482EAE842417958600AABAED /* KeyboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardViewController.xib; sourceTree = "<group>"; };
 		4846FA5A240EA1F10071BFE0 /* StartBrainSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBrainSetupViewController.swift; sourceTree = "<group>"; };
 		4846FA5B240EA1F10071BFE0 /* StartBrainSetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartBrainSetupViewController.xib; sourceTree = "<group>"; };
+		48A882FB244B07F400A7B83A /* NoiseTagging.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NoiseTagging.xcframework; path = ../NoiseTagging.xcframework; sourceTree = "<group>"; };
+		48BCE04524432C56007BFEFA /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		48C3137C240CFD4300ABC1A2 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C3137F240CFD4300ABC1A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48C31381240CFD4300ABC1A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +78,6 @@
 		48C3138B240CFD4500ABC1A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48C3138D240CFD4500ABC1A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C31398240D00A100ABC1A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		48C3139B240D114000ABC1A2 /* ListOfExamplesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfExamplesTableViewController.swift; sourceTree = "<group>"; };
 		48C3139D240D116D00ABC1A2 /* SimpleButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButtonsViewController.swift; sourceTree = "<group>"; };
 		48C3139E240D116D00ABC1A2 /* SimpleButtonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleButtonsViewController.xib; sourceTree = "<group>"; };
 		48C313B5240D2B5000ABC1A2 /* LabeledButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledButtonsViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				482DEADE244093470018E18F /* NoiseTagging.xcframework in Frameworks */,
+				48A882FC244B07F400A7B83A /* NoiseTagging.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +159,16 @@
 			path = "Using images";
 			sourceTree = "<group>";
 		};
+		48BCE04224432C2C007BFEFA /* Navigation and Pages */ = {
+			isa = PBXGroup;
+			children = (
+				48BCE04524432C56007BFEFA /* NavigationViewController.swift */,
+				480DFD502449B9AE00AC87BB /* ViewPageViewController.swift */,
+				480DFD512449B9AE00AC87BB /* ViewPageViewController.xib */,
+			);
+			path = "Navigation and Pages";
+			sourceTree = "<group>";
+		};
 		48C31373240CFD4300ABC1A2 = {
 			isa = PBXGroup;
 			children = (
@@ -168,10 +190,13 @@
 		48C3137E240CFD4300ABC1A2 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				480DFD4A2449AAE500AC87BB /* Constants.swift */,
 				48C3137F240CFD4300ABC1A2 /* AppDelegate.swift */,
 				48C31381240CFD4300ABC1A2 /* SceneDelegate.swift */,
 				48C31383240CFD4300ABC1A2 /* ViewController.swift */,
-				48C3139B240D114000ABC1A2 /* ListOfExamplesTableViewController.swift */,
+				480DFD5A2449EE2400AC87BB /* ListOfExamplesTableViewController.swift */,
+				480DFD5B2449EE2400AC87BB /* ListOfExamplesTableViewController.xib */,
+				480DFD4E2449ACCC00AC87BB /* ExampleViewController.swift */,
 				48C313A1240D117600ABC1A2 /* Examples */,
 				48C31385240CFD4300ABC1A2 /* Main.storyboard */,
 				48C31388240CFD4500ABC1A2 /* Assets.xcassets */,
@@ -184,7 +209,7 @@
 		48C31393240CFD6100ABC1A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				482DEADD244093470018E18F /* NoiseTagging.xcframework */,
+				48A882FB244B07F400A7B83A /* NoiseTagging.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -197,6 +222,7 @@
 				482431A8241BBBB000E7285B /* Labeled buttons */,
 				482431A9241BBBB700E7285B /* Popup buttons */,
 				482431AA241BBBBE00E7285B /* Keyboard */,
+				48BCE04224432C2C007BFEFA /* Navigation and Pages */,
 				482431AB241BBBCB00E7285B /* Custom controls */,
 			);
 			path = Examples;
@@ -261,9 +287,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480DFD532449B9AE00AC87BB /* ViewPageViewController.xib in Resources */,
 				482431B1241BBE2C00E7285B /* Image0.png in Resources */,
 				48C313A0240D116D00ABC1A2 /* SimpleButtonsViewController.xib in Resources */,
 				48C3138C240CFD4500ABC1A2 /* LaunchScreen.storyboard in Resources */,
+				480DFD5D2449EE2400AC87BB /* ListOfExamplesTableViewController.xib in Resources */,
 				48C31389240CFD4500ABC1A2 /* Assets.xcassets in Resources */,
 				482431B0241BBE2C00E7285B /* Image1.png in Resources */,
 				482EAE862417958600AABAED /* KeyboardViewController.xib in Resources */,
@@ -280,15 +308,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480DFD522449B9AE00AC87BB /* ViewPageViewController.swift in Sources */,
+				48BCE04624432C56007BFEFA /* NavigationViewController.swift in Sources */,
 				4846FA5C240EA1F10071BFE0 /* StartBrainSetupViewController.swift in Sources */,
 				482EAE852417958600AABAED /* KeyboardViewController.swift in Sources */,
 				48C313B7240D2B5000ABC1A2 /* LabeledButtonsViewController.swift in Sources */,
+				480DFD5C2449EE2400AC87BB /* ListOfExamplesTableViewController.swift in Sources */,
 				48C3139F240D116D00ABC1A2 /* SimpleButtonsViewController.swift in Sources */,
 				48C31384240CFD4300ABC1A2 /* ViewController.swift in Sources */,
-				48C3139C240D114000ABC1A2 /* ListOfExamplesTableViewController.swift in Sources */,
+				480DFD4B2449AAE500AC87BB /* Constants.swift in Sources */,
 				48C313BB240D52D600ABC1A2 /* PopupButtonViewController.swift in Sources */,
 				482431AD241BBC9B00E7285B /* NoiseTagButtonUsingImages.swift in Sources */,
 				48C31380240CFD4300ABC1A2 /* AppDelegate.swift in Sources */,
+				480DFD4F2449ACCC00AC87BB /* ExampleViewController.swift in Sources */,
 				48C31382240CFD4300ABC1A2 /* SceneDelegate.swift in Sources */,
 				482431A2241BBB8000E7285B /* CustomControlsViewController.swift in Sources */,
 			);
@@ -435,14 +467,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = 5UPDJHJ6D7;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.mindaffect.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -455,14 +487,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = 5UPDJHJ6D7;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.mindaffect.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -107,7 +107,7 @@ Please note that a unit does *not* need to have a fixed set of controls: each ti
 
 The `noiseTaggingView` argument makes it possible to use one delegate for multiple units.  
 
-`NoiseTagDelegate` has a number of optional functions as well, e.g. to use an alternative background color (`customBackgroundColorFor(view:)`), or to respond to a trial ending without any of the buttons being pressed (`respondToNoClick()`).
+`NoiseTagDelegate` has a number of optional functions as well, e.g. to use an alternative background color (`customBackgroundColorFor(noiseTaggingView:)`), or to respond to a trial ending without any of the buttons being pressed (`respondToNoClick()`).
 
 
 ## Blocking

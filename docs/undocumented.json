@@ -106,6 +106,27 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 40,
+      "symbol": "Page.Kind.View",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 41,
+      "symbol": "Page.Kind.List",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Pages and Tree Navigation/Page.swift",
+      "line": 42,
+      "symbol": "Page.Kind.Settings",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Controls/Simple buttons/NoiseTagCheckBoxView.swift",
       "line": 17,
       "symbol": "NoiseTagCheckBoxView",
@@ -183,15 +204,29 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/NoiseTagController.swift",
+      "line": 1640,
+      "symbol": "NoiseTagController.enterBrainControlLayerFrom(view:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/Support for NoiseTagController/NoiseTagController extensions/NoiseTagController+Settings.swift",
-      "line": 29,
+      "line": 18,
+      "symbol": "NoiseTagController.mode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/Support for NoiseTagController/NoiseTagController extensions/NoiseTagController+Settings.swift",
+      "line": 25,
       "symbol": "NoiseTagController.voice",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Controller/Support for NoiseTagController/NoiseTagController extensions/NoiseTagController+Settings.swift",
-      "line": 33,
+      "line": 29,
       "symbol": "NoiseTagController.timeInBetweenTrials",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -240,7 +275,7 @@
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/MAIN CLASSES/Model/NoiseTagSetOfSettings.swift",
-      "line": 420,
+      "line": 416,
       "symbol": "NoiseTagSetOfSettings.copy(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -303,282 +338,345 @@
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 27,
+      "line": 23,
       "symbol": "SettingSubscriber",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 28,
+      "line": 24,
       "symbol": "SettingSubscriber.valueChangedOf(setting:inSet:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 32,
+      "line": 28,
       "symbol": "SetOfSettings",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 53,
+      "line": 45,
       "symbol": "SetOfSettings.settings",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 54,
+      "line": 46,
       "symbol": "SetOfSettings.displayName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 58,
+      "line": 50,
       "symbol": "SetOfSettings.nNonDefaultSettings",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 70,
+      "line": 62,
       "symbol": "SetOfSettings.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 77,
+      "line": 69,
       "symbol": "SetOfSettings.copy(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 95,
+      "line": 87,
       "symbol": "SetOfSettings.encode(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 122,
+      "line": 114,
       "symbol": "SetOfSettings.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 129,
+      "line": 121,
       "symbol": "SetOfSettings.subscribe(_:toSettingsWithTitle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 143,
+      "line": 135,
       "symbol": "SetOfSettings.subscribe(_:toSettingsWithTitles:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 149,
+      "line": 141,
       "symbol": "SetOfSettings.informSubscribersToSettingWith(settingTitle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 182,
+      "line": 174,
       "symbol": "SetOfSettings.add(setting:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 186,
+      "line": 178,
       "symbol": "SetOfSettings.insert(setting:at:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 198,
+      "line": 190,
       "symbol": "SetOfSettings.addByReplace(setting:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 215,
+      "line": 207,
       "symbol": "SetOfSettings.addNewGroupWith(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 220,
+      "line": 212,
       "symbol": "SetOfSettings.deleteSettingAt(index:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 224,
+      "line": 216,
       "symbol": "SetOfSettings.deleteSettingWith(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 233,
+      "line": 225,
       "symbol": "SetOfSettings.settingWith(title:caseSensitive:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 242,
+      "line": 234,
       "symbol": "SetOfSettings.settingsWith(titles:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 282,
+      "line": 274,
       "symbol": "SetOfSettings.boolFor(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 291,
+      "line": 283,
       "symbol": "SetOfSettings.set(value:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 300,
+      "line": 292,
       "symbol": "SetOfSettings.toggleSettingWith(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 309,
+      "line": 301,
       "symbol": "SetOfSettings.intFor(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 318,
+      "line": 310,
       "symbol": "SetOfSettings.set(value:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 327,
+      "line": 319,
       "symbol": "SetOfSettings.doubleFor(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 337,
+      "line": 329,
       "symbol": "SetOfSettings.cgFloatFor(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 346,
+      "line": 338,
       "symbol": "SetOfSettings.set(value:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 355,
+      "line": 347,
       "symbol": "SetOfSettings.set(value:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 364,
+      "line": 356,
       "symbol": "SetOfSettings.indexSelectionForEnumSettingWith(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 373,
+      "line": 365,
       "symbol": "SetOfSettings.selectedEnumForSettingWith(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 382,
+      "line": 374,
       "symbol": "SetOfSettings.set(enumValue:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 391,
+      "line": 383,
       "symbol": "SetOfSettings.indexSelectionForItemOfArraySettingWith(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 400,
+      "line": 392,
       "symbol": "SetOfSettings.selectedItemOfArrayFor(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 409,
+      "line": 401,
       "symbol": "SetOfSettings.set(itemOfArray:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 418,
+      "line": 410,
       "symbol": "SetOfSettings.colorFor(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 427,
+      "line": 419,
       "symbol": "SetOfSettings.textFor(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 440,
+      "line": 432,
       "symbol": "SetOfSettings.takeOnValuesOf(setOfSettings:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Settings/SetOfSettings.swift",
-      "line": 455,
+      "line": 447,
       "symbol": "SetOfSettings.settingsShouldPerformActionsWhenValueChanges",
       "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 13,
+      "symbol": "Sayer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 24,
+      "symbol": "Sayer.setOfSettings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 25,
+      "symbol": "Sayer.voiceDefinition",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 32,
+      "symbol": "Sayer.voice",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 35,
+      "symbol": "Sayer.voiceDeveloper",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 36,
+      "symbol": "Sayer.speechRateOnAScaleFrom0To1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 44,
+      "symbol": "Sayer.say(text:useDeveloperVoice:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 100,
+      "symbol": "Sayer.speechRateFor(fraction:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Framework-specific/Text to Speech/Sayer.swift",
+      "line": 109,
+      "symbol": "Sayer.add(customVoice:withDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -597,42 +695,42 @@
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/SyncableObject.swift",
-      "line": 32,
+      "line": 28,
       "symbol": "SyncableObject.encodeSyncableFields(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/SyncableObject.swift",
-      "line": 48,
+      "line": 44,
       "symbol": "SyncableObject.recordType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/Generic syncable database/SyncableObject.swift",
-      "line": 52,
+      "line": 48,
       "symbol": "SyncableObject.hasBeenUploaded",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/JvHHandyFunctions.swift",
-      "line": 163,
+      "line": 159,
       "symbol": "String.heightWithConstrainedWidth(width:font:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/JvHHandyFunctions.swift",
-      "line": 171,
+      "line": 167,
       "symbol": "Float.stringWith(nDigitsBehindComma:applyMinimalDigits:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/JvHHandyFunctions.swift",
-      "line": 283,
+      "line": 279,
       "symbol": "Array.randomItem()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -961,294 +1059,294 @@
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 622,
+      "line": 582,
       "symbol": "JSON.rawData(options:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 630,
+      "line": 590,
       "symbol": "JSON.rawString(_:options:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 639,
+      "line": 599,
       "symbol": "JSON.rawString(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 754,
+      "line": 714,
       "symbol": "JSON.array",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 763,
+      "line": 723,
       "symbol": "JSON.arrayValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 768,
+      "line": 728,
       "symbol": "JSON.arrayObject",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 792,
+      "line": 752,
       "symbol": "JSON.dictionary",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 805,
+      "line": 765,
       "symbol": "JSON.dictionaryValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 811,
+      "line": 771,
       "symbol": "JSON.dictionaryObject",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 835,
+      "line": 795,
       "symbol": "JSON.bool",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 854,
+      "line": 814,
       "symbol": "JSON.boolValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 878,
+      "line": 838,
       "symbol": "JSON.string",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 897,
+      "line": 857,
       "symbol": "JSON.stringValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 921,
+      "line": 881,
       "symbol": "JSON.number",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 938,
+      "line": 898,
       "symbol": "JSON.numberValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 965,
+      "line": 925,
       "symbol": "JSON.null",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 978,
+      "line": 938,
       "symbol": "JSON.exists()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 991,
+      "line": 951,
       "symbol": "JSON.url",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1018,
+      "line": 978,
       "symbol": "JSON.double",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1031,
+      "line": 991,
       "symbol": "JSON.doubleValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1040,
+      "line": 1000,
       "symbol": "JSON.float",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1053,
+      "line": 1013,
       "symbol": "JSON.floatValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1062,
+      "line": 1022,
       "symbol": "JSON.int",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1075,
+      "line": 1035,
       "symbol": "JSON.intValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1084,
+      "line": 1044,
       "symbol": "JSON.uInt",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1097,
+      "line": 1057,
       "symbol": "JSON.uIntValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1106,
+      "line": 1066,
       "symbol": "JSON.int8",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1119,
+      "line": 1079,
       "symbol": "JSON.int8Value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1128,
+      "line": 1088,
       "symbol": "JSON.uInt8",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1141,
+      "line": 1101,
       "symbol": "JSON.uInt8Value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1150,
+      "line": 1110,
       "symbol": "JSON.int16",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1163,
+      "line": 1123,
       "symbol": "JSON.int16Value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1172,
+      "line": 1132,
       "symbol": "JSON.uInt16",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1185,
+      "line": 1145,
       "symbol": "JSON.uInt16Value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1194,
+      "line": 1154,
       "symbol": "JSON.int32",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1207,
+      "line": 1167,
       "symbol": "JSON.int32Value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1216,
+      "line": 1176,
       "symbol": "JSON.uInt32",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1229,
+      "line": 1189,
       "symbol": "JSON.uInt32Value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1238,
+      "line": 1198,
       "symbol": "JSON.int64",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1251,
+      "line": 1211,
       "symbol": "JSON.int64Value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1260,
+      "line": 1220,
       "symbol": "JSON.uInt64",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jopvanheesch/EigenBedrijf/MindAffect/Projects Xcode/NoiseTagging/NoiseTagging/Shared across projects!/SwiftyJSON/SwiftyJSON.swift",
-      "line": 1273,
+      "line": 1233,
       "symbol": "JSON.uInt64Value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
