@@ -1,4 +1,5 @@
 /* Copyright (c) 2016-2020 MindAffect.
+Author: Jop van Heesch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -13,10 +14,19 @@ import NoiseTagging
 
 /**
 This VC shows a list of examples, which all are `ExampleViewController`s.
+
+This VC's view is popped on the NoiseTagging stack (and therefore implements `NoiseTagDelegate`) so users can use the gestures provided by the NoiseTagging framework, such as double tapping with two fingers for opening the Developer screen.
 */
 class ListOfExamplesTableViewController: UITableViewController, UINavigationControllerDelegate, NoiseTagDelegate {
 	
+	/**
+	Reuse identifier for our table view's cells.
+	*/
 	private let kCellReuseIdentifier = "Example"
+	
+	/**
+	An array of the VCs which manage the examples.
+	*/
 	var exampleViewControllers = [ExampleViewController]()
 	
     override func viewDidLoad() {
@@ -38,6 +48,9 @@ class ListOfExamplesTableViewController: UITableViewController, UINavigationCont
 		
 		// Prepare our table view:
 		self.tableView.reloadData()
+		
+		// Push ourselves on the noise tagging stack. We do not show any noise tagging controls, but this way the gestures provided by the NoiseTagging framework, such as opening the Developer Screen by double tapping with two fingers, work on our view as well. The only downside is that the NoiseTagging framework will change our view's background color, which is why we override `customBackgroundColorFor:noiseTaggingView`:
+		NoiseTagging.push(view: self.view, forNoiseTaggingWithDelegate: self)
     }
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -45,9 +58,6 @@ class ListOfExamplesTableViewController: UITableViewController, UINavigationCont
 		
 		// While presenting an Example VC, we may hide our navigation bar. Make sure it is visible again:
 		self.navigationController?.setNavigationBarHidden(false, animated: true)
-		
-		// Once we have been presented, push ourselves on the noise tagging stack. We do not show any noise tagging controls, but this way the gestures provided by the NoiseTagging framework, such as opening the Developer Screen by double tapping with two fingers, work on our view as well. The only downside is that the NoiseTagging framework will change our view's background color, which is why we override `customBackgroundColorFor:noiseTaggingView`:
-		NoiseTagging.push(view: self.view, forNoiseTaggingWithDelegate: self)
 	}
 	
 	/**
@@ -74,7 +84,6 @@ class ListOfExamplesTableViewController: UITableViewController, UINavigationCont
         // Let the cell display the example VC's title and subTitle:
 		cell.textLabel?.text = self.exampleViewControllers[indexPath.row].title
 		cell.detailTextLabel?.numberOfLines = 0
-		
 		cell.accessoryType = .disclosureIndicator
 
         return cell

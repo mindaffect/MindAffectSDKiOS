@@ -1,9 +1,10 @@
 custom_categories:
-  - name: Programming Guides
+  - name: Guides
     children:
       - README
       - Quick Start
       - Main Programming Guide
+      - LICENSE
   - name: Main Symbols
     children:
       - NoiseTagging
@@ -17,25 +18,43 @@ custom_categories:
       - NoiseTagButtonView
       - NoiseTagShapeButtonView
       - NoiseTagLabeledButtonView
-      - LocationLabel
       - NoiseTagCheckBoxView
       - NoiseTagRadioButton
       - NoiseTagPopupButtonView
       - NoiseTagPopupItem
+      - NoiseTaggingAlertAction
+      - ResultOfPresentingAlert
   - name: Keyboard
     children:
       - NoiseTagKeyboardViewController
-      - NoiseTaggingKeyboardDelegate
+      - NoiseTagKeyboardDelegate
       - SetOfSettingsNoiseTagKeyboard
       - NoiseTagKeyboardSettingTitles
       - CustomizableButtonState
       - StandardCustomizableKeyboardButton
       - LettersLayoutType
+  - name: Navigation and Pages
+    children:
+      - NavigatorTreeOfPages
+      - Page
+      - PageDelegate
+      - PageAnimationType
+  - name: Sound and Text to Speech
+    children:
+      - Sound
+      - SoundsHelper
+      - Saying
+      - Sayer
+      - VoiceDefinition
+      - CustomVoiceDelegate
+      - SpeechRate
   - name: Settings
     children:
+      - SettingsTableViewController
       - Setting
-      - NoiseTagSetOfSettings
       - SetOfSettings
+      - SetOfSettingsDelegate
+      - NoiseTagSetOfSettings
       - NoiseTagSettingTitles
       - BoolSetting
       - IntSetting
@@ -51,6 +70,12 @@ custom_categories:
       - Setting_abstract
       - SettingObserver
       - SettingSubscriber
+  - name: Recordings
+    children:
+      - Recordingsdatabase
+      - Recordings
+      - Recording
+      - FileOfRecording
 
       
 module: NoiseTagging

@@ -1,4 +1,5 @@
 /* Copyright (c) 2016-2020 MindAffect.
+Author: Jop van Heesch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -12,20 +13,21 @@ import NoiseTagging
 
 
 class ViewController: UIViewController {
-		
-	var viewDidAppearHasBeenCalled = false
+			
+	var presentedNavigationController: UINavigationController!
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		if !viewDidAppearHasBeenCalled {
-			
-			viewDidAppearHasBeenCalled = true
+		if self.presentedNavigationController == nil {
 			
 			// Change NoiseTagging's default settings:
 			
 			// Enable accessing the Developer screen:
-			NoiseTagging.settings.set(value: true, for: NoiseTagSettingTitles.twoFingerDoubleTapOpensDeveloperScreen)
+			NoiseTagging.settings.set(boolValue: true, for: NoiseTagSettingTitles.twoFingerDoubleTapOpensDeveloperScreen)
+			
+			// Disable NoiseTagging printing in the console:
+//			NoiseTagging.settings.set(boolValue: false, for: NoiseTagSettingTitles.noiseTaggingPrintsToTheConsole)
 			
 			
 			// Present a navigation controller with a ListOfExamplesTableViewController as its root. The ListOfExamplesTableViewController shows a list of examples. If the user selects an example, that example is pushed:
@@ -34,31 +36,29 @@ class ViewController: UIViewController {
 			let listOfExamplesTableViewController = ListOfExamplesTableViewController(nibName: "ListOfExamplesTableViewController", bundle: nil)
 			
 			// Create a UINavigationController, which we will present fullscreen:
-			let navigationController = UINavigationController(rootViewController: listOfExamplesTableViewController)
-			navigationController.modalPresentationStyle = .fullScreen
+			self.presentedNavigationController = UINavigationController(rootViewController: listOfExamplesTableViewController)
+			self.presentedNavigationController.modalPresentationStyle = .fullScreen
 			
 			// Prepare the navigation controller's appearance:
-			navigationController.overrideUserInterfaceStyle = .light
-			navigationController.navigationBar.barTintColor = kColorMindAffectOrange
-			navigationController.navigationBar.isTranslucent = false
+			self.presentedNavigationController.overrideUserInterfaceStyle = .light
+			self.presentedNavigationController.navigationBar.barTintColor = kColorMindAffectOrange
+			self.presentedNavigationController.navigationBar.isTranslucent = false
 			let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-			navigationController.navigationBar.titleTextAttributes = textAttributes
-			navigationController.navigationBar.tintColor = UIColor.white
-			navigationController.navigationBar.prefersLargeTitles = true
+			self.presentedNavigationController.navigationBar.titleTextAttributes = textAttributes
+			self.presentedNavigationController.navigationBar.tintColor = UIColor.white
+			self.presentedNavigationController.navigationBar.prefersLargeTitles = true
 			let navigationBarAppearance = UINavigationBarAppearance()
 			navigationBarAppearance.configureWithOpaqueBackground()
 			navigationBarAppearance.titleTextAttributes = textAttributes
 			navigationBarAppearance.largeTitleTextAttributes = textAttributes
 			navigationBarAppearance.backgroundColor = kColorMindAffectOrange
-			navigationController.navigationBar.standardAppearance = navigationBarAppearance
-			navigationController.navigationBar.scrollEdgeAppearance = navigationBarAppearance
-			navigationController.navigationBar.compactAppearance = navigationBarAppearance
+			self.presentedNavigationController.navigationBar.standardAppearance = navigationBarAppearance
+			self.presentedNavigationController.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+			self.presentedNavigationController.navigationBar.compactAppearance = navigationBarAppearance
 			
 			// Present the navigationController:
-			self.present(navigationController, animated: true, completion: nil)
+			self.present(self.presentedNavigationController, animated: true, completion: nil)
 		}
 	}
-
-
 }
 

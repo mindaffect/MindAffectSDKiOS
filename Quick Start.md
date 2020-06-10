@@ -49,7 +49,7 @@ In this example we make our `ViewController` the delegate:
 class ViewController: UIViewController, NoiseTagDelegate {
 ```
 
-And we implement `NoiseTagDelegate`'s one required function:
+And we implement one `NoiseTagDelegate` function:
 
 ```Swift
 func startNoiseTagControlOn(noiseTaggingView: UIView) {

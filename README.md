@@ -7,6 +7,8 @@ Table of Contents:
 
 **Important**: For the full documentation, download the repository from Github (https://github.com/mindaffect/MindAffectSDKiOS) and open docs/index.html. 
 
+Developing this framework has been made possible by the generous support of the American, Belgian and Dutch ALS Associations, a.o. under Grants ATC20610 and 2017-57.
+
 
 # What is Noise Tagging?
 
@@ -26,28 +28,29 @@ The NoiseTagging Framework for iOS makes it easy to develop iOS apps that can be
 - Precise and effective flickering;
 - Trial control;
 - Generic UI components that work well with noise tagging;
-- An in-app Developer screen with extra functionalities aimed at developers.
+- An in-app Developer screen with extra functionalities aimed at developers;
+- Some supporting functionalities, like Text to Speech. 
 
 In upcoming Sections we discuss these in more detail. 
+
+**Note**: A small set of non-crucial functionalities only work correctly on an iPad screen, such as the *Recordings* screen, which allows developers to inspect collected log files within their own app. 
 
 
 ## System Integration
 
 Here you find an overview of our system architecure: https://drive.google.com/open?id=1rmdK3u1Vxe78UVQbCRCWk8BVX6N4iisN
 
-The 'Presentation' and 'Output' roles as depicted in this overview can be fulfilled by various devices. To this end a device needs to connect to the Recogniser and implement a certain communication protocol. By using this framework you do not need to worry about this: the framework provides standard UI to let your users connect their iOS device to the Recogniser and it handles all communication with the Recogniser. 
+The 'Presentation' and 'Output' roles as depicted in this overview can be fulfilled by various devices. To this end a device needs to connect to the Decoder and implement a certain communication protocol. By using this framework you do not need to worry about this: the framework provides standard UI to let your users connect their iOS device to the Decoder and it handles all communication with the Decoder. 
 
 
-## Brain Control Layer
+## Setup Brain Control
 
 Before users can start controlling your app using noise tagging, they need to perform a number of steps:
-1. Connect their iOS device with the Recogniser;
+1. Connect their iOS device with the Decoder;
 2. Check that the headset is fitted correctly;
 3. Calibrate the system.
 
-The NoiseTagging framework provides standard UI in which the user can perform all of these tasks, as well as inspect the status of the system. This UI consists of a number of screens, which collectively we refer to as the *Brain Control Layer*.
-
-If the NoiseTagging framework notices problems – e.g. a connection problem with the Recogniser –, it shows a special type of alert (see Section "Generic UI Components"). If necessary, the user can go directly back into the Brain Control Layer from such an alert. 
+The NoiseTagging framework provides two standard UIs in which the user can perform all of these tasks, as well as inspect the status of the system. For use cases where everything needs to brain-controllable – e.g. because users may be locked-in patients who want to be able to recalibrate the system without any help – the framework provides a number of screens which collectively we refer to as the *Brain Control Layer*. Alternatively a more streamlined – and prettier – UI is provided by the *Simplified Brain Setup UI*. 
 
 
 ## Flicker
@@ -57,6 +60,8 @@ For optimal recognition (that is: the best and fastest recognition of where the 
 2. These noise tags are displayed as precisely as possible. 
 
 Clients of the NoiseTagging framework only need to tell it which buttons participate in noise tagging. The framework assigns appropriate noise tags.
+
+**Important**: Noise tags are being displayed using a `CADisplayLink`. When running in debug, this may lead to sub-optimal frame timing (assuming Xcode's default build settings for debugging are used). Therefore we recommend to use a release configuration whenever using brain-control.. 
 
 
 ## Trial Control
@@ -94,7 +99,8 @@ The NoiseTagging framework provides the following components, all specifically d
 - **Popup button**: a labeled button to select one out of a number of options. The button itself shows the currently selected option. If it is pressed, a popover is shown to choose from all possible options.
 - **Popover with buttons**: a popover which can be populated with simple buttons. Optionally the popover also contains a button to close the popover without pressing any of the other buttons.
 - **Keyboard**: a view controller which can be used to present a keyboard and let the user edit a text using noise tagging.
-- **Tree navigation**: a controller that lets you create UI that is comparable to UINavigationController. It lets users navigate through a *tree* of *pages*, where each page can provide a list of *sub pages* for the user to navigate to. At the top the title of the current page is displayed and in the top left there is a button to go back to the previous page. 
+- **Tree navigation**: a controller that lets you create UI that is comparable to UINavigationController. It lets users navigate through a *tree* of *pages*, where each page can provide a list of *sub pages* for the user to navigate to. At the top the title of the current page is displayed and in the top left there is a button to go back to the previous page.
+- **Settings page**: a page with automatically generated UI for editing settings. 
 - **Alert**: a popover similar to normal system alerts, but with buttons that can be pressed using noise tagging. 
 
 

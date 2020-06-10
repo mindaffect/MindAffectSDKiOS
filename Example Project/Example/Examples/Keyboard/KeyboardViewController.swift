@@ -1,4 +1,5 @@
 /* Copyright (c) 2016-2020 MindAffect.
+Author: Jop van Heesch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -16,6 +17,7 @@ This example shows how to use `NoiseTagKeyboardViewController` to present a brai
 */
 class KeyboardViewController: ExampleViewController {
 
+	// We show a text field whose text can be edited using `NoiseTagKeyboardViewController`:
 	@IBOutlet weak var textField: UITextField!
 	
 	// Create a NoiseTagKeyboardViewController, which provides the actual keyboard:
@@ -44,10 +46,6 @@ class KeyboardViewController: ExampleViewController {
 		}
 	}
 	
-	override var shouldPopNoiseTaggingWhenMovingFromParent: Bool {
-		return true
-	}
-	
 	
 	// MARK - Actions
 	
@@ -59,7 +57,7 @@ class KeyboardViewController: ExampleViewController {
 		self.keyboardVC.typedText = self.textField.text ?? ""
 		
 		// Set keyboardVC's title, because it will be displayed in our navigation controller:
-		self.keyboardVC.title = "Typing"
+		self.keyboardVC.title = "Editing Text"
 		
 		// Push keyboardVC on our navigation controller:
 		self.navigationController?.pushViewController(self.keyboardVC, animated: true)

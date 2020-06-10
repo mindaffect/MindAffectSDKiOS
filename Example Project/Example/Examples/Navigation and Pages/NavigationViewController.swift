@@ -1,4 +1,5 @@
 /* Copyright (c) 2016-2020 MindAffect.
+Author: Jop van Heesch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -32,7 +33,7 @@ class NavigationViewController: ExampleViewController {
 		// Set our title and subTitle, which are shown in the list of examples.
 		self.title = "Navigation and Pages"
 	}
-	
+		
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
@@ -61,8 +62,7 @@ class NavigationViewController: ExampleViewController {
 			TextSetting(title: "A Text Setting", value: "Some text"),
 			IntSetting(title: "An Int Setting", value: 10)
 		]
-		let frameSettingsPages = CGRect(x: 0, y: 0, width: 1024 * ScalingUI.scaleWRTRegularIPadScreen, height: 640 * ScalingUI.scaleWRTRegularIPadScreen) // todo: calculate or use constants
-		let settingsPage = Page(title: "A Settings Page", settings: settings, frame: frameSettingsPages, delegate: self)
+		let settingsPage = Page(title: "A Settings Page", settings: settings, delegate: self)
 		settingsPage.subTitle = "Each Settings page lets the user edit a maximum of six settings."
 			
 		// 3. Define a List page, containing two (very minimal) sub-pages:
@@ -81,13 +81,13 @@ class NavigationViewController: ExampleViewController {
 		self.navigator.closureToPerformOnClose = {
 			self.navigationController?.popViewController(animated: true)
 		}
-		
-		// Let the navigator present its UI:
-		self.navigator.present()
 	}
 	
-	override var shouldPopNoiseTaggingWhenMovingFromParent: Bool {
-		return true
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+				
+		// Let the navigator present its UI:
+		self.navigator.present()
 	}
 
 	

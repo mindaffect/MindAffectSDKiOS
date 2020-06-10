@@ -33,18 +33,18 @@
 	 {"id": "Z", "title": "Z"},
 	 
 	 {"id": "backspace", "icon": "Icons_Backspace"},
-	 {"id": "deleteAll", "icon": "Icons_Delete all"},
+	 {"id": "deleteAll", "icon": "Icons_Delete all", "timing": 1},
 	 {"id": "space", "icon": "Icons_Space"},
 	 {"id": "questionmark", "title": "?"},
 	 {"id": "dot", "title": "."},
 	 {"id": "alarm", "icon": "Icons_Alarm"},
-	 {"id": "keyboards", "title": "123"},
+	 {"id": "keyboards", "title": "123", "timing": 1},
 	 {"id": "autocomplete", "icon": "Icons_Lightningbolt"},
 	 {"id": "confirm", "icon": "Icons_Speak"},
 	 {"id": "shift_LocalTextfield", "icon": "Icons_Shift"},
-	 {"id": "specialCharacters", "title": ".?!"},
-	 {"id": "undo", "icon": "Icons_Undo"},
-	 {"id": "ready", "icon": "Icons_Checkmark"},
+	 {"id": "specialCharacters", "title": ".?!", "timing": 1},
+	 {"id": "undo", "icon": "Icons_Undo", "timing": 1},
+	 {"id": "ready", "icon": "Icons_Checkmark", "timing": 1},
 	 {"id": "playpause", "icon": "Icons_Pause"},
 	 
 	 {"id": "1", "title": "1"},
@@ -99,10 +99,6 @@
 	 {"id": "topRowWithoutAutoComplete", "elements": ["leftOfTextField", "textFieldAndOptionallyDeleteAll", "backspace"], "marginInBetween": 13, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
 	 {"relativeSizes": [1, 4, 1]}},
 	 {"id": "topRow", "elements": ["topRowWithAutoComplete"]},
-	 {"id": "topRowPlusSpaceLeftForSyncView", "elements": ["empty space", "topRow"], "marginInBetween": 13, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
-	 {"relativeSizes": [0.22, 8]}},
-	 {"id": "topRowPlusSpaceRightForSyncView", "elements": ["topRow", "empty space"], "marginInBetween": 0, "placementMethod": "elementsWithRelativeSizes", "placementArgs":
-	 {"relativeSizes": [12.821, 1]}},
 	 
 	 {"id": "buttonsLeftOfSpace", "elements": ["alarm", "keyboards", "shift_LocalTextfield"], "marginInBetween": 13},
 	 {"id": "buttonsRightOfSpace", "elements": [], "marginInBetween": 13},

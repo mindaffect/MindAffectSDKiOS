@@ -30,6 +30,8 @@ The read-only variable `NoiseTagging` gives you easy access to a singleton `Nois
 
 `NoiseTagging` is also *your* main gateway to using the framework. You use it to define which controls should flicker, to provide  the user with UI to setup brain control, to customize noise tagging settings, etcetera. 
 
+**Important**: Noise tags are being displayed using a `CADisplayLink`. When running in debug, this may lead to sub-optimal frame timing (assuming Xcode's default build settings for debugging are used). Therefore we recommend to use a release configuration whenever using brain-control.
+
 
 ### Settings
 
@@ -92,13 +94,13 @@ class ViewController: UIViewController, NoiseTagDelegate {
 		// Add noise tagging actions:
 		
 		// For some types of controls you add actions directly:
-		someNoiseTagButtonView.noiseTagging.addAction(timing: 0) {
+		self.someNoiseTagButtonView.noiseTagging.addAction(timing: 0) {
 			// This code is executed when the button is pressed:
 			print("Hello")
 		}
 		
 		// For some types of controls you add actions indirectly. E.g. a NoiseTagPopupButtonView's action always is the same and you only need to enable brain control on it:
-		someNoiseTagPopupButtonView.noiseTagControlIsOn = true
+		self.someNoiseTagPopupButtonView.noiseTagControlIsOn = true
 	}
 }
 ```
@@ -108,6 +110,17 @@ Please note that a unit does *not* need to have a fixed set of controls: each ti
 The `noiseTaggingView` argument makes it possible to use one delegate for multiple units.  
 
 `NoiseTagDelegate` has a number of optional functions as well, e.g. to use an alternative background color (`customBackgroundColorFor(noiseTaggingView:)`), or to respond to a trial ending without any of the buttons being pressed (`respondToNoClick()`).
+
+
+### Brain Setup
+
+By default users can start connecting their brains by double tapping anywhere on the current noise tagging unit's view. Alternatively you can use one of these two functions provided by `NoiseTagging`:
+- `startBrainSetup(pushedFromNavigationController:withCompletionAfterBrainSetup)`
+- `enterBrainControlLayerFrom(view)`
+
+We recommend you use the former, unless users need to be able to access the brain control layer without using touch.
+
+If you use one of these functions, consider setting the `doubleTapOpensBrainSetup` setting to `false`.
 
 
 ## Blocking
@@ -231,14 +244,14 @@ You access settings by their titles, which are defined in the struct `NoiseTagSe
 let setting_framesPerBit = NoiseTagging.settings.settingWith(title: NoiseTagSettingTitles.framesPerBit)
 ```
 
-Alternatively you can use some convenience methods of `setOfSettings` to get or set settings more directly:
+Alternatively you can use some convenience methods of `SetOfSettings` to get or set settings more directly:
 
 ```swift
 // Get an Int setting:
 _ = NoiseTagging.settings.intFor(NoiseTagSettingTitles.framesPerBit)
 
 // Set a setting:
-NoiseTagging.settings.set(value: 2, for: NoiseTagSettingTitles.framesPerBit)
+NoiseTagging.settings.set(intValue: 2, for: NoiseTagSettingTitles.framesPerBit)
 ```
 
 
@@ -289,11 +302,11 @@ The easiest way to conform to `NoiseTagControl` is to simply subclass `UIView`. 
 
 ### `NoiseTagControl` Methods and Properties
 
-#### `func setFlickerColor(color: UIColor)`
-This function is called to show a noise tag on the control. The passed color is the current *flicker color*, which is a function of the current bit of the control's noise tag. By default `UIView` sets this color as its layer's background color. 
+#### `func show(appearance: NoiseTagControlAppearance, withDefaultColor defaultColor: UIColor)`
+This function is called to show a noise tag on the control, as well as for showing other standard appearances provides by the framework, e.g. for a disabled state. In case a control is flickering, the passed color is the current *flicker color*, which is a function of the current bit of the control's noise tag. By default `UIView` sets this color as its layer's background color, but classes `NoiseTagControl`s can also choose to show the bits differently.  
 
 #### `func setFeedbackColor(color: UIColor?)`
-This function is called to show *feedback* colors on the control, for example for *highlighting* – indicating that the user should look at the control during calibration –, or for providing visual feedback when there is a button press. By default `UIView` calls `setFlickerColor(color:)`, passing this color, or if the color is `nil`, it calls `self.updateUIDependingOnNoiseTagging()`. 
+This function is called to show *feedback* colors on the control, for example for *highlighting* – indicating that the user should look at the control during calibration –, or for providing visual feedback when there is a button press. By default `UIView` calls `show(appearance:withDefaultColor)`, passing the `Other` appearance and this color, or if the color is `nil`, it calls `self.updateUIDependingOnNoiseTagging()`. 
 
 #### `func layerToHandleNoiseTagTaps() -> CALayer?`
 In order to allow the user to press buttons using touch, the framework performs a simple kind of hit test. A tap is considered to be on a control if it is in the bounds of the layer returned by this function. By default `UIView` simply returns its `layer`.
@@ -311,8 +324,9 @@ The hit test we explained above, in the context of `layerToHandleNoiseTagTaps`, 
 This allows controls to respond when the state of `NoiseTagging` changes in some way that might be relevant for their appearance. Currently this only is called when the flickering starts or stops. `UIView`'s default implementation is as follows:
 
 ```swift
-// By default we use setFlickerColor to show the default color for enabled/disabled controls:
-self.setFlickerColor(color: self.noiseTagging.enabled ? self.defaultColorWhenEnabled : self.defaultColorWhenDisabled)
+// By default we use show(appearance:withDefaultColor) to show the default color for enabled/disabled controls:
+let defaultColor = self.noiseTagging.enabled ? self.defaultColorWhenEnabled : self.defaultColorWhenDisabled
+self.show(appearance: self.noiseTagging.enabled ? NoiseTagControlAppearance.Enabled : NoiseTagControlAppearance.Disabled, withDefaultColor: defaultColor)
 ```
 
 
@@ -331,7 +345,7 @@ The NoiseTagging framework logs data that might be useful for your own developme
 
 The NoiseTagging framework groups log files in *recordings*. Each recording contains the information that is logged in some meaningful bracket of time, plus optionally some feedback. 
 
-The NoiseTagging framework creates multiple log files. E.g. one log file is about the communication with the Recogniser, another one is about rendering the flicker patterns, and yet another one is about the buttons that have been pressed. 
+The NoiseTagging framework creates multiple log files. E.g. one log file is about the communication with the Decoder, another one is about rendering the flicker patterns, and yet another one is about the buttons that have been pressed. 
 
 
 #### Time Brackets

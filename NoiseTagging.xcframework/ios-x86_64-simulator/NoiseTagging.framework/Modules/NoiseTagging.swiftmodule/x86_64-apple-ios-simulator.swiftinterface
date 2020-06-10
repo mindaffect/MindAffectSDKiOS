@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
 // swift-module-flags: -target x86_64-apple-ios13.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name NoiseTagging
 import AVFoundation
 import AudioToolbox
@@ -53,7 +53,7 @@ extension Int : NoiseTagging.ItemOfArrayInMenu {
     @objc get
   }
   @objc public func updateValueToMatch(newSetting: NoiseTagging.Setting)
-  @objc public var hasDefaultValue: Swift.Bool {
+  @objc public var valueEqualsDefaultValue: Swift.Bool {
     @objc get
   }
   @objc public func resetToDefault()
@@ -84,36 +84,63 @@ public enum NoiseTagMode : Swift.Int, NoiseTagging.EnumAsSetting {
     get
   }
 }
+@objc @_inheritsConvenienceInitializers public class SettingsTableViewController : UIKit.UITableViewController, NoiseTagging.SettingObserver {
+  public static func newViewControllerForEditing(setsOfSettings: [NoiseTagging.SetOfSettings]) -> NoiseTagging.SettingsTableViewController
+  @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGFloat
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc public func valueChangedFor(setting: NoiseTagging.Setting)
+  @objc deinit
+  @objc override dynamic public init(style: UIKit.UITableView.Style)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
 public struct NoiseTagSettingTitles {
-  public static let showNoiseTagIDsOnControls: Swift.String
-  public static let framesPerBit: Swift.String
-  public static let preferredNFramesPerSecond: Swift.String
-  public static let doubleTapOpensBrainSetup: Swift.String
-  public static let twoFingerDoubleTapOpensDeveloperScreen: Swift.String
-  public static let useTapsForTogglingWhetherControlsParticipateInNoiseTagging: Swift.String
-  public static let filenameNoiseTags: Swift.String
   public static let mode: Swift.String
+  public static let certaintyRequiredForPress: Swift.String
+  public static let disableNoClicks: Swift.String
+  public static let clickFeedbackMode: Swift.String
+  public static let noiseTaggingPrintsToTheConsole: Swift.String
+  public static let showNoiseTagIDsOnControls: Swift.String
+  public static let soundOnMissedFrame: Swift.String
   public static let leftCornerView: Swift.String
   public static let leftCornerViewIndexOfNoiseTag: Swift.String
   public static let rightCornerView: Swift.String
   public static let rightCornerViewIndexOfNoiseTag: Swift.String
-  public static let clickSoundOnPress: Swift.String
-  public static let enableOtherSounds: Swift.String
-  public static let contrastMode: Swift.String
-  public static let voice: Swift.String
-  public static let speechRate: Swift.String
-  public static let disableNoClicks: Swift.String
+  public static let framesPerBit: Swift.String
+  public static let preferredNFramesPerSecond: Swift.String
+  public static let filenameNoiseTags: Swift.String
   public static let assignNoiseTagsInReversedOrder: Swift.String
   public static let randomlyTranslateNoiseTagsInTraining: Swift.String
   public static let timeInBetweenTrials: Swift.String
-  public static let certaintyRequiredForPress: Swift.String
+  public static let nSimpleTrainTrials: Swift.String
   public static let trialDurationSimpleTrain: Swift.String
+  public static let nGenericTrainTrials: Swift.String
   public static let trialDurationGenericTrain: Swift.String
   public static let minTrialDuration: Swift.String
   public static let maxTestTrialDuration: Swift.String
   public static let disableMaxTestTrialDuration: Swift.String
-  public static let nSimpleTrainTrials: Swift.String
-  public static let nGenericTrainTrials: Swift.String
+  public static let certaintyRequiredForFirstZeroTrainClick: Swift.String
+  public static let maxDurationFirstZeroTrainClick: Swift.String
+  public static let nZeroTrainTrials: Swift.String
+  public static let voice: Swift.String
+  public static let speechRate: Swift.String
+  public static let autoDiscoverHostAddressUsingSSDP: Swift.String
+  public static let hostAddressTCP: Swift.String
+  public static let portTCP: Swift.String
+  public static let autoConnectTCP: Swift.String
+  public static let timeoutConnectingOverTCP: Swift.String
+  public static let timeInBetweenAttemptsToConnect: Swift.String
+  public static let durationAutoConnectTCPBeforeWarningUser: Swift.String
+  public static let contrastMode: Swift.String
   public static let defaultBackgroundColorPrimary: Swift.String
   public static let defaultBackgroundColorTopAndBottomBars: Swift.String
   public static let defaultBackgroundColorTreeNavigation: Swift.String
@@ -126,33 +153,21 @@ public struct NoiseTagSettingTitles {
   public static let defaultColorItemsOnButtons: Swift.String
   public static let colorBitOffIfMaxContrast: Swift.String
   public static let colorBitOnIfMaxContrast: Swift.String
-  public static let autoDiscoverHostAddressUsingSSDP: Swift.String
-  public static let hostAddressTCP: Swift.String
-  public static let portTCP: Swift.String
-  public static let autoConnectTCP: Swift.String
-  public static let timeoutConnectingOverTCP: Swift.String
-  public static let timeInBetweenAttemptsToConnect: Swift.String
-  public static let durationAutoConnectTCPBeforeWarningUser: Swift.String
-  public static let soundOnMissedFrame: Swift.String
-  public static let clickFeedbackMode: Swift.String
-  public static let certaintyRequiredForFirstZeroTrainClick: Swift.String
-  public static let maxDurationFirstZeroTrainClick: Swift.String
-  public static let nZeroTrainTrials: Swift.String
-  public static let hideNonTargetControls: Swift.String
+  public static let clickSoundOnPress: Swift.String
+  public static let enableOtherSounds: Swift.String
   public static let soundAlarmWhenDisconnecting: Swift.String
-  public static let sayOutLoudWhenSendingModeToUtopia: Swift.String
-  public static let ttsFailedClicks: Swift.String
   public static let playSoundAfterNoiseTaggingOn: Swift.String
   public static let intervalPlaySoundAfterNoiseTaggingOn: Swift.String
+  public static let doubleTapOpensBrainSetup: Swift.String
+  public static let twoFingerDoubleTapOpensDeveloperScreen: Swift.String
+  public static let useTapsForTogglingWhetherControlsParticipateInNoiseTagging: Swift.String
+  public static let hideNonTargetControls: Swift.String
   public static let labeledButtonsOnlyPartlyFlicker: Swift.String
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NoiseTagSetOfSettings : NoiseTagging.SetOfSettings {
   @objc required public init?(coder aDecoder: Foundation.NSCoder)
   @objc override public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
   @objc deinit
-}
-public protocol DelegateForSimplifiedBrainControl : AnyObject {
-  func simplifiedSetupForBrainControlFinished(withBrainControl: Swift.Bool, completion: () -> ())
 }
 @objc public enum NoiseTagControlAppearance : Swift.Int {
   case Flicker0
@@ -176,13 +191,21 @@ public protocol DelegateForSimplifiedBrainControl : AnyObject {
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
 }
 public enum ScalingUI {
-  public static let scaleWRTRegularIPadScreen: CoreGraphics.CGFloat
-  public static let scaleWRT12inch9IPadScreen: CoreGraphics.CGFloat
-  public static func scaleCompletely(view: UIKit.UIView, withScale scale: CoreGraphics.CGFloat)
-  public static func scaleCompletelyFromRegularToCurrentIPad(view: UIKit.UIView)
-  public static func scaleCompletelyFrom12inch9ToCurrentIPad(view: UIKit.UIView)
-  public static func imageScaledWRTNormalIPadScreen(image: UIKit.UIImage?) -> UIKit.UIImage?
-  public static func imageScaledWRT12inch9IPadScreen(image: UIKit.UIImage?) -> UIKit.UIImage?
+  public static func scale(view: UIKit.UIView, withScaleX scaleX: CoreGraphics.CGFloat, scaleY: CoreGraphics.CGFloat, scaleR scaleROrNil: CoreGraphics.CGFloat? = nil)
+  public enum FromRegularIPad {
+    public static let scaleX: CoreGraphics.CGFloat
+    public static let scaleY: CoreGraphics.CGFloat
+    public static let scaleR: CoreGraphics.CGFloat
+    public static func scale(view: UIKit.UIView)
+    public static func scale(image: UIKit.UIImage?) -> UIKit.UIImage?
+  }
+  public enum From12inch9 {
+    public static let scaleX: CoreGraphics.CGFloat
+    public static let scaleY: CoreGraphics.CGFloat
+    public static let scaleR: CoreGraphics.CGFloat
+    public static func scale(view: UIKit.UIView)
+    public static func scale(image: UIKit.UIImage?) -> UIKit.UIImage?
+  }
 }
 @objc @_inheritsConvenienceInitializers public class SoundsHelper : ObjectiveC.NSObject, AVFoundation.AVAudioPlayerDelegate {
   public func play(filename: Swift.String, fileExtension: Swift.String = "wav")
@@ -192,6 +215,11 @@ public enum ScalingUI {
   @objc override dynamic public init()
 }
 public let Sound: NoiseTagging.SoundsHelper
+@objc @_hasMissingDesignatedInitializers public class SyncableDatabase : ObjectiveC.NSObject {
+  public var viewControllerForPresentingAlerts: UIKit.UIViewController?
+  @objc deinit
+  @objc override dynamic public init()
+}
 extension UIViewController {
   public var viewIsInCurrentNoiseTaggingUnit: Swift.Bool {
     get
@@ -217,7 +245,7 @@ extension UIViewController {
     @objc get
   }
   @objc public func updateValueToMatch(newSetting: NoiseTagging.Setting)
-  @objc public var hasDefaultValue: Swift.Bool {
+  @objc public var valueEqualsDefaultValue: Swift.Bool {
     @objc get
   }
   @objc public func resetToDefault()
@@ -277,7 +305,7 @@ public protocol PageDelegate {
   final public let viewContainsFakeNavigationBar: Swift.Bool
   public init(title: Swift.String, view: UIKit.UIView, viewContainsFakeNavigationBar: Swift.Bool = false, delegate: NoiseTagging.NoiseTagDelegate? = nil)
   final public let settings: [NoiseTagging.Setting]
-  public init(title: Swift.String, settings: [NoiseTagging.Setting], frame: CoreGraphics.CGRect, delegate: NoiseTagging.NoiseTagDelegate? = nil)
+  public init(title: Swift.String, settings: [NoiseTagging.Setting], delegate: NoiseTagging.NoiseTagDelegate? = nil)
   public func setNoiseTagActionsForSettingViews()
   final public let subPages: [NoiseTagging.Page]?
   public init(title: Swift.String, subPages: [NoiseTagging.Page])
@@ -321,6 +349,17 @@ public enum Layout {
   public enum Popovers {
     public static let defaultRatioButtons: CoreGraphics.CGFloat
   }
+  public enum Navigator {
+    public enum NavigationBar {
+      public enum LeftButton {
+        public static let frame: CoreGraphics.CGRect
+      }
+      public static let height: CoreGraphics.CGFloat
+    }
+    public enum Pages {
+      public static let availableSpace: CoreGraphics.CGSize
+    }
+  }
 }
 public enum PageAnimationType : Swift.Int {
   case None
@@ -334,44 +373,50 @@ public enum PageAnimationType : Swift.Int {
   }
 }
 @objc public class NavigatorTreeOfPages : ObjectiveC.NSObject, NoiseTagging.NoiseTagDelegate, NoiseTagging.PageDelegate {
-  final public let presentingView: UIKit.UIView
+  public init(presentingView: UIKit.UIView, initialPage: NoiseTagging.Page)
+  public func present()
+  public func startNoiseTagControl()
   public var closureToPerformOnClose: (() -> ())? {
     get
     set
   }
-  public static var frameBackButton: CoreGraphics.CGRect {
-    get
-  }
-  public init(presentingView: UIKit.UIView, initialPage: NoiseTagging.Page)
-  public func present()
   public func push(page: NoiseTagging.Page, completion: (() -> ())? = nil)
-  public func reloadPage()
   @objc public func pop(completion: (() -> ())? = nil)
+  public func reloadPage()
   public func popBackTill(page: NoiseTagging.Page, completion: (() -> ())? = nil)
   public func popAndPush(page: NoiseTagging.Page)
   public func navigateToInitialPage()
   public func pageIsOnStack(page: NoiseTagging.Page) -> Swift.Bool
-  public func startNoiseTagControl()
   public func pageRequestsTitleBarToBe(hidden: Swift.Bool)
   @objc public func startNoiseTagControlOn(noiseTaggingView: UIKit.UIView)
   @objc deinit
   @objc override dynamic public init()
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NoiseTagController : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NoiseTagController : ObjectiveC.NSObject, NoiseTagging.SetOfSettingsDelegate {
   public func colorFor(bit: Swift.Bool) -> UIKit.UIColor
   public func updateControls(updateCode: @escaping () -> ())
   public func push(view: UIKit.UIView, forNoiseTaggingWithDelegate delegate: NoiseTagging.NoiseTagDelegate)
   public func pop()
   public func update(view: UIKit.UIView, forNoiseTaggingWithDelegate delegate: NoiseTagging.NoiseTagDelegate)
+  public func set(mode: NoiseTagging.NoiseTagMode, waitTillDecoderConfirms: Swift.Bool = false, withExplanation explanationWhileWaiting: Swift.String? = nil)
   public var trialsAreRunning: Swift.Bool {
     get
     set
   }
   public func blockTrials(forDuration duration: Foundation.TimeInterval? = nil)
   public func unblockTrials()
+  public var dataCollectionHelper: NoiseTagging.DataCollectionHelperProtocol?
+  final public let defaultSetOfSettings: NoiseTagging.NoiseTagSetOfSettings
   final public let settings: NoiseTagging.NoiseTagSetOfSettings
+  public func updateSettingsToMatch(newSettings: NoiseTagging.SetOfSettings)
+  public func valueChangedOf(setting: NoiseTagging.Setting, inSet setOfSettings: NoiseTagging.SetOfSettings)
   public func enterBrainControlLayerFrom(view: UIKit.UIView, completion: (() -> ())? = nil)
   public func startBrainSetup(pushedFromNavigationController clientNavigationController: UIKit.UINavigationController?, withCompletionAfterBrainSetup completionAfterBrainSetup: @escaping () -> ())
+  public func showAlertWith(title: Swift.String, explanation: Swift.String, actions: [NoiseTagging.NoiseTaggingAlertAction], ignoreDuringCalibration: Swift.Bool = false) -> NoiseTagging.ResultOfPresentingAlert
+  public var networkCommunicationHasBeenSetUp: Swift.Bool {
+    get
+  }
+  public func sendDecoderALogMessageWith(text: Swift.String)
   @objc deinit
 }
 public var NoiseTagging: NoiseTagging.NoiseTagController {
@@ -381,7 +426,7 @@ public protocol CustomVoiceDelegate {
   func say(text: Swift.String, with customVoice: NoiseTagging.VoiceDefinition)
 }
 @objc @_inheritsConvenienceInitializers public class Sayer : ObjectiveC.NSObject {
-  public var setOfSettings: NoiseTagging.SetOfSettings?
+  public var settings: NoiseTagging.SetOfSettings?
   public var voiceDefinition: NoiseTagging.VoiceDefinition {
     get
   }
@@ -393,7 +438,6 @@ public protocol CustomVoiceDelegate {
     get
   }
   public func say(text: Swift.String, useDeveloperVoice: Swift.Bool = false)
-  public func speechRateFor(fraction: Swift.Float) -> Swift.Float
   public func add(customVoice: NoiseTagging.VoiceDefinition, withDelegate delegate: NoiseTagging.CustomVoiceDelegate)
   @objc override dynamic public init()
   @objc deinit
@@ -435,13 +479,13 @@ public enum CustomizableButtonState : Swift.Equatable {
   case custom(view: UIKit.UIView, idInKeyboard: Swift.String)
   public static func == (lhs: NoiseTagging.CustomizableButtonState, rhs: NoiseTagging.CustomizableButtonState) -> Swift.Bool
 }
-@objc public protocol NoiseTaggingKeyboardDelegate : AnyObject {
+@objc public protocol NoiseTagKeyboardDelegate : AnyObject {
   @objc optional func customActionOnPressOnKeyWith(idInKeyboard: Swift.String) -> Swift.Bool
   @objc optional func readyButtonPressedInKeyboard()
 }
 @objc @_hasMissingDesignatedInitializers public class NoiseTagKeyboardViewController : UIKit.UIViewController, NoiseTagging.NoiseTagDelegate, NoiseTagging.SettingSubscriber {
   @objc dynamic public init()
-  weak public var delegate: NoiseTagging.NoiseTaggingKeyboardDelegate?
+  weak public var delegate: NoiseTagging.NoiseTagKeyboardDelegate?
   public var customizableButtonStates: [NoiseTagging.CustomizableButtonState] {
     get
     set
@@ -452,14 +496,17 @@ public enum CustomizableButtonState : Swift.Equatable {
     get
     set
   }
+  @objc public func startNoiseTagControlOn(noiseTaggingView: UIKit.UIView)
+  @objc public func respondToNoiseTagModeChange()
+  @objc public func idsOfControlsToIncludeAsTargetInVerifyMode(noiseTaggingView: UIKit.UIView) -> [Swift.String]?
+  public func valueChangedOf(setting: NoiseTagging.Setting, inSet setOfSettings: NoiseTagging.SetOfSettings)
   @objc override dynamic public func viewDidLoad()
   @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
   @objc override dynamic public func viewDidLayoutSubviews()
-  @objc public func startNoiseTagControlOn(noiseTaggingView: UIKit.UIView)
-  @objc public func respondToNoiseTagModeChange()
-  public func valueChangedOf(setting: NoiseTagging.Setting, inSet setOfSettings: NoiseTagging.SetOfSettings)
-  @objc override dynamic public func didReceiveMemoryWarning()
   @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var prefersHomeIndicatorAutoHidden: Swift.Bool {
     @objc get
   }
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -510,9 +557,9 @@ public enum CustomizableButtonState : Swift.Equatable {
   @objc override dynamic public func show(appearance: NoiseTagging.NoiseTagControlAppearance, withDefaultColor defaultColor: UIKit.UIColor)
   public func valueChangedOf(setting: NoiseTagging.Setting, inSet setOfSettings: NoiseTagging.SetOfSettings)
   @objc dynamic public init()
-  @objc override dynamic public func layoutSubviews()
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers public class DoubleSetting : NoiseTagging.Setting_abstract, NoiseTagging.Setting, Foundation.NSCoding {
@@ -535,7 +582,7 @@ public enum CustomizableButtonState : Swift.Equatable {
     @objc get
   }
   @objc public func updateValueToMatch(newSetting: NoiseTagging.Setting)
-  @objc public var hasDefaultValue: Swift.Bool {
+  @objc public var valueEqualsDefaultValue: Swift.Bool {
     @objc get
   }
   @objc public func resetToDefault()
@@ -550,11 +597,11 @@ public enum CustomizableButtonState : Swift.Equatable {
 @objc public protocol NoiseTagControl : ObjectiveC.NSObjectProtocol {
   @objc func show(appearance: NoiseTagging.NoiseTagControlAppearance, withDefaultColor defaultColor: UIKit.UIColor)
   @objc func setFeedbackColor(color: UIKit.UIColor?)
+  @objc func updateUIDependingOnNoiseTagging()
   @objc func layerToHandleNoiseTagTaps() -> QuartzCore.CALayer?
   @objc func layerForFeedbackAnimations() -> QuartzCore.CALayer
   @objc func layerFlickeringPart() -> QuartzCore.CALayer
   @objc var isHiddenOrIsInHiddenView: Swift.Bool { get }
-  @objc func updateUIDependingOnNoiseTagging()
   @objc optional func participatesInFlickering_didChangeValue()
   @objc optional func noiseTagControlIsEnabled_didChangeValue()
 }
@@ -568,6 +615,12 @@ extension NoiseTagControl {
   public var defaultColorWhenDisabled: UIKit.UIColor {
     get
   }
+}
+@objc @_hasMissingDesignatedInitializers public class FileOfRecording : ObjectiveC.NSObject, Foundation.NSCoding {
+  @objc required public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init()
 }
 public struct NoiseTagKeyboardSettingTitles {
   public static let keyboardLayout: Swift.String
@@ -605,15 +658,19 @@ public struct NoiseTagKeyboardSettingTitles {
   public func showPopover()
   public func selectItemWithAssociatedValue<T>(value: T) where T : Swift.Equatable
   @objc public func startNoiseTagControlOn(noiseTaggingView: UIKit.UIView)
-  public func present(viewController: UIKit.UIViewController)
   @objc public func popoverPresentationControllerShouldDismissPopover(_: UIKit.UIPopoverPresentationController) -> Swift.Bool
   @objc public func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
   @objc deinit
+}
+public protocol SetOfSettingsDelegate {
+  func valueChangedOf(setting: NoiseTagging.Setting, inSet setOfSettings: NoiseTagging.SetOfSettings)
 }
 public protocol SettingSubscriber : AnyObject {
   func valueChangedOf(setting: NoiseTagging.Setting, inSet setOfSettings: NoiseTagging.SetOfSettings)
 }
 @objc @_inheritsConvenienceInitializers open class SetOfSettings : ObjectiveC.NSObject, Foundation.NSCopying, Foundation.NSCoding, NoiseTagging.SettingObserver {
+  @objc override dynamic public init()
+  public var delegate: NoiseTagging.SetOfSettingsDelegate?
   public var settings: [NoiseTagging.Setting] {
     get
   }
@@ -621,13 +678,11 @@ public protocol SettingSubscriber : AnyObject {
   public var nNonDefaultSettings: Swift.Int {
     get
   }
-  @objc override dynamic public init()
   @objc open func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
   @objc public func encode(with aCoder: Foundation.NSCoder)
   @objc required public init?(coder aDecoder: Foundation.NSCoder)
-  public func subscribe(_ subscriber: NoiseTagging.SettingSubscriber, toSettingsWithTitle settingTitle: Swift.String)
+  public func subscribe(_ subscriber: NoiseTagging.SettingSubscriber, toSettingWithTitle settingTitle: Swift.String)
   public func subscribe(_ subscriber: NoiseTagging.SettingSubscriber, toSettingsWithTitles settingTitles: [Swift.String])
-  public func informSubscribersToSettingWith(settingTitle: Swift.String)
   public func add(setting: NoiseTagging.Setting)
   public func insert(setting: NoiseTagging.Setting, at index: Swift.Int)
   public func addByReplace(setting: NoiseTagging.Setting)
@@ -637,24 +692,24 @@ public protocol SettingSubscriber : AnyObject {
   public func settingWith(title: Swift.String, caseSensitive: Swift.Bool = true) -> NoiseTagging.Setting?
   public func settingsWith(titles: [Swift.String]) -> [NoiseTagging.Setting]
   public func boolFor(_ settingTitle: Swift.String) -> Swift.Bool
-  public func set(value: Swift.Bool, for settingTitle: Swift.String)
+  public func set(boolValue: Swift.Bool, for settingTitle: Swift.String)
   public func toggleSettingWith(title: Swift.String)
   public func intFor(_ settingTitle: Swift.String) -> Swift.Int
-  public func set(value: Swift.Int, for settingTitle: Swift.String)
+  public func set(intValue: Swift.Int, for settingTitle: Swift.String)
   public func doubleFor(_ settingTitle: Swift.String) -> Swift.Double
   public func cgFloatFor(_ settingTitle: Swift.String) -> CoreGraphics.CGFloat
-  public func set(value: Swift.Double, for settingTitle: Swift.String)
-  public func set(value: Swift.String, for settingTitle: Swift.String)
+  public func set(doubleValue: Swift.Double, for settingTitle: Swift.String)
+  public func set(stringValue: Swift.String, for settingTitle: Swift.String)
   public func indexSelectionForEnumSettingWith(title: Swift.String) -> Swift.Int
   public func selectedEnumForSettingWith(title: Swift.String) -> NoiseTagging.EnumAsSetting?
   public func set(enumValue: NoiseTagging.EnumAsSetting, for settingTitle: Swift.String)
   public func indexSelectionForItemOfArraySettingWith(title: Swift.String) -> Swift.Int
-  public func selectedItemOfArrayFor(title: Swift.String) -> NoiseTagging.ItemOfArrayInMenu?
+  public func selectedItemOfArrayFor(settingTitle: Swift.String) -> NoiseTagging.ItemOfArrayInMenu?
   public func set(itemOfArray: NoiseTagging.ItemOfArrayInMenu, for settingTitle: Swift.String)
-  public func colorFor(title: Swift.String) -> UIKit.UIColor
-  public func textFor(title: Swift.String) -> Swift.String
-  public func takeOnValuesOf(setOfSettings: NoiseTagging.SetOfSettings)
-  public static var settingsShouldPerformActionsWhenValueChanges: Swift.Bool
+  public func colorFor(settingTitle: Swift.String) -> UIKit.UIColor
+  public func textFor(settingTitle: Swift.String) -> Swift.String
+  public func takeOnValuesOf(settings: NoiseTagging.SetOfSettings)
+  public static func changeSettingsWithoutPerformingActions(closure: (() -> ()))
   @objc public func valueChangedFor(setting: NoiseTagging.Setting)
   @objc deinit
 }
@@ -676,6 +731,26 @@ public enum SpeechRate : Swift.Int, NoiseTagging.EnumAsSetting {
     get
   }
 }
+@objc @_hasMissingDesignatedInitializers public class Recordingsdatabase : NoiseTagging.SyncableDatabase {
+  public var numberOfClosedRecordings: Swift.Int {
+    get
+  }
+  public func closedRecordingAt(index: Swift.Int) -> NoiseTagging.Recording
+  public static let kNotificationName_newRecordingStarted: Foundation.NSNotification.Name
+  public func recordingContaining(file: NoiseTagging.FileOfRecording) -> NoiseTagging.Recording?
+  public func startNewRecording(withComments comments: Swift.String)
+  public func append(text: Swift.String, toFileNamed fileName: Swift.String)
+  public func append(line: Swift.String, toFileNamed fileName: Swift.String)
+  public func append(toCSVNamed fileName: Swift.String, cells: (Swift.String, Swift.CustomStringConvertible)...)
+  public func store(image: UIKit.UIImage, underFileName fileName: Swift.String)
+  public var folderNameCurrentRecording: Swift.String? {
+    get
+  }
+  @objc deinit
+}
+public var Recordings: NoiseTagging.Recordingsdatabase {
+  get
+}
 @objc @_hasMissingDesignatedInitializers public class BoolSetting : NoiseTagging.Setting_abstract, NoiseTagging.Setting, Foundation.NSCoding {
   final public let initialValue: Swift.Bool
   public var value: Swift.Bool {
@@ -696,7 +771,7 @@ public enum SpeechRate : Swift.Int, NoiseTagging.EnumAsSetting {
     @objc get
   }
   @objc public func updateValueToMatch(newSetting: NoiseTagging.Setting)
-  @objc public var hasDefaultValue: Swift.Bool {
+  @objc public var valueEqualsDefaultValue: Swift.Bool {
     @objc get
   }
   @objc public func resetToDefault()
@@ -707,6 +782,9 @@ public enum SpeechRate : Swift.Int, NoiseTagging.EnumAsSetting {
     @objc get
   }
   @objc deinit
+}
+public protocol DataCollectionHelperProtocol {
+  func shouldProceedWith(trial: Swift.Int) -> Swift.Bool
 }
 public enum LettersLayoutType : Swift.Int, NoiseTagging.EnumAsSetting {
   case ABC
@@ -740,7 +818,7 @@ public enum LettersLayoutType : Swift.Int, NoiseTagging.EnumAsSetting {
     @objc get
   }
   @objc public func updateValueToMatch(newSetting: NoiseTagging.Setting)
-  @objc public var hasDefaultValue: Swift.Bool {
+  @objc public var valueEqualsDefaultValue: Swift.Bool {
     @objc get
   }
   @objc public func resetToDefault()
@@ -750,6 +828,11 @@ public enum LettersLayoutType : Swift.Int, NoiseTagging.EnumAsSetting {
   @objc public var cellReuseIdentifier: Swift.String {
     @objc get
   }
+  @objc deinit
+}
+@objc public class NoiseTaggingAlertAction : ObjectiveC.NSObject {
+  public init(title: Swift.String, closure: (() -> ())? = nil)
+  @objc override dynamic public init()
   @objc deinit
 }
 public enum ClickFeedbackMode : Swift.Int, NoiseTagging.EnumAsSetting {
@@ -768,14 +851,13 @@ public enum ClickFeedbackMode : Swift.Int, NoiseTagging.EnumAsSetting {
 }
 @objc public protocol NoiseTagDelegate : AnyObject {
   @objc optional func startNoiseTagControlOn(noiseTaggingView: UIKit.UIView)
-  @objc optional func respondToNoiseTagModeChange()
-  @objc optional func contextDescription() -> Swift.String?
-  @objc optional func respondToNoClick()
-  @objc optional func preparePlay() -> Foundation.NSNumber?
-  @objc optional func trialsWillStartRunning()
-  @objc optional func trialsStoppedRunning()
   @objc optional func customBackgroundColorFor(noiseTaggingView: UIKit.UIView) -> UIKit.UIColor?
   @objc optional func idsOfControlsToIncludeAsTargetInVerifyMode(noiseTaggingView: UIKit.UIView) -> [Swift.String]?
+  @objc optional func respondToNoiseTagModeChange()
+  @objc optional func respondToNoClick()
+  @objc optional func trialsWillStartRunning()
+  @objc optional func trialsStoppedRunning()
+  @objc optional func contextDescription() -> Swift.String?
   @objc optional func nextTarget() -> NoiseTagging.NoiseTagControl
   @objc optional func thereWillBeANextTarget() -> Swift.Bool
   @objc optional func trialEnded()
@@ -799,7 +881,7 @@ public enum ClickFeedbackMode : Swift.Int, NoiseTagging.EnumAsSetting {
     @objc get
   }
   @objc public func updateValueToMatch(newSetting: NoiseTagging.Setting)
-  @objc public var hasDefaultValue: Swift.Bool {
+  @objc public var valueEqualsDefaultValue: Swift.Bool {
     @objc get
   }
   @objc public func resetToDefault()
@@ -817,50 +899,55 @@ public enum ClickFeedbackMode : Swift.Int, NoiseTagging.EnumAsSetting {
 @objc public protocol Setting : Foundation.NSCopying, ObjectiveC.NSObjectProtocol {
   @objc var title: Swift.String { get }
   @objc var isEditable: Swift.Bool { get set }
+  @objc var allowsUndefined: Swift.Bool { get set }
   @objc var isVisibleInUI: Swift.Bool { get set }
   @objc var help: Swift.String? { get set }
+  @objc var validityCheck: ((Any) -> NoiseTagging.ResultValidityCheck)? { get set }
+  @objc var valueEqualsDefaultValue: Swift.Bool { get }
+  @objc var valueIsUndefined: Swift.Bool { get set }
+  @objc func updateValueToMatch(newSetting: NoiseTagging.Setting)
+  @objc func resetToDefault()
+  @objc func setToUndefined()
+  @objc var actionBeforeChange: (() -> ())? { get set }
+  @objc var actionAfterChange: (() -> ())? { get set }
   @objc var observers: [NoiseTagging.SettingObserver] { get set }
   @objc func add(observer: NoiseTagging.SettingObserver)
   @objc func remove(observer: NoiseTagging.SettingObserver)
   @objc optional var valueAsJson: Any { get }
   @objc var descriptionValueIfDefined: Swift.String { get }
   @objc var descriptionValue: Swift.String { get }
-  @objc func updateValueToMatch(newSetting: NoiseTagging.Setting)
-  @objc var hasDefaultValue: Swift.Bool { get }
-  @objc func resetToDefault()
   @objc var cellNibName: Swift.String { get }
   @objc var cellReuseIdentifier: Swift.String { get }
-  @objc var validityCheck: ((Any) -> NoiseTagging.ResultValidityCheck)? { get set }
-  @objc var actionBeforeChange: (() -> ())? { get set }
-  @objc var actionAfterChange: (() -> ())? { get set }
-  @objc var allowsUndefined: Swift.Bool { get set }
-  @objc var isUndefined: Swift.Bool { get set }
-  @objc func setToUndefined()
 }
 @objc @_hasMissingDesignatedInitializers public class Setting_abstract : ObjectiveC.NSObject {
   @objc final public let title: Swift.String
   @objc public var isEditable: Swift.Bool
+  @objc public var allowsUndefined: Swift.Bool
   @objc public var isVisibleInUI: Swift.Bool
   @objc public var help: Swift.String?
-  @objc public var observers: [NoiseTagging.SettingObserver]
   @objc public var validityCheck: ((Any) -> NoiseTagging.ResultValidityCheck)?
-  @objc public var actionBeforeChange: (() -> ())?
-  @objc public var actionAfterChange: (() -> ())?
-  @objc public var allowsUndefined: Swift.Bool
-  @objc public var isUndefined: Swift.Bool {
+  @objc public var valueIsUndefined: Swift.Bool {
     @objc get
     @objc set
   }
   @objc public func setToUndefined()
+  @objc public var actionBeforeChange: (() -> ())?
+  @objc public var actionAfterChange: (() -> ())?
+  @objc public var observers: [NoiseTagging.SettingObserver]
+  @objc public func add(observer: NoiseTagging.SettingObserver)
+  @objc public func remove(observer: NoiseTagging.SettingObserver)
   @objc public var descriptionValue: Swift.String {
     @objc get
   }
-  @objc public func add(observer: NoiseTagging.SettingObserver)
-  @objc public func remove(observer: NoiseTagging.SettingObserver)
   public func encode(with aCoder: Foundation.NSCoder)
   public func decode(with aDecoder: Foundation.NSCoder)
   @objc override dynamic public init()
   @objc deinit
+}
+public enum ResultOfPresentingAlert {
+  case Shown(Swift.Int)
+  case NotShownBecauseWeAreInCalibration
+  case NotShownBecauseNoViewToPresentFromAvailable
 }
 public enum ContrastMode : Swift.Int, NoiseTagging.EnumAsSetting {
   case Min
@@ -910,7 +997,7 @@ public enum ContrastMode : Swift.Int, NoiseTagging.EnumAsSetting {
     @objc get
   }
   @objc public func updateValueToMatch(newSetting: NoiseTagging.Setting)
-  @objc public var hasDefaultValue: Swift.Bool {
+  @objc public var valueEqualsDefaultValue: Swift.Bool {
     @objc get
   }
   @objc public func resetToDefault()
@@ -988,7 +1075,38 @@ extension EnumAsSetting {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc public class NoiseTagControlProperties : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers public class Recording : ObjectiveC.NSObject {
+  public var commentsOnStartOfRecording: Swift.String {
+    get
+  }
+  public var commentsOnEndOfRecording: Swift.String {
+    get
+  }
+  public var dateStart: Foundation.Date {
+    get
+  }
+  public var dateEnd: Foundation.Date? {
+    get
+  }
+  public var titleToShowUser: Swift.String {
+    get
+  }
+  public static var recordType: Swift.String {
+    get
+  }
+  final public let recordName: Swift.String
+  public var creationDateICloud: Foundation.Date?
+  public var syncableFields: [Swift.String : CloudKit.CKRecordValueProtocol] {
+    get
+  }
+  required public init?(cloudKitRecord: CloudKit.CKRecord)
+  @objc required public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class NoiseTagControlProperties : ObjectiveC.NSObject {
+  public func addAction(timing: Swift.Double, closure: @escaping (() -> ()))
   public var identifier: Swift.String?
   public var customUtopiaObjectID: Swift.Int?
   public var participatesInFlickering: Swift.Bool {
@@ -1000,8 +1118,6 @@ extension EnumAsSetting {
     set
   }
   public var playClickSoundOnPress: Swift.Bool
-  public init(control: NoiseTagging.NoiseTagControl)
-  public func addAction(timing: Swift.Double, closure: @escaping (() -> ()))
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1017,6 +1133,8 @@ extension EnumAsSetting {
   @objc override dynamic public init()
 }
 @objc public class NoiseTagShapeButtonView : NoiseTagging.NoiseTagButtonView {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   public var path: CoreGraphics.CGPath? {
     get
     set
@@ -1025,8 +1143,6 @@ extension EnumAsSetting {
     get
     set
   }
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc override dynamic public func layerToHandleNoiseTagTaps() -> QuartzCore.CALayer?
   @objc override dynamic public func show(appearance: NoiseTagging.NoiseTagControlAppearance, withDefaultColor defaultColor: UIKit.UIColor)
   @objc override dynamic public func noiseTagControlIsEnabled_didChangeValue()
@@ -1065,3 +1181,4 @@ extension NoiseTagging.ContrastMode : Swift.RawRepresentable {}
 extension NoiseTagging.NoiseTagLabeledButtonView.LocationLabel : Swift.Equatable {}
 extension NoiseTagging.NoiseTagLabeledButtonView.LocationLabel : Swift.Hashable {}
 extension NoiseTagging.NoiseTagLabeledButtonView.LocationLabel : Swift.RawRepresentable {}
+extension NoiseTagging.Recording : Foundation.NSCoding {}
