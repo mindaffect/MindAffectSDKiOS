@@ -595,7 +595,7 @@ SWIFT_PROTOCOL("_TtP12NoiseTagging16NoiseTagDelegate_")
 /// Called after each update for logging purposes. If the delegate returns a <em>context description</em>, this is logged.
 - (NSString * _Nullable)contextDescription SWIFT_WARN_UNUSED_RESULT;
 /// This is part of functionality that will become available later on.
-- (id <NoiseTagControl> _Nonnull)nextTarget SWIFT_WARN_UNUSED_RESULT;
+- (id <NoiseTagControl> _Nullable)nextTarget SWIFT_WARN_UNUSED_RESULT;
 /// This is part of functionality that will become available later on.
 - (BOOL)thereWillBeANextTarget SWIFT_WARN_UNUSED_RESULT;
 /// This is part of functionality that will become available later on.

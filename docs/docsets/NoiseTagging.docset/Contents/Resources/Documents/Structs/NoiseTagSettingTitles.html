@@ -399,6 +399,52 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
+                <a name="/Flicker"></a>
+                <a name="//apple_ref/swift/Section/Flicker" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Flicker"></a>
+                  <h3 class="section-name"><p>Flicker</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12NoiseTagging0A16TagSettingTitlesV8useMetalSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/useMetal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12NoiseTagging0A16TagSettingTitlesV8useMetalSSvpZ">useMetal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether to use Metal instead of a display link for making the controls flicker.</p>
+
+<p>The NoiseTagging framework provides two ways to make the controls flicker. If this setting is <code>false</code>, it uses a <code>CADisplayLink</code>.</p>
+
+<p>Metal has the advantage of rendering the flicker more precise, so performance might increase by enabling this setting. However, there also is a downside: while your controls flicker, their appearance and frame should not change. All Metal drawing happens in a separate layer on top of your own UI and if you e.g. move your controls while flickering, the flicker of those controls – drawn in that separate layer -, will not move along.</p>
+
+<p>If your controls only change <em>in between</em> trials, we recommend you enable this setting.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">useMetal</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
                 <a name="/Clicks"></a>
                 <a name="//apple_ref/swift/Section/Clicks" class="dashAnchor"></a>
                 <div class="section-name-container">

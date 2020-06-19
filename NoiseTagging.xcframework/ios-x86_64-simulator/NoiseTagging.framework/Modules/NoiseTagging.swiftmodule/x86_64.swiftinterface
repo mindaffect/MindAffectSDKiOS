@@ -105,6 +105,7 @@ public enum NoiseTagMode : Swift.Int, NoiseTagging.EnumAsSetting {
 }
 public struct NoiseTagSettingTitles {
   public static let mode: Swift.String
+  public static let useMetal: Swift.String
   public static let certaintyRequiredForPress: Swift.String
   public static let disableNoClicks: Swift.String
   public static let clickFeedbackMode: Swift.String
@@ -858,7 +859,7 @@ public enum ClickFeedbackMode : Swift.Int, NoiseTagging.EnumAsSetting {
   @objc optional func trialsWillStartRunning()
   @objc optional func trialsStoppedRunning()
   @objc optional func contextDescription() -> Swift.String?
-  @objc optional func nextTarget() -> NoiseTagging.NoiseTagControl
+  @objc optional func nextTarget() -> NoiseTagging.NoiseTagControl?
   @objc optional func thereWillBeANextTarget() -> Swift.Bool
   @objc optional func trialEnded()
 }
