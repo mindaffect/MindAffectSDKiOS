@@ -26,6 +26,9 @@ class ViewController: UIViewController {
 			// Enable accessing the Developer screen:
 			NoiseTagging.settings.set(boolValue: true, for: NoiseTagSettingTitles.twoFingerDoubleTapOpensDeveloperScreen)
 			
+			// In this app controls do not change within trials, so we can safely enable Metal for rendering, which should be more precise (see `useMetal` for a more elaborate explanation):
+			NoiseTagging.settings.set(boolValue: true, for: NoiseTagSettingTitles.useMetal)
+			
 			// Disable NoiseTagging printing in the console:
 //			NoiseTagging.settings.set(boolValue: false, for: NoiseTagSettingTitles.noiseTaggingPrintsToTheConsole)
 			

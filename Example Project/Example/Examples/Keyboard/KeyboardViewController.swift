@@ -62,6 +62,9 @@ class KeyboardViewController: ExampleViewController {
 		// Push keyboardVC on our navigation controller:
 		self.navigationController?.pushViewController(self.keyboardVC, animated: true)
 		
+		// Block trials, so trials do not start untill the animation is finished and the keyboard is positioned correctly:
+		NoiseTagging.blockTrials(forDuration: 0.5)
+		
 		// Push keyboardVC on the NoiseTagging stack:
 		NoiseTagging.push(view: self.keyboardVC.view, forNoiseTaggingWithDelegate: self.keyboardVC)
 	}

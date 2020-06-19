@@ -20,10 +20,10 @@
 		482431B1241BBE2C00E7285B /* Image0.png in Resources */ = {isa = PBXBuildFile; fileRef = 482431AF241BBE2C00E7285B /* Image0.png */; };
 		482EAE852417958600AABAED /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482EAE832417958600AABAED /* KeyboardViewController.swift */; };
 		482EAE862417958600AABAED /* KeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482EAE842417958600AABAED /* KeyboardViewController.xib */; };
-		4834E4B92490E2D2005A6642 /* NoiseTagging.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4834E4B82490E2D2005A6642 /* NoiseTagging.xcframework */; };
-		4834E4BA2490E2D2005A6642 /* NoiseTagging.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4834E4B82490E2D2005A6642 /* NoiseTagging.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4846FA5C240EA1F10071BFE0 /* StartBrainSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4846FA5A240EA1F10071BFE0 /* StartBrainSetupViewController.swift */; };
 		4846FA5D240EA1F10071BFE0 /* StartBrainSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4846FA5B240EA1F10071BFE0 /* StartBrainSetupViewController.xib */; };
+		48543172249CA11500664C46 /* NoiseTagging.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48543171249CA11500664C46 /* NoiseTagging.xcframework */; };
+		48543173249CA11500664C46 /* NoiseTagging.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48543171249CA11500664C46 /* NoiseTagging.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		48BCE04624432C56007BFEFA /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BCE04524432C56007BFEFA /* NavigationViewController.swift */; };
 		48C31380240CFD4300ABC1A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3137F240CFD4300ABC1A2 /* AppDelegate.swift */; };
 		48C31382240CFD4300ABC1A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C31381240CFD4300ABC1A2 /* SceneDelegate.swift */; };
@@ -55,13 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4834E4BB2490E2D2005A6642 /* Embed Frameworks */ = {
+		48543174249CA11500664C46 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4834E4BA2490E2D2005A6642 /* NoiseTagging.xcframework in Embed Frameworks */,
+				48543173249CA11500664C46 /* NoiseTagging.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,9 +82,9 @@
 		482431AF241BBE2C00E7285B /* Image0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image0.png; sourceTree = "<group>"; };
 		482EAE832417958600AABAED /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		482EAE842417958600AABAED /* KeyboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardViewController.xib; sourceTree = "<group>"; };
-		4834E4B82490E2D2005A6642 /* NoiseTagging.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NoiseTagging.xcframework; path = ../NoiseTagging.xcframework; sourceTree = "<group>"; };
 		4846FA5A240EA1F10071BFE0 /* StartBrainSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBrainSetupViewController.swift; sourceTree = "<group>"; };
 		4846FA5B240EA1F10071BFE0 /* StartBrainSetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartBrainSetupViewController.xib; sourceTree = "<group>"; };
+		48543171249CA11500664C46 /* NoiseTagging.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NoiseTagging.xcframework; path = ../NoiseTagging.xcframework; sourceTree = "<group>"; };
 		48754017244DB1FC00031343 /* NoiseTagging.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NoiseTagging.xcodeproj; path = ../NoiseTagging/NoiseTagging.xcodeproj; sourceTree = "<group>"; };
 		48BCE04524432C56007BFEFA /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		48C3137C240CFD4300ABC1A2 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4834E4B92490E2D2005A6642 /* NoiseTagging.xcframework in Frameworks */,
+				48543172249CA11500664C46 /* NoiseTagging.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +236,7 @@
 		48C31393240CFD6100ABC1A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4834E4B82490E2D2005A6642 /* NoiseTagging.xcframework */,
+				48543171249CA11500664C46 /* NoiseTagging.xcframework */,
 				48754017244DB1FC00031343 /* NoiseTagging.xcodeproj */,
 			);
 			name = Frameworks;
@@ -266,7 +266,7 @@
 				48C31378240CFD4300ABC1A2 /* Sources */,
 				48C31379240CFD4300ABC1A2 /* Frameworks */,
 				48C3137A240CFD4300ABC1A2 /* Resources */,
-				4834E4BB2490E2D2005A6642 /* Embed Frameworks */,
+				48543174249CA11500664C46 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -518,14 +518,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.3;
+				CURRENT_PROJECT_VERSION = 1.4;
 				DEVELOPMENT_TEAM = 5UPDJHJ6D7;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.mindaffect.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -538,14 +538,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.3;
+				CURRENT_PROJECT_VERSION = 1.4;
 				DEVELOPMENT_TEAM = 5UPDJHJ6D7;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.mindaffect.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

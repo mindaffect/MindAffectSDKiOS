@@ -97,6 +97,9 @@ class ListOfExamplesTableViewController: UITableViewController, UINavigationCont
 		}
 		self.navigationController?.pushViewController(exampleViewController, animated: true)
 		
+		// Block trials, so trials do not start untill the animation is finished and the layout of any controls in exampleViewController will not change anymore:
+		NoiseTagging.blockTrials(forDuration: 0.5)
+		
 		// Also push a new unit onto the Noise Tagging stack:
 		NoiseTagging.push(view: exampleViewController.view, forNoiseTaggingWithDelegate: exampleViewController)
 	}
